@@ -10,17 +10,21 @@
 ******************************************************************************/
 package org.eclipse.ecf.provider.jersey.server;
 
+import java.lang.reflect.Method;
+import java.lang.reflect.Modifier;
 import java.net.URI;
 import java.net.URISyntaxException;
 import java.util.List;
 import java.util.Map;
 
 import javax.servlet.Servlet;
+import javax.ws.rs.Path;
 import javax.ws.rs.container.ContainerRequestFilter;
 import javax.ws.rs.container.ContainerResponseFilter;
 import javax.ws.rs.core.Configurable;
 import javax.ws.rs.core.Configuration;
 import javax.ws.rs.core.Feature;
+import javax.ws.rs.core.MediaType;
 import javax.ws.rs.ext.ContextResolver;
 import javax.ws.rs.ext.ExceptionMapper;
 import javax.ws.rs.ext.MessageBodyReader;
@@ -37,6 +41,8 @@ import org.eclipse.ecf.provider.jaxrs.server.JaxRSServerDistributionProvider;
 import org.eclipse.ecf.remoteservice.RSARemoteServiceContainerAdapter.RSARemoteServiceRegistration;
 import org.eclipse.ecf.remoteservice.provider.IRemoteServiceDistributionProvider;
 import org.glassfish.jersey.server.ResourceConfig;
+import org.glassfish.jersey.server.model.Resource;
+import org.glassfish.jersey.server.model.ResourceMethod;
 import org.glassfish.jersey.servlet.ServletContainer;
 import org.osgi.service.component.annotations.Activate;
 import org.osgi.service.component.annotations.Component;
@@ -92,97 +98,115 @@ public class JerseyServerDistributionProvider extends JaxRSServerDistributionPro
 		super.unbindHttpService(httpService);
 	}
 
-	@SuppressWarnings("rawtypes")
+	@Override
+    @SuppressWarnings("rawtypes")
 	@Reference(cardinality = ReferenceCardinality.MULTIPLE)
 	protected void bindMessageBodyWriter(MessageBodyWriter instance, Map serviceProps) {
 		super.bindMessageBodyWriter(instance, serviceProps);
 	}
 
-	@SuppressWarnings("rawtypes")
+	@Override
+    @SuppressWarnings("rawtypes")
 	protected void unbindMessageBodyWriter(MessageBodyWriter instance) {
 		super.unbindMessageBodyWriter(instance);
 	}
 
-	@SuppressWarnings("rawtypes")
+	@Override
+    @SuppressWarnings("rawtypes")
 	@Reference(cardinality = ReferenceCardinality.MULTIPLE)
 	protected void bindMessageBodyReader(MessageBodyReader instance, Map serviceProps) {
 		super.bindMessageBodyReader(instance, serviceProps);
 	}
 
-	@SuppressWarnings("rawtypes")
+	@Override
+    @SuppressWarnings("rawtypes")
 	protected void unbindMessageBodyReader(MessageBodyReader instance) {
 		super.unbindMessageBodyReader(instance);
 	}
 
-	@SuppressWarnings("rawtypes")
+	@Override
+    @SuppressWarnings("rawtypes")
 	@Reference(cardinality = ReferenceCardinality.MULTIPLE)
 	protected void bindContextResolver(ContextResolver instance, Map serviceProps) {
 		super.bindContextResolver(instance, serviceProps);
 	}
 
-	@SuppressWarnings("rawtypes")
+	@Override
+    @SuppressWarnings("rawtypes")
 	protected void unbindContextResolver(ContextResolver instance) {
 		super.unbindContextResolver(instance);
 	}
 
-	@SuppressWarnings("rawtypes")
+	@Override
+    @SuppressWarnings("rawtypes")
 	@Reference(cardinality = ReferenceCardinality.MULTIPLE)
 	protected void bindExceptionMapper(ExceptionMapper instance, Map serviceProps) {
 		super.bindExceptionMapper(instance, serviceProps);
 	}
 
-	@SuppressWarnings("rawtypes")
+	@Override
+    @SuppressWarnings("rawtypes")
 	protected void unbindExceptionMapper(ExceptionMapper instance) {
 		super.unbindExceptionMapper(instance);
 	}
 
-	@SuppressWarnings("rawtypes")
+	@Override
+    @SuppressWarnings("rawtypes")
 	@Reference(cardinality = ReferenceCardinality.MULTIPLE)
 	protected void bindFeature(Feature instance, Map serviceProps) {
 		super.bindFeature(instance, serviceProps);
 	}
 
-	protected void unbindFeature(Feature instance) {
+	@Override
+    protected void unbindFeature(Feature instance) {
 		super.unbindFeature(instance);
 	}
 
-	@SuppressWarnings("rawtypes")
+	@Override
+    @SuppressWarnings("rawtypes")
 	@Reference(cardinality = ReferenceCardinality.MULTIPLE)
 	protected void bindReaderInterceptor(ReaderInterceptor instance, Map serviceProps) {
 		super.bindReaderInterceptor(instance, serviceProps);
 	}
 
-	protected void unbindReaderInterceptor(ReaderInterceptor instance) {
+	@Override
+    protected void unbindReaderInterceptor(ReaderInterceptor instance) {
 		super.unbindReaderInterceptor(instance);
 	}
 
-	@SuppressWarnings("rawtypes")
+	@Override
+    @SuppressWarnings("rawtypes")
 	@Reference(cardinality = ReferenceCardinality.MULTIPLE)
 	protected void bindWriterInterceptor(WriterInterceptor instance, Map serviceProps) {
 		super.bindWriterInterceptor(instance, serviceProps);
 	}
 
-	protected void unbindWriterInterceptor(WriterInterceptor instance) {
+	@Override
+    protected void unbindWriterInterceptor(WriterInterceptor instance) {
 		super.unbindWriterInterceptor(instance);
 	}
 
-	@SuppressWarnings("rawtypes")
+	@Override
+    @SuppressWarnings("rawtypes")
 	@Reference(cardinality = ReferenceCardinality.MULTIPLE)
 	protected void bindContainerRequestFilter(ContainerRequestFilter instance, Map serviceProps) {
 		super.bindContainerRequestFilter(instance, serviceProps);
 	}
 
-	protected void unbindContainerRequestFilter(ContainerRequestFilter instance) {
+	@Override
+    protected void unbindContainerRequestFilter(ContainerRequestFilter instance) {
 		super.unbindContainerRequestFilter(instance);
 	}
 
-	@SuppressWarnings("rawtypes")
+	@Override
+    @SuppressWarnings("rawtypes")
 	@Reference(cardinality = ReferenceCardinality.MULTIPLE)
 	protected void bindContainerResponseFilter(ContainerResponseFilter instance, Map serviceProps) {
 		super.bindContainerResponseFilter(instance, serviceProps);
 	}
 
-	protected void unbindContainerResponseFilter(ContainerResponseFilter instance) {
+	@Override
+    protected void unbindContainerResponseFilter(ContainerResponseFilter instance) {
 		super.unbindContainerResponseFilter(instance);
 	}
 
@@ -206,7 +230,9 @@ public class JerseyServerDistributionProvider extends JaxRSServerDistributionPro
 		protected void exportRegistration(RSARemoteServiceRegistration reg) {
 			ServletContainer sc = (ServletContainer) this.servlet;
 			if (sc == null)
-				throw new NullPointerException("Servlet cannot be null");
+            {
+                throw new NullPointerException("Servlet cannot be null");
+            }
 			ResourceConfig config = new ResourceConfig(sc.getConfiguration());
 			config.register(reg.getService());
 			((ServletContainer) servlet).reload(config);
@@ -216,7 +242,67 @@ public class JerseyServerDistributionProvider extends JaxRSServerDistributionPro
 		protected Servlet createServlet(RSARemoteServiceRegistration registration) {
 			ResourceConfig resourceConfig = (ResourceConfig) createConfigurable();
 			if (resourceConfig != null)
-				resourceConfig.register(registration.getService());
+            {
+                resourceConfig.register(registration.getService());
+            }
+
+            Class<?> implClass = registration.getService().getClass();
+            for (Class<?> clazz : implClass.getInterfaces())
+            {
+                if (clazz.getAnnotation(Path.class) == null)
+                {
+                    final Resource.Builder resourceBuilder = Resource.builder();
+                    ResourceMethod.Builder methodBuilder;
+                    Resource.Builder childResourceBuilder;
+                    String serviceResourcePath;
+                    String methodResourcePath;
+                    String methodName;
+
+                    //class
+                    serviceResourcePath = "/" + clazz.getSimpleName().toLowerCase();
+                    resourceBuilder.path(serviceResourcePath);
+                    resourceBuilder.name(implClass.getName());
+
+                    //methods
+                    for (Method method : clazz.getMethods())
+                    {
+                        if (Modifier.isPublic(method.getModifiers()))
+                        {
+                            methodName = method.getName().toLowerCase();
+                            methodResourcePath = "/" + methodName;
+                            childResourceBuilder = resourceBuilder.addChildResource(methodResourcePath);
+
+                            if (method.getAnnotation(Path.class) == null)
+                            {
+                                if (method.getParameterCount() == 0)
+                                {
+                                    methodBuilder = childResourceBuilder.addMethod("GET");
+                                }
+                                else
+                                {
+                                    if (methodName.contains("delete"))
+                                    {
+                                        methodBuilder = childResourceBuilder.addMethod("DELETE");
+
+                                    }
+                                    else
+                                    {
+                                        methodBuilder = childResourceBuilder.addMethod("POST");
+                                    }
+                                    methodBuilder.consumes(MediaType.APPLICATION_JSON);//APPLICATION_JSON)TEXT_PLAIN_TYPE
+                                }
+                                methodBuilder.produces(MediaType.APPLICATION_JSON)//APPLICATION_JSON)
+                                    //.handledBy(implClass, method)
+                                    .handledBy(registration.getService(), method).handlingMethod(method).extended(
+                                        false);
+                            }
+                        }
+                    }
+                    final Resource resource = resourceBuilder.build();
+                    resourceConfig.registerResources(resource);
+                }
+            }
+
 			return new ServletContainer(resourceConfig);
 		}
 
@@ -231,8 +317,10 @@ public class JerseyServerDistributionProvider extends JaxRSServerDistributionPro
 			@SuppressWarnings("rawtypes")
 			Configurable c = createConfigurable(getExportedRegistrations());
 			if (c != null)
-				((ServletContainer) servlet).reload((ResourceConfig) c);
+            {
+                ((ServletContainer) servlet).reload((ResourceConfig) c);
+            }
 		}
-		
+
 	}
 }
