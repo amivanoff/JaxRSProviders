@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <feature
-      id="org.eclipse.ecf.provider.jersey.server.feature"
-      label="ECF Remote Services Jersey Server Provider"
-      version="1.1.0.qualifier"
+      id="org.eclipse.ecf.provider.jersey.client.feature"
+      label="Jersey Remote Service Client Provider Feature"
+      version="1.1.0.201702022058"
       provider-name="%providerName">
 
    <description url="http://www.eclipse.org/ecf">
-      This feature provides a client Remote Service Distribution provider based upon the Jersey implementation
+      This feature provides the a Remote Service distribution provider based upon the Jersey implementation
       of the Jax-RS specification.
       For tutorials, documentation, and examples with ECF&apos;s Implementation of OSGi RS/RSA see
 
@@ -31,30 +31,31 @@ https://wiki.eclipse.org/ECF#OSGi_Remote_Services
 
    <plugin
          id="javax.ws.rs"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
+         download-size="152"
+         install-size="334"
+         version="2.0.1.v201504171603"
          unpack="false"/>
 
    <plugin
          id="org.eclipse.ecf.provider.jaxrs"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
+         download-size="11"
+         install-size="20"
+         version="1.1.0.201702022058"
          unpack="false"/>
 
    <plugin
-         id="org.eclipse.ecf.provider.jaxrs.server"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
+         id="org.eclipse.ecf.provider.jaxrs.client"
+         download-size="16"
+         install-size="30"
+         version="1.1.0.201702022058"
          unpack="false"/>
 
    <plugin
-         id="org.eclipse.ecf.provider.jersey.server"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
+         id="org.eclipse.ecf.provider.jersey.client"
+         download-size="8"
+         install-size="13"
+         version="1.1.0.201702022058"
          unpack="false"/>
+
 
 </feature>
