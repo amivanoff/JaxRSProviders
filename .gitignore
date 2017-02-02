@@ -1,1 +1,3 @@
 .polyglot.build.properties
+target
+/features/org.eclipse.ecf.provider.jersey.client.feature/target
