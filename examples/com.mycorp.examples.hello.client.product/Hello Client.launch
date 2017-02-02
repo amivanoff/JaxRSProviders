@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<launchConfiguration type="org.eclipse.pde.ui.RuntimeWorkbench">
+<booleanAttribute key="append.args" value="true"/>
+<stringAttribute key="application" value=""/>
+<booleanAttribute key="askclear" value="false"/>
+<booleanAttribute key="automaticAdd" value="false"/>
+<booleanAttribute key="automaticValidate" value="true"/>
+<stringAttribute key="bootstrap" value=""/>
+<stringAttribute key="checked" value="[NONE]"/>
+<booleanAttribute key="clearConfig" value="true"/>
+<booleanAttribute key="clearws" value="true"/>
+<booleanAttribute key="clearwslog" value="false"/>
+<stringAttribute key="configLocation" value="${workspace_loc}/workingdir2/config"/>
+<booleanAttribute key="default" value="false"/>
+<booleanAttribute key="default_auto_start" value="true"/>
+<booleanAttribute key="includeOptional" value="true"/>
+<stringAttribute key="location" value="${workspace_loc}/workingdir2/config"/>
+<listAttribute key="org.eclipse.debug.ui.favoriteGroups">
+<listEntry value="org.eclipse.debug.ui.launchGroup.debug"/>
+<listEntry value="org.eclipse.debug.ui.launchGroup.run"/>
+</listAttribute>
+<stringAttribute key="org.eclipse.jdt.launching.PROGRAM_ARGUMENTS" value="-os ${target.os} -ws ${target.ws} -arch ${target.arch} -nl ${target.nl} -consoleLog -os ${target.os} -ws ${target.ws} -arch ${target.arch} -nl ${target.nl} -console -debug -clean -configuration ./config -data ./data -user ./user"/>
+<stringAttribute key="org.eclipse.jdt.launching.SOURCE_PATH_PROVIDER" value="org.eclipse.pde.ui.workbenchClasspathProvider"/>
+<stringAttribute key="org.eclipse.jdt.launching.VM_ARGUMENTS" value="-Xms40m -Xmx384m -Declipse.ignoreApp=true -Dosgi.noShutdown=true -Declipse.log.level=ALL -Dlogback.configurationFile=logback.xml -Dorg.eclipse.equinox.http.jetty.autostart=false"/>
+<stringAttribute key="org.eclipse.jdt.launching.WORKING_DIRECTORY" value="${workspace_loc}/workingdir2"/>
+<stringAttribute key="pde.version" value="3.3"/>
+<stringAttribute key="product" value="com.mycorp.examples.hello.client.product"/>
+<stringAttribute key="productFile" value="\com.mycorp.examples.hello.client.product\com.mycorp.examples.hello.client.product.product"/>
+<stringAttribute key="selected_target_plugins" value="org.eclipse.ecf.osgi.services.remoteserviceadmin.proxy@default:default,javassist@default:default,org.eclipse.equinox.util@default:default,org.eclipse.equinox.ds@6:true,org.eclipse.jetty.http*9.3.10.v20160621@default:default,org.eclipse.equinox.simpleconfigurator@1:true,org.glassfish.hk2.api@default:default,org.eclipse.equinox.useradmin@default:default,org.eclipse.equinox.common@1:true,javax.persistence@default:default,org.apache.felix.gogo.runtime@default:default,org.eclipse.ecf.remoteservice.asyncproxy*2.0.100.v20160907-0906@default:default,org.eclipse.equinox.cm@default:default,javax.annotation@default:default,javax.inject@default:default,org.glassfish.jersey.core.jersey-client@default:default,org.glassfish.hk2.osgi-resource-locator@default:default,org.eclipse.jetty.security*9.3.10.v20160621@default:default,com.fasterxml.jackson.core.jackson-annotations@default:default,org.slf4j.log4j@default:default,org.slf4j.ext@default:default,org.eclipse.ecf.remoteservice@default:default,org.json@default:default,org.eclipse.jetty.server*9.3.10.v20160621@default:default,com.fasterxml.jackson.jaxrs.jackson-jaxrs-json-provider@default:default,javax.validation@default:default,org.eclipse.equinox.concurrent@default:default,org.eclipse.equinox.preferences@default:default,com.fasterxml.jackson.module.jackson-module-jaxb-annotations@default:default,org.eclipse.equinox.weaving.hook@default:default,com.ibm.icu@default:default,com.fasterxml.jackson.datatype.jackson-datatype-guava@default:default,org.eclipse.core.jobs@default:default,org.slf4j.jcl@default:default,org.eclipse.ecf.provider.jmdns@default:default,org.aopalliance@default:default,org.glassfish.hk2.locator@default:default,org.glassfish.jersey.containers.jersey-container-servlet@default:default,org.glassfish.jersey.containers.jersey-container-servlet-core@default:default,ch.qos.logback.classic@default:default,org.eclipse.ecf@4:true,org.slf4j.jul@default:default,ch.qos.logback.core@default:default,org.eclipse.equinox.launcher.win32.win32.x86_64@default:default,org.slf4j.api@default:default,org.eclipse.equinox.event@default:default,org.eclipse.equinox.transforms.hook@default:default,org.eclipse.osgi.services@default:default,org.apache.felix.gogo.command@default:default,javax.servlet@default:default,org.eclipse.jetty.io*9.3.10.v20160621@default:default,org.eclipse.osgi.services.remoteserviceadmin@default:default,org.eclipse.ecf.osgi.services.distribution@5:true,org.eclipse.equinox.launcher@default:default,org.eclipse.osgi.util@default:default,org.glassfish.jersey.media.jersey-media-json-jackson@default:default,org.eclipse.equinox.http.servlet@default:default,org.eclipse.equinox.registry@default:default,org.glassfish.jersey.bundles.repackaged.jersey-guava@default:default,com.fasterxml.jackson.core.jackson-core@default:default,org.eclipse.equinox.app@2:true,org.eclipse.equinox.http.jetty@default:default,org.eclipse.equinox.region@default:default,javax.xml@default:default,org.eclipse.osgi@-1:true,org.glassfish.jersey.core.jersey-server@default:default,ch.qos.logback.slf4j@default:default,com.google.guava@default:default,org.eclipse.osgi.compatibility.state@default:default,org.eclipse.ecf.discovery@default:default,org.glassfish.jersey.core.jersey-common@default:default,javax.ws.rs@default:default,org.tukaani.xz@default:default,org.glassfish.hk2.utils@default:default,org.eclipse.ecf.osgi.services.remoteserviceadmin@5:true,org.glassfish.jersey.ext.jersey-entity-filtering@default:default,org.eclipse.equinox.console@default:default,com.fasterxml.jackson.core.jackson-databind@default:default,org.eclipse.ecf.ssl@default:default,org.eclipse.ecf.identity@default:default,org.objectweb.asm@default:default,javax.validation.api@default:default,org.eclipse.jetty.servlet*9.3.10.v20160621@default:default,org.eclipse.core.contenttype@default:default,org.eclipse.jetty.util*9.3.10.v20160621@default:default,org.apache.felix.gogo.shell@default:default,org.eclipse.core.runtime@2:true,com.fasterxml.jackson.jaxrs.jackson-jaxrs-base@default:default,"/>
+<stringAttribute key="selected_workspace_plugins" value="com.mycorp.examples.hello@default:default,org.eclipse.ecf.provider.jaxrs@default:default,com.mycorp.examples.hello.model@default:default,org.eclipse.ecf.provider.jersey.client@default:default,com.mycorp.examples.hello.client@default:default,org.eclipse.ecf.provider.jaxrs.client@default:default,"/>
+<booleanAttribute key="show_selected_only" value="false"/>
+<booleanAttribute key="tracing" value="false"/>
+<booleanAttribute key="useCustomFeatures" value="false"/>
+<booleanAttribute key="useDefaultConfig" value="true"/>
+<booleanAttribute key="useDefaultConfigArea" value="false"/>
+<booleanAttribute key="useProduct" value="true"/>
+<booleanAttribute key="usefeatures" value="false"/>
+</launchConfiguration>

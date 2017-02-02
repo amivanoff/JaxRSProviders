@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<scr:component xmlns:scr="http://www.osgi.org/xmlns/scr/v1.1.0" activate="activate" enabled="true" name="com.mycorp.examples.student.client">
+   <reference bind="bindHello" cardinality="1..1" interface="com.mycorp.examples.hello.IHello" name="Hello" policy="dynamic" unbind="unbindHello"/>
+   <implementation class="com.mycorp.examples.hello.client.HelloServiceClient"/>
+</scr:component>

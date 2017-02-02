@@ -1,0 +1,84 @@
+{
+	"variables": [],
+	"info": {
+		"name": "Hello DS Service",
+		"_postman_id": "e26eb5c8-ecd6-9532-84ba-27ac3bd441a0",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://localhost:8080/students/istudent/students",
+			"request": {
+				"url": "http://localhost:8080/students/istudent/students",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/hello/ihello/hello",
+			"request": {
+				"url": "http://localhost:8080/hello/ihello/hello",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/hello/ihello/hello2",
+			"request": {
+				"url": "http://localhost:8080/hello/ihello/hello2",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/hello/ihello/hello3",
+			"request": {
+				"url": "http://localhost:8080/hello/ihello/hello3",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n \"from\": \"DDD\",\r\n \"message\": \"WWS\",\r\n \"array\": [\r\n      1,\r\n      21\r\n  ]\r\n }"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/hello/ihello/hello4",
+			"request": {
+				"url": "http://localhost:8080/hello/ihello/hello4",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"from\": \"RRR\",\n  \"message\": \"EEE\",\n  \"array\": [\n    1,\n    5,\n    21\n  ]\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
