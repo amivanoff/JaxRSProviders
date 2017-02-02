@@ -82,7 +82,9 @@
     <module>examples</module>
     <module>releng/org.eclipse.ecf.jaxrs.releng.target</module>
     <module>bundles</module>
-    
+    <module>features</module>
+    <!--<module>tests</module>-->
+    <module>sites/org.eclipse.ecf.provider.jaxrs.site</module>
   </modules>
 
   <build>
@@ -93,19 +95,28 @@
         <version>${tycho-version}</version>
         <extensions>true</extensions>
       </plugin>
+	  <plugin>
+				<groupId>org.eclipse.tycho</groupId>
+				<artifactId>tycho-versions-plugin</artifactId>
+			</plugin>
+	  <plugin>
+				<groupId>org.eclipse.tycho</groupId>
+				<artifactId>tycho-compiler-plugin</artifactId>
+			</plugin>
       <plugin>
         <groupId>org.eclipse.tycho</groupId>
         <artifactId>target-platform-configuration</artifactId>
         <version>${tycho-version}</version>
         <configuration>
+		  <targetDefinitionIncludeSource>honor</targetDefinitionIncludeSource>
           <target>
             <artifact>
               <groupId>org.eclipse.ecf</groupId>
               <artifactId>org.eclipse.ecf.jaxrs.releng.target</artifactId>
-              <classifier>ecf-${target-platform}</classifier>
               <version>1.0.0-SNAPSHOT</version>
             </artifact>
           </target>
+		  <resolver>p2</resolver>
           <environments>
             <environment>
               <os>win32</os>
@@ -135,7 +146,31 @@
           </environments>
         </configuration>
       </plugin> 
-      <plugin>
+    </plugins>
+    <pluginManagement>
+      <plugins>
+				<plugin>
+					<groupId>org.eclipse.tycho</groupId>
+					<artifactId>tycho-versions-plugin</artifactId>
+					<version>${tycho-version}</version>
+				</plugin>
+				<plugin>
+					<groupId>org.eclipse.tycho</groupId>
+					<artifactId>tycho-maven-plugin</artifactId>
+					<version>${tycho-version}</version>
+					<extensions>true</extensions>
+				</plugin>
+		<plugin>
+          <groupId>org.eclipse.tycho</groupId>
+          <artifactId>tycho-compiler-plugin</artifactId>
+          <version>${tycho-version}</version>
+          <configuration>
+            <compilerArguments>
+              <properties>${project.basedir}/.settings/org.eclipse.jdt.core.prefs</properties>
+            </compilerArguments>
+          </configuration>
+        </plugin>
+		<plugin>
         <groupId>org.eclipse.tycho</groupId>
         <artifactId>tycho-source-plugin</artifactId>
         <version>${tycho-version}</version>
@@ -152,9 +187,9 @@
         <groupId>org.eclipse.tycho.extras</groupId>
         <artifactId>tycho-source-feature-plugin</artifactId>
         <version>${tycho-version}</version>
-        <configuration>
+        <!--<configuration>
           <includeBinaryFeature>false</includeBinaryFeature>
-        </configuration>
+        </configuration>-->
         <executions>
           <execution>
             <id>source-feature</id>
@@ -165,38 +200,22 @@
           </execution>
         </executions>
       </plugin>
-      <plugin>
-        <groupId>org.eclipse.tycho</groupId>
-        <artifactId>tycho-p2-plugin</artifactId>
-        <version>${tycho-version}</version>
-        <executions>
-          <execution>
-            <id>attach-p2-metadata</id>
-            <phase>package</phase>
-            <goals>
-              <goal>p2-metadata</goal>
-            </goals>
-          </execution>
-        </executions>
-      </plugin>
-    </plugins>
-    <pluginManagement>
-      <plugins>
-        <plugin>
-          <groupId>org.eclipse.tycho</groupId>
-          <artifactId>tycho-compiler-plugin</artifactId>
-          <version>${tycho-version}</version>
-          <configuration>
-            <compilerArguments>
-              <properties>${project.basedir}/.settings/org.eclipse.jdt.core.prefs</properties>
-            </compilerArguments>
-          </configuration>
-        </plugin>
+				<plugin>
+					<groupId>org.eclipse.tycho</groupId>
+					<artifactId>tycho-p2-repository-plugin</artifactId>
+					<version>${tycho-version}</version>
+					<configuration>
+						<includeAllDependencies>false</includeAllDependencies>
+					</configuration>
+				</plugin>
         <plugin>
           <groupId>org.eclipse.tycho</groupId>
           <artifactId>tycho-packaging-plugin</artifactId>
           <version>${tycho-version}</version>
-          <dependencies>
+		  <configuration>
+						<archiveSite>true</archiveSite>
+					</configuration>
+          <!--<dependencies>
             <dependency>
               <groupId>org.eclipse.tycho.extras</groupId>
               <artifactId>tycho-buildtimestamp-jgit</artifactId>
@@ -218,7 +237,7 @@
             </sourceReferences>
             <timestampProvider>jgit</timestampProvider>
             <jgit.dirtyWorkingTree>warning</jgit.dirtyWorkingTree>
-          </configuration>
+          </configuration>-->
         </plugin>
         <plugin>
           <groupId>org.eclipse.tycho</groupId>
@@ -234,6 +253,22 @@
           <artifactId>maven-clean-plugin</artifactId>
 	  <version>3.0.0</version>
         </plugin>
+		
+		<plugin>
+            <groupId>org.eclipse.tycho</groupId>
+            <artifactId>tycho-p2-plugin</artifactId>
+            <version>${tycho-version}</version>
+            <executions>
+					<execution>
+					  <id>attach-p2-metadata</id>
+					  <phase>package</phase>
+					  <goals>
+						<goal>p2-metadata</goal>
+					  </goals>
+					</execution>
+				  </executions>
+          </plugin>
+		  
       </plugins>
     </pluginManagement>
   </build>
@@ -252,7 +287,7 @@
               <includePackedArtifacts>true</includePackedArtifacts>
             </configuration>
           </plugin>
-          <plugin>
+          <!--<plugin>
             <groupId>org.eclipse.tycho.extras</groupId>
             <artifactId>tycho-pack200a-plugin</artifactId>
             <version>${tycho-version}</version>
@@ -293,24 +328,8 @@
                 <phase>verify</phase>
               </execution>
             </executions>
-          </plugin>
-          <plugin>
-            <groupId>org.eclipse.tycho</groupId>
-            <artifactId>tycho-p2-plugin</artifactId>
-            <version>${tycho-version}</version>
-            <executions>
-              <execution>
-                <id>p2-metadata</id>
-                <goals>
-                  <goal>p2-metadata</goal>
-                </goals>
-                <phase>verify</phase>
-              </execution>
-            </executions>
-            <configuration>
-              <defaultP2Metadata>false</defaultP2Metadata>
-            </configuration>
-          </plugin>
+          </plugin>-->
+          
         </plugins>
       </build>
     </profile>
