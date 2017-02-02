@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<units size='1'>
+  <unit id='201702022058.org.eclipse.ecf.provider.jaxrs' version='1.0.0.65-cLSs6h7MAGqAMAMMAew'>
+    <properties size='2'>
+      <property name='org.eclipse.equinox.p2.name' value='ECF Jax-RS Providers'/>
+      <property name='org.eclipse.equinox.p2.type.category' value='true'/>
+    </properties>
+    <provides size='1'>
+      <provided namespace='org.eclipse.equinox.p2.iu' name='201702022058.org.eclipse.ecf.provider.jaxrs' version='1.0.0.65-cLSs6h7MAGqAMAMMAew'/>
+    </provides>
+    <requires size='3'>
+      <required namespace='org.eclipse.equinox.p2.iu' name='org.eclipse.ecf.provider.jersey.server.feature.feature.group' range='[1.1.0.201702022058,1.1.0.201702022058]'/>
+      <required namespace='org.eclipse.equinox.p2.iu' name='org.eclipse.ecf.provider.jersey.client.feature.feature.group' range='[1.1.0.201702022058,1.1.0.201702022058]'/>
+      <required namespace='org.eclipse.equinox.p2.iu' name='org.eclipse.ecf.provider.jersey.client.feature.source.feature.group' range='[1.1.0.201702022058,1.1.0.201702022058]'/>
+    </requires>
+    <touchpoint id='null' version='0.0.0'/>
+  </unit>
+</units>

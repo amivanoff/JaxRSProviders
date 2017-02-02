@@ -1,0 +1,2406 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?metadataRepository version='1.1.0'?>
+<repository name='TychoTargetPlatform' type='org.eclipse.equinox.internal.p2.metadata.repository.LocalMetadataRepository' version='0.0.1'>
+  <units size='52'>
+    <unit id='javax.ws.rs' version='2.0.1.v201504171603' singleton='false'>
+      <update id='javax.ws.rs' range='[0.0.0,2.0.1.v201504171603)' severity='0'/>
+      <properties size='7'>
+        <property name='df_LT.pluginName' value='JAX-RS API'/>
+        <property name='df_LT.providerName' value='Eclipse Orbit'/>
+        <property name='org.eclipse.equinox.p2.name' value='%pluginName'/>
+        <property name='org.eclipse.equinox.p2.description' value='Java API for RESTful Web Services (JAX-RS)'/>
+        <property name='org.eclipse.equinox.p2.provider' value='%providerName'/>
+        <property name='org.eclipse.equinox.p2.doc.url' value='http://www.oracle.com/'/>
+        <property name='org.eclipse.equinox.p2.bundle.localization' value='plugin'/>
+      </properties>
+      <provides size='9'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='javax.ws.rs' version='2.0.1.v201504171603'/>
+        <provided namespace='osgi.bundle' name='javax.ws.rs' version='2.0.1.v201504171603'/>
+        <provided namespace='java.package' name='javax.ws.rs' version='2.0.1'/>
+        <provided namespace='java.package' name='javax.ws.rs.client' version='2.0.1'/>
+        <provided namespace='java.package' name='javax.ws.rs.container' version='2.0.1'/>
+        <provided namespace='java.package' name='javax.ws.rs.core' version='2.0.1'/>
+        <provided namespace='java.package' name='javax.ws.rs.ext' version='2.0.1'/>
+        <provided namespace='org.eclipse.equinox.p2.eclipse.type' name='bundle' version='1.0.0'/>
+        <provided namespace='org.eclipse.equinox.p2.localization' name='df_LT' version='1.0.0'/>
+      </provides>
+      <requires size='4'>
+        <required namespace='java.package' name='javax.net.ssl' range='0.0.0'/>
+        <required namespace='java.package' name='javax.xml.bind.annotation' range='0.0.0'/>
+        <required namespace='java.package' name='javax.xml.bind.annotation.adapters' range='0.0.0'/>
+        <required namespace='java.package' name='javax.xml.namespace' range='0.0.0'/>
+      </requires>
+      <artifacts size='1'>
+        <artifact classifier='osgi.bundle' id='javax.ws.rs' version='2.0.1.v201504171603'/>
+      </artifacts>
+      <touchpoint id='org.eclipse.equinox.p2.osgi' version='1.0.0'/>
+      <touchpointData size='1'>
+        <instructions size='1'>
+          <instruction key='manifest'>
+            Bundle-SymbolicName: javax.ws.rs&#xA;Bundle-Version: 2.0.1.v201504171603
+          </instruction>
+        </instructions>
+      </touchpointData>
+    </unit>
+    <unit id='org.glassfish.jersey.core.jersey-common' version='2.23.2' singleton='false'>
+      <update id='org.glassfish.jersey.core.jersey-common' range='[0.0.0,2.23.2)' severity='0'/>
+      <properties size='2'>
+        <property name='org.eclipse.equinox.p2.name' value='jersey-core-common'/>
+        <property name='org.eclipse.equinox.p2.provider' value='Oracle Corporation'/>
+      </properties>
+      <provides size='22'>
+        <provided namespace='osgi.bundle' name='org.glassfish.jersey.core.jersey-common' version='2.23.2'/>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='org.glassfish.jersey.core.jersey-common' version='2.23.2'/>
+        <provided namespace='org.eclipse.equinox.p2.eclipse.type' name='bundle' version='1.0.0'/>
+        <provided namespace='java.package' name='org.glassfish.jersey.internal.spi' version='2.23.2'/>
+        <provided namespace='java.package' name='org.glassfish.jersey.internal.util.collection' version='2.23.2'/>
+        <provided namespace='java.package' name='org.glassfish.jersey.logging' version='2.23.2'/>
+        <provided namespace='java.package' name='org.glassfish.jersey' version='2.23.2'/>
+        <provided namespace='java.package' name='org.glassfish.jersey.message' version='2.23.2'/>
+        <provided namespace='java.package' name='org.glassfish.jersey.internal.sonar' version='2.23.2'/>
+        <provided namespace='java.package' name='org.glassfish.jersey.model.internal' version='2.23.2'/>
+        <provided namespace='java.package' name='org.glassfish.jersey.process.internal' version='2.23.2'/>
+        <provided namespace='java.package' name='org.glassfish.jersey.spi' version='2.23.2'/>
+        <provided namespace='java.package' name='org.glassfish.jersey.uri' version='2.23.2'/>
+        <provided namespace='java.package' name='org.glassfish.jersey.process' version='2.23.2'/>
+        <provided namespace='java.package' name='org.glassfish.jersey.filter' version='2.23.2'/>
+        <provided namespace='java.package' name='org.glassfish.jersey.internal.inject' version='2.23.2'/>
+        <provided namespace='java.package' name='org.glassfish.jersey.message.internal' version='2.23.2'/>
+        <provided namespace='java.package' name='org.glassfish.jersey.internal.l10n' version='2.23.2'/>
+        <provided namespace='java.package' name='org.glassfish.jersey.uri.internal' version='2.23.2'/>
+        <provided namespace='java.package' name='org.glassfish.jersey.internal' version='2.23.2'/>
+        <provided namespace='java.package' name='org.glassfish.jersey.internal.util' version='2.23.2'/>
+        <provided namespace='java.package' name='org.glassfish.jersey.model' version='2.23.2'/>
+      </provides>
+      <requires size='35'>
+        <required namespace='java.package' name='javax.activation' range='0.0.0'/>
+        <required namespace='java.package' name='javax.annotation' range='[1.2.0,2.0.0)'/>
+        <required namespace='java.package' name='javax.imageio' range='0.0.0'/>
+        <required namespace='java.package' name='javax.imageio.spi' range='0.0.0'/>
+        <required namespace='java.package' name='javax.imageio.stream' range='0.0.0'/>
+        <required namespace='java.package' name='javax.inject' range='[1.0.0,2.0.0)'/>
+        <required namespace='java.package' name='javax.net.ssl' range='0.0.0'/>
+        <required namespace='java.package' name='javax.ws.rs' range='[2.0.0,3.0.0)'/>
+        <required namespace='java.package' name='javax.ws.rs.client' range='[2.0.0,3.0.0)'/>
+        <required namespace='java.package' name='javax.ws.rs.container' range='[2.0.0,3.0.0)'/>
+        <required namespace='java.package' name='javax.ws.rs.core' range='[2.0.0,3.0.0)'/>
+        <required namespace='java.package' name='javax.ws.rs.ext' range='[2.0.0,3.0.0)'/>
+        <required namespace='java.package' name='javax.xml' range='0.0.0'/>
+        <required namespace='java.package' name='javax.xml.namespace' range='0.0.0'/>
+        <required namespace='java.package' name='javax.xml.parsers' range='0.0.0'/>
+        <required namespace='java.package' name='javax.xml.transform' range='0.0.0'/>
+        <required namespace='java.package' name='javax.xml.transform.dom' range='0.0.0'/>
+        <required namespace='java.package' name='javax.xml.transform.sax' range='0.0.0'/>
+        <required namespace='java.package' name='javax.xml.transform.stream' range='0.0.0'/>
+        <required namespace='java.package' name='jersey.repackaged.com.google.common.base' range='[2.23.0,3.0.0)'/>
+        <required namespace='java.package' name='jersey.repackaged.com.google.common.collect' range='[2.23.0,3.0.0)'/>
+        <required namespace='java.package' name='jersey.repackaged.com.google.common.net' range='[2.23.0,3.0.0)'/>
+        <required namespace='java.package' name='jersey.repackaged.com.google.common.primitives' range='[2.23.0,3.0.0)'/>
+        <required namespace='java.package' name='jersey.repackaged.com.google.common.util.concurrent' range='[2.23.0,3.0.0)'/>
+        <required namespace='java.package' name='org.glassfish.hk2.api' range='[2.5.0,3.0.0)'/>
+        <required namespace='java.package' name='org.glassfish.hk2.extension' range='[2.5.0,3.0.0)'/>
+        <required namespace='java.package' name='org.glassfish.hk2.osgiresourcelocator' range='[1.0.0,2.0.0)'/>
+        <required namespace='java.package' name='org.glassfish.hk2.utilities' range='[2.5.0,3.0.0)'/>
+        <required namespace='java.package' name='org.glassfish.hk2.utilities.binding' range='[2.5.0,3.0.0)'/>
+        <required namespace='java.package' name='org.glassfish.hk2.utilities.cache' range='[2.5.0,3.0.0)'/>
+        <required namespace='java.package' name='org.jvnet.hk2.annotations' range='[2.5.0,3.0.0)'/>
+        <required namespace='java.package' name='org.osgi.framework' range='[1.5.0,2.0.0)'/>
+        <required namespace='java.package' name='org.w3c.dom' range='0.0.0'/>
+        <required namespace='java.package' name='org.xml.sax' range='0.0.0'/>
+        <required namespace='java.package' name='sun.misc' range='0.0.0' optional='true' greedy='false'/>
+      </requires>
+      <artifacts size='1'>
+        <artifact classifier='osgi.bundle' id='org.glassfish.jersey.core.jersey-common' version='2.23.2'/>
+      </artifacts>
+      <touchpoint id='org.eclipse.equinox.p2.osgi' version='1.0.0'/>
+      <touchpointData size='1'>
+        <instructions size='1'>
+          <instruction key='manifest'>
+            Manifest-Version: 1.0&#xA;Bundle-SymbolicName: org.glassfish.jersey.core.jersey-common&#xA;Bundle-Version: 2.23.2
+          </instruction>
+        </instructions>
+      </touchpointData>
+    </unit>
+    <unit id='org.glassfish.hk2.locator' version='2.5.0.b05' singleton='false'>
+      <update id='org.glassfish.hk2.locator' range='[0.0.0,2.5.0.b05)' severity='0'/>
+      <properties size='2'>
+        <property name='org.eclipse.equinox.p2.name' value='ServiceLocator Default Implementation'/>
+        <property name='org.eclipse.equinox.p2.provider' value='Oracle Corporation'/>
+      </properties>
+      <provides size='5'>
+        <provided namespace='osgi.bundle' name='org.glassfish.hk2.locator' version='2.5.0.b05'/>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='org.glassfish.hk2.locator' version='2.5.0.b05'/>
+        <provided namespace='org.eclipse.equinox.p2.eclipse.type' name='bundle' version='1.0.0'/>
+        <provided namespace='java.package' name='org.jvnet.hk2.external.generator' version='2.5.0'/>
+        <provided namespace='java.package' name='org.jvnet.hk2.external.runtime' version='2.5.0'/>
+      </provides>
+      <requires size='12'>
+        <required namespace='java.package' name='javassist.util.proxy' range='[3.20.0,4.0.0)'/>
+        <required namespace='java.package' name='javax.inject' range='[1.0.0,2.0.0)'/>
+        <required namespace='java.package' name='org.aopalliance.intercept' range='[1.0.0,2.0.0)'/>
+        <required namespace='java.package' name='org.glassfish.hk2.api' range='[2.5.0,3.0.0)'/>
+        <required namespace='java.package' name='org.glassfish.hk2.api.messaging' range='[2.5.0,3.0.0)'/>
+        <required namespace='java.package' name='org.glassfish.hk2.extension' range='[2.5.0,3.0.0)'/>
+        <required namespace='java.package' name='org.glassfish.hk2.utilities' range='[2.5.0,3.0.0)'/>
+        <required namespace='java.package' name='org.glassfish.hk2.utilities.cache' range='[2.5.0,3.0.0)'/>
+        <required namespace='java.package' name='org.glassfish.hk2.utilities.general' range='[2.5.0,3.0.0)'/>
+        <required namespace='java.package' name='org.glassfish.hk2.utilities.reflection' range='[2.5.0,3.0.0)'/>
+        <required namespace='java.package' name='org.glassfish.hk2.utilities.reflection.internal' range='[2.5.0,3.0.0)'/>
+        <required namespace='java.package' name='org.jvnet.hk2.annotations' range='[2.5.0,3.0.0)'/>
+      </requires>
+      <artifacts size='1'>
+        <artifact classifier='osgi.bundle' id='org.glassfish.hk2.locator' version='2.5.0.b05'/>
+      </artifacts>
+      <touchpoint id='org.eclipse.equinox.p2.osgi' version='1.0.0'/>
+      <touchpointData size='1'>
+        <instructions size='1'>
+          <instruction key='manifest'>
+            Manifest-Version: 1.0&#xA;Bundle-SymbolicName: org.glassfish.hk2.locator&#xA;Bundle-Version: 2.5.0.b05
+          </instruction>
+        </instructions>
+      </touchpointData>
+    </unit>
+    <unit id='org.eclipse.ecf.provider.jaxrs.source' version='1.1.0.201702022058' singleton='false'>
+      <update id='org.eclipse.ecf.provider.jaxrs.source' range='[0.0.0,1.1.0.201702022058)' severity='0'/>
+      <properties size='9'>
+        <property name='df_LT.bundleVendor' value='Eclipse.org - ECF'/>
+        <property name='df_LT.bundleName' value='ECF Dist Provider - Jax RS Support Source'/>
+        <property name='org.eclipse.equinox.p2.name' value='%bundleName'/>
+        <property name='org.eclipse.equinox.p2.provider' value='%bundleVendor'/>
+        <property name='org.eclipse.equinox.p2.bundle.localization' value='OSGI-INF/l10n/bundle-src'/>
+        <property name='maven-groupId' value='org.eclipse.ecf'/>
+        <property name='maven-artifactId' value='org.eclipse.ecf.provider.jaxrs'/>
+        <property name='maven-version' value='1.1.0-SNAPSHOT'/>
+        <property name='maven-classifier' value='sources'/>
+      </properties>
+      <provides size='4'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='org.eclipse.ecf.provider.jaxrs.source' version='1.1.0.201702022058'/>
+        <provided namespace='osgi.bundle' name='org.eclipse.ecf.provider.jaxrs.source' version='1.1.0.201702022058'/>
+        <provided namespace='org.eclipse.equinox.p2.eclipse.type' name='source' version='1.0.0'/>
+        <provided namespace='org.eclipse.equinox.p2.localization' name='df_LT' version='1.0.0'/>
+      </provides>
+      <artifacts size='1'>
+        <artifact classifier='osgi.bundle' id='org.eclipse.ecf.provider.jaxrs.source' version='1.1.0.201702022058'/>
+      </artifacts>
+      <touchpoint id='org.eclipse.equinox.p2.osgi' version='1.0.0'/>
+      <touchpointData size='1'>
+        <instructions size='1'>
+          <instruction key='manifest'>
+            Bundle-SymbolicName: org.eclipse.ecf.provider.jaxrs.source&#xA;Bundle-Version: 1.1.0.201702022058
+          </instruction>
+        </instructions>
+      </touchpointData>
+    </unit>
+    <unit id='config.a.jre.javase' version='1.7.0' singleton='false'>
+      <hostRequirements size='1'>
+        <required namespace='org.eclipse.equinox.p2.iu' name='a.jre.javase' range='1.7.0'/>
+      </hostRequirements>
+      <properties size='1'>
+        <property name='org.eclipse.equinox.p2.type.fragment' value='true'/>
+      </properties>
+      <provides size='1'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='config.a.jre.javase' version='1.7.0'/>
+      </provides>
+      <requires size='1'>
+        <required namespace='org.eclipse.equinox.p2.iu' name='a.jre.javase' range='1.7.0'/>
+      </requires>
+      <touchpoint id='org.eclipse.equinox.p2.native' version='1.0.0'/>
+      <touchpointData size='1'>
+        <instructions size='1'>
+          <instruction key='install'>
+
+          </instruction>
+        </instructions>
+      </touchpointData>
+    </unit>
+    <unit id='org.eclipse.ecf.provider.jaxrs.client' version='1.1.0.201702022058' singleton='false'>
+      <update id='org.eclipse.ecf.provider.jaxrs.client' range='[0.0.0,1.1.0.201702022058)' severity='0'/>
+      <properties size='5'>
+        <property name='org.eclipse.equinox.p2.name' value='ECF Dist Provider - Jax-RS Client Support'/>
+        <property name='org.eclipse.equinox.p2.provider' value='Eclipse.org - ECF'/>
+        <property name='maven-groupId' value='org.eclipse.ecf'/>
+        <property name='maven-artifactId' value='org.eclipse.ecf.provider.jaxrs.client'/>
+        <property name='maven-version' value='1.1.0-SNAPSHOT'/>
+      </properties>
+      <provides size='4'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='org.eclipse.ecf.provider.jaxrs.client' version='1.1.0.201702022058'/>
+        <provided namespace='osgi.bundle' name='org.eclipse.ecf.provider.jaxrs.client' version='1.1.0.201702022058'/>
+        <provided namespace='java.package' name='org.eclipse.ecf.provider.jaxrs.client' version='1.1.0'/>
+        <provided namespace='org.eclipse.equinox.p2.eclipse.type' name='bundle' version='1.0.0'/>
+      </provides>
+      <requires size='12'>
+        <required namespace='osgi.bundle' name='org.eclipse.equinox.common' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.ecf' range='0.0.0'/>
+        <required namespace='java.package' name='javax.ws.rs' range='2.0.1'/>
+        <required namespace='java.package' name='javax.ws.rs.client' range='2.0.1'/>
+        <required namespace='java.package' name='javax.ws.rs.core' range='2.0.1'/>
+        <required namespace='java.package' name='org.eclipse.ecf.provider.jaxrs' range='1.1.0'/>
+        <required namespace='java.package' name='org.eclipse.ecf.remoteservice' range='7.2.0'/>
+        <required namespace='java.package' name='org.eclipse.ecf.remoteservice.asyncproxy' range='0.0.0'/>
+        <required namespace='java.package' name='org.eclipse.ecf.remoteservice.client' range='8.0.0'/>
+        <required namespace='java.package' name='org.eclipse.ecf.remoteservice.provider' range='1.0.0'/>
+        <required namespace='java.package' name='org.eclipse.equinox.concurrent.future' range='1.1.0'/>
+        <required namespace='java.package' name='org.osgi.framework' range='0.0.0'/>
+      </requires>
+      <artifacts size='1'>
+        <artifact classifier='osgi.bundle' id='org.eclipse.ecf.provider.jaxrs.client' version='1.1.0.201702022058'/>
+      </artifacts>
+      <touchpoint id='org.eclipse.equinox.p2.osgi' version='1.0.0'/>
+      <touchpointData size='1'>
+        <instructions size='1'>
+          <instruction key='manifest'>
+            Bundle-SymbolicName: org.eclipse.ecf.provider.jaxrs.client&#xA;Bundle-Version: 1.1.0.201702022058
+          </instruction>
+        </instructions>
+      </touchpointData>
+    </unit>
+    <unit id='org.glassfish.jersey.media.jersey-media-json-jackson' version='2.23.2' singleton='false'>
+      <update id='org.glassfish.jersey.media.jersey-media-json-jackson' range='[0.0.0,2.23.2)' severity='0'/>
+      <properties size='2'>
+        <property name='org.eclipse.equinox.p2.name' value='jersey-media-json-jackson'/>
+        <property name='org.eclipse.equinox.p2.provider' value='Oracle Corporation'/>
+      </properties>
+      <provides size='5'>
+        <provided namespace='osgi.bundle' name='org.glassfish.jersey.media.jersey-media-json-jackson' version='2.23.2'/>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='org.glassfish.jersey.media.jersey-media-json-jackson' version='2.23.2'/>
+        <provided namespace='org.eclipse.equinox.p2.eclipse.type' name='bundle' version='1.0.0'/>
+        <provided namespace='java.package' name='org.glassfish.jersey.jackson.internal' version='2.23.2'/>
+        <provided namespace='java.package' name='org.glassfish.jersey.jackson' version='2.23.2'/>
+      </provides>
+      <requires size='23'>
+        <required namespace='java.package' name='com.fasterxml.jackson.core' range='[2.5.0,3.0.0)'/>
+        <required namespace='java.package' name='com.fasterxml.jackson.databind' range='[2.5.0,3.0.0)'/>
+        <required namespace='java.package' name='com.fasterxml.jackson.databind.introspect' range='[2.5.0,3.0.0)'/>
+        <required namespace='java.package' name='com.fasterxml.jackson.databind.jsonFormatVisitors' range='[2.5.0,3.0.0)'/>
+        <required namespace='java.package' name='com.fasterxml.jackson.databind.node' range='[2.5.0,3.0.0)'/>
+        <required namespace='java.package' name='com.fasterxml.jackson.databind.ser' range='[2.5.0,3.0.0)'/>
+        <required namespace='java.package' name='com.fasterxml.jackson.databind.ser.impl' range='[2.5.0,3.0.0)'/>
+        <required namespace='java.package' name='com.fasterxml.jackson.jaxrs.base' range='[2.5.0,3.0.0)'/>
+        <required namespace='java.package' name='com.fasterxml.jackson.jaxrs.cfg' range='[2.5.0,3.0.0)'/>
+        <required namespace='java.package' name='com.fasterxml.jackson.jaxrs.json' range='[2.5.0,3.0.0)'/>
+        <required namespace='java.package' name='javax.annotation' range='[1.2.0,2.0.0)'/>
+        <required namespace='java.package' name='javax.inject' range='[1.0.0,2.0.0)'/>
+        <required namespace='java.package' name='javax.ws.rs' range='[2.0.0,3.0.0)'/>
+        <required namespace='java.package' name='javax.ws.rs.core' range='[2.0.0,3.0.0)'/>
+        <required namespace='java.package' name='javax.ws.rs.ext' range='[2.0.0,3.0.0)'/>
+        <required namespace='java.package' name='org.glassfish.hk2.api' range='[2.5.0,3.0.0)'/>
+        <required namespace='java.package' name='org.glassfish.hk2.utilities.binding' range='[2.5.0,3.0.0)'/>
+        <required namespace='java.package' name='org.glassfish.jersey' range='[2.23.0,3.0.0)'/>
+        <required namespace='java.package' name='org.glassfish.jersey.internal' range='[2.23.0,3.0.0)'/>
+        <required namespace='java.package' name='org.glassfish.jersey.internal.spi' range='[2.23.0,3.0.0)'/>
+        <required namespace='java.package' name='org.glassfish.jersey.internal.util' range='[2.23.0,3.0.0)'/>
+        <required namespace='java.package' name='org.glassfish.jersey.message.filtering' range='[2.23.0,3.0.0)'/>
+        <required namespace='java.package' name='org.glassfish.jersey.message.filtering.spi' range='[2.23.0,3.0.0)'/>
+      </requires>
+      <artifacts size='1'>
+        <artifact classifier='osgi.bundle' id='org.glassfish.jersey.media.jersey-media-json-jackson' version='2.23.2'/>
+      </artifacts>
+      <touchpoint id='org.eclipse.equinox.p2.osgi' version='1.0.0'/>
+      <touchpointData size='1'>
+        <instructions size='1'>
+          <instruction key='manifest'>
+            Manifest-Version: 1.0&#xA;Bundle-SymbolicName: org.glassfish.jersey.media.jersey-media-json-jack&#xA; son&#xA;Bundle-Version: 2.23.2
+          </instruction>
+        </instructions>
+      </touchpointData>
+    </unit>
+    <unit id='org.eclipse.ecf' version='3.8.0.v20170104-0657'>
+      <update id='org.eclipse.ecf' range='[0.0.0,3.8.0.v20170104-0657)' severity='0'/>
+      <properties size='8'>
+        <property name='df_LT.plugin.provider' value='Eclipse.org - ECF'/>
+        <property name='df_LT.plugin.name' value='ECF Core API'/>
+        <property name='org.eclipse.equinox.p2.name' value='%plugin.name'/>
+        <property name='org.eclipse.equinox.p2.provider' value='%plugin.provider'/>
+        <property name='org.eclipse.equinox.p2.bundle.localization' value='plugin'/>
+        <property name='maven-groupId' value='org.eclipse.ecf'/>
+        <property name='maven-artifactId' value='org.eclipse.ecf'/>
+        <property name='maven-version' value='3.8.0-SNAPSHOT'/>
+      </properties>
+      <provides size='15'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='org.eclipse.ecf' version='3.8.0.v20170104-0657'/>
+        <provided namespace='osgi.bundle' name='org.eclipse.ecf' version='3.8.0.v20170104-0657'/>
+        <provided namespace='java.package' name='org.eclipse.ecf.core' version='3.0.0'/>
+        <provided namespace='java.package' name='org.eclipse.ecf.core.events' version='3.1.0'/>
+        <provided namespace='java.package' name='org.eclipse.ecf.core.jobs' version='1.1.0'/>
+        <provided namespace='java.package' name='org.eclipse.ecf.core.provider' version='3.1.0'/>
+        <provided namespace='java.package' name='org.eclipse.ecf.core.security' version='3.1.0'/>
+        <provided namespace='java.package' name='org.eclipse.ecf.core.start' version='3.1.0'/>
+        <provided namespace='java.package' name='org.eclipse.ecf.core.status' version='1.1.0'/>
+        <provided namespace='java.package' name='org.eclipse.ecf.core.user' version='3.1.0'/>
+        <provided namespace='java.package' name='org.eclipse.ecf.core.util' version='3.5.0'/>
+        <provided namespace='java.package' name='org.eclipse.ecf.core.util.reflection' version='2.3.0'/>
+        <provided namespace='java.package' name='org.eclipse.ecf.internal.core' version='0.0.0'/>
+        <provided namespace='org.eclipse.equinox.p2.eclipse.type' name='bundle' version='1.0.0'/>
+        <provided namespace='org.eclipse.equinox.p2.localization' name='df_LT' version='1.0.0'/>
+      </provides>
+      <requires size='8'>
+        <required namespace='osgi.bundle' name='org.eclipse.equinox.common' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.equinox.registry' range='0.0.0' optional='true' greedy='false'/>
+        <required namespace='osgi.bundle' name='org.eclipse.ecf.identity' range='0.0.0'/>
+        <required namespace='java.package' name='org.eclipse.core.runtime.jobs' range='0.0.0'/>
+        <required namespace='java.package' name='org.eclipse.equinox.concurrent.future' range='1.0.0' optional='true'/>
+        <required namespace='java.package' name='org.osgi.framework' range='1.3.0'/>
+        <required namespace='java.package' name='org.osgi.service.log' range='1.3.0'/>
+        <required namespace='java.package' name='org.osgi.util.tracker' range='1.3.2'/>
+      </requires>
+      <artifacts size='1'>
+        <artifact classifier='osgi.bundle' id='org.eclipse.ecf' version='3.8.0.v20170104-0657'/>
+      </artifacts>
+      <touchpoint id='org.eclipse.equinox.p2.osgi' version='1.0.0'/>
+      <touchpointData size='1'>
+        <instructions size='1'>
+          <instruction key='manifest'>
+            Bundle-SymbolicName: org.eclipse.ecf;singleton:=true&#xA;Bundle-Version: 3.8.0.v20170104-0657
+          </instruction>
+        </instructions>
+      </touchpointData>
+    </unit>
+    <unit id='org.eclipse.ecf.provider.jersey.client.feature.feature.jar' version='1.1.0.201702022058'>
+      <properties size='7'>
+        <property name='org.eclipse.equinox.p2.name' value='Jersey Remote Service Client Provider Feature'/>
+        <property name='org.eclipse.equinox.p2.description' value='This feature provides the a Remote Service distribution provider based upon the Jersey implementation&#xA;      of the Jax-RS specification.&#xA;      For tutorials, documentation, and examples with ECF&apos;s Implementation of OSGi RS/RSA see&#xA;&#xA;https://wiki.eclipse.org/ECF#OSGi_Remote_Services'/>
+        <property name='org.eclipse.equinox.p2.description.url' value='http://www.eclipse.org/ecf'/>
+        <property name='org.eclipse.equinox.p2.provider' value='%providerName'/>
+        <property name='maven-groupId' value='org.eclipse.ecf'/>
+        <property name='maven-artifactId' value='org.eclipse.ecf.provider.jersey.client.feature'/>
+        <property name='maven-version' value='1.1.0-SNAPSHOT'/>
+      </properties>
+      <provides size='3'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='org.eclipse.ecf.provider.jersey.client.feature.feature.jar' version='1.1.0.201702022058'/>
+        <provided namespace='org.eclipse.equinox.p2.eclipse.type' name='feature' version='1.0.0'/>
+        <provided namespace='org.eclipse.update.feature' name='org.eclipse.ecf.provider.jersey.client.feature' version='1.1.0.201702022058'/>
+      </provides>
+      <filter>
+        (org.eclipse.update.install.features=true)
+      </filter>
+      <artifacts size='1'>
+        <artifact classifier='org.eclipse.update.feature' id='org.eclipse.ecf.provider.jersey.client.feature' version='1.1.0.201702022058'/>
+      </artifacts>
+      <touchpoint id='org.eclipse.equinox.p2.osgi' version='1.0.0'/>
+      <touchpointData size='1'>
+        <instructions size='1'>
+          <instruction key='zipped'>
+            true
+          </instruction>
+        </instructions>
+      </touchpointData>
+      <licenses size='1'>
+        <license uri='%25licenseURL' url='%25licenseURL'>
+          %license
+        </license>
+      </licenses>
+      <copyright>
+        #################################################&#xA;# Copyright (c) 2016 Composent, Inc. and others. All rights reserved.&#xA;# This program and the accompanying materials are made available under the &#xA;# terms of the Eclipse Public License v1.0 which accompanies this &#xA;# distribution, and is available at &#xA;# http://www.eclipse.org/legal/epl-v10.html&#xA;#&#xA;# Contributors: Composent, Inc. - initial API and implementation&#xA;#################################################
+      </copyright>
+    </unit>
+    <unit id='a.jre.javase' version='1.7.0' singleton='false'>
+      <provides size='174'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='a.jre.javase' version='1.7.0'/>
+        <provided namespace='java.package' name='javax.accessibility' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.activation' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.activity' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.annotation' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.annotation.processing' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.crypto' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.crypto.interfaces' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.crypto.spec' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.imageio' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.imageio.event' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.imageio.metadata' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.imageio.plugins.bmp' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.imageio.plugins.jpeg' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.imageio.spi' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.imageio.stream' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.jws' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.jws.soap' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.lang.model' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.lang.model.element' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.lang.model.type' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.lang.model.util' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.management' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.management.loading' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.management.modelmbean' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.management.monitor' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.management.openmbean' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.management.relation' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.management.remote' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.management.remote.rmi' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.management.timer' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.naming' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.naming.directory' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.naming.event' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.naming.ldap' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.naming.spi' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.net' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.net.ssl' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.print' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.print.attribute' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.print.attribute.standard' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.print.event' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.rmi' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.rmi.CORBA' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.rmi.ssl' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.script' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.security.auth' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.security.auth.callback' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.security.auth.kerberos' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.security.auth.login' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.security.auth.spi' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.security.auth.x500' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.security.cert' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.security.sasl' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.sound.midi' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.sound.midi.spi' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.sound.sampled' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.sound.sampled.spi' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.sql' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.sql.rowset' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.sql.rowset.serial' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.sql.rowset.spi' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.swing' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.swing.border' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.swing.colorchooser' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.swing.event' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.swing.filechooser' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.swing.plaf' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.swing.plaf.basic' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.swing.plaf.metal' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.swing.plaf.multi' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.swing.plaf.nimbus' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.swing.plaf.synth' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.swing.table' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.swing.text' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.swing.text.html' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.swing.text.html.parser' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.swing.text.rtf' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.swing.tree' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.swing.undo' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.tools' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.transaction' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.transaction.xa' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.xml' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.xml.bind' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.xml.bind.annotation' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.xml.bind.annotation.adapters' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.xml.bind.attachment' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.xml.bind.helpers' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.xml.bind.util' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.xml.crypto' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.xml.crypto.dom' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.xml.crypto.dsig' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.xml.crypto.dsig.dom' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.xml.crypto.dsig.keyinfo' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.xml.crypto.dsig.spec' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.xml.datatype' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.xml.namespace' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.xml.parsers' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.xml.soap' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.xml.stream' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.xml.stream.events' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.xml.stream.util' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.xml.transform' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.xml.transform.dom' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.xml.transform.sax' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.xml.transform.stax' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.xml.transform.stream' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.xml.validation' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.xml.ws' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.xml.ws.handler' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.xml.ws.handler.soap' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.xml.ws.http' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.xml.ws.soap' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.xml.ws.spi' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.xml.ws.spi.http' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.xml.ws.wsaddressing' version='0.0.0'/>
+        <provided namespace='java.package' name='javax.xml.xpath' version='0.0.0'/>
+        <provided namespace='java.package' name='org.ietf.jgss' version='0.0.0'/>
+        <provided namespace='java.package' name='org.omg.CORBA' version='0.0.0'/>
+        <provided namespace='java.package' name='org.omg.CORBA_2_3' version='0.0.0'/>
+        <provided namespace='java.package' name='org.omg.CORBA_2_3.portable' version='0.0.0'/>
+        <provided namespace='java.package' name='org.omg.CORBA.DynAnyPackage' version='0.0.0'/>
+        <provided namespace='java.package' name='org.omg.CORBA.ORBPackage' version='0.0.0'/>
+        <provided namespace='java.package' name='org.omg.CORBA.portable' version='0.0.0'/>
+        <provided namespace='java.package' name='org.omg.CORBA.TypeCodePackage' version='0.0.0'/>
+        <provided namespace='java.package' name='org.omg.CosNaming' version='0.0.0'/>
+        <provided namespace='java.package' name='org.omg.CosNaming.NamingContextExtPackage' version='0.0.0'/>
+        <provided namespace='java.package' name='org.omg.CosNaming.NamingContextPackage' version='0.0.0'/>
+        <provided namespace='java.package' name='org.omg.Dynamic' version='0.0.0'/>
+        <provided namespace='java.package' name='org.omg.DynamicAny' version='0.0.0'/>
+        <provided namespace='java.package' name='org.omg.DynamicAny.DynAnyFactoryPackage' version='0.0.0'/>
+        <provided namespace='java.package' name='org.omg.DynamicAny.DynAnyPackage' version='0.0.0'/>
+        <provided namespace='java.package' name='org.omg.IOP' version='0.0.0'/>
+        <provided namespace='java.package' name='org.omg.IOP.CodecFactoryPackage' version='0.0.0'/>
+        <provided namespace='java.package' name='org.omg.IOP.CodecPackage' version='0.0.0'/>
+        <provided namespace='java.package' name='org.omg.Messaging' version='0.0.0'/>
+        <provided namespace='java.package' name='org.omg.PortableInterceptor' version='0.0.0'/>
+        <provided namespace='java.package' name='org.omg.PortableInterceptor.ORBInitInfoPackage' version='0.0.0'/>
+        <provided namespace='java.package' name='org.omg.PortableServer' version='0.0.0'/>
+        <provided namespace='java.package' name='org.omg.PortableServer.CurrentPackage' version='0.0.0'/>
+        <provided namespace='java.package' name='org.omg.PortableServer.POAManagerPackage' version='0.0.0'/>
+        <provided namespace='java.package' name='org.omg.PortableServer.POAPackage' version='0.0.0'/>
+        <provided namespace='java.package' name='org.omg.PortableServer.portable' version='0.0.0'/>
+        <provided namespace='java.package' name='org.omg.PortableServer.ServantLocatorPackage' version='0.0.0'/>
+        <provided namespace='java.package' name='org.omg.SendingContext' version='0.0.0'/>
+        <provided namespace='java.package' name='org.omg.stub.java.rmi' version='0.0.0'/>
+        <provided namespace='java.package' name='org.w3c.dom' version='0.0.0'/>
+        <provided namespace='java.package' name='org.w3c.dom.bootstrap' version='0.0.0'/>
+        <provided namespace='java.package' name='org.w3c.dom.css' version='0.0.0'/>
+        <provided namespace='java.package' name='org.w3c.dom.events' version='0.0.0'/>
+        <provided namespace='java.package' name='org.w3c.dom.html' version='0.0.0'/>
+        <provided namespace='java.package' name='org.w3c.dom.ls' version='0.0.0'/>
+        <provided namespace='java.package' name='org.w3c.dom.ranges' version='0.0.0'/>
+        <provided namespace='java.package' name='org.w3c.dom.stylesheets' version='0.0.0'/>
+        <provided namespace='java.package' name='org.w3c.dom.traversal' version='0.0.0'/>
+        <provided namespace='java.package' name='org.w3c.dom.views' version='0.0.0'/>
+        <provided namespace='java.package' name='org.w3c.dom.xpath' version='0.0.0'/>
+        <provided namespace='java.package' name='org.xml.sax' version='0.0.0'/>
+        <provided namespace='java.package' name='org.xml.sax.ext' version='0.0.0'/>
+        <provided namespace='java.package' name='org.xml.sax.helpers' version='0.0.0'/>
+        <provided namespace='osgi.ee' name='OSGi/Minimum' version='1.0.0'/>
+        <provided namespace='osgi.ee' name='OSGi/Minimum' version='1.1.0'/>
+        <provided namespace='osgi.ee' name='OSGi/Minimum' version='1.2.0'/>
+        <provided namespace='osgi.ee' name='JRE' version='1.0.0'/>
+        <provided namespace='osgi.ee' name='JRE' version='1.1.0'/>
+        <provided namespace='osgi.ee' name='JavaSE' version='1.0.0'/>
+        <provided namespace='osgi.ee' name='JavaSE' version='1.1.0'/>
+        <provided namespace='osgi.ee' name='JavaSE' version='1.2.0'/>
+        <provided namespace='osgi.ee' name='JavaSE' version='1.3.0'/>
+        <provided namespace='osgi.ee' name='JavaSE' version='1.4.0'/>
+        <provided namespace='osgi.ee' name='JavaSE' version='1.5.0'/>
+        <provided namespace='osgi.ee' name='JavaSE' version='1.6.0'/>
+        <provided namespace='osgi.ee' name='JavaSE' version='1.7.0'/>
+      </provides>
+      <touchpoint id='org.eclipse.equinox.p2.native' version='1.0.0'/>
+    </unit>
+    <unit id='org.eclipse.osgi.services' version='3.5.100.v20160504-1419' singleton='false'>
+      <update id='org.eclipse.osgi.services' range='[0.0.0,3.5.100.v20160504-1419)' severity='0'/>
+      <properties size='12'>
+        <property name='df_LT.osgiServicesDes' value='OSGi Service Platform Release 4.2.0 Service Interfaces and Classes'/>
+        <property name='df_LT.osgiServices' value='OSGi Release 4.2.0 Services'/>
+        <property name='df_LT.eclipse.org' value='Eclipse.org - Equinox'/>
+        <property name='org.eclipse.equinox.p2.name' value='%osgiServices'/>
+        <property name='org.eclipse.equinox.p2.description' value='%osgiServicesDes'/>
+        <property name='org.eclipse.equinox.p2.provider' value='%eclipse.org'/>
+        <property name='org.eclipse.equinox.p2.contact' value='www.eclipse.org'/>
+        <property name='org.eclipse.equinox.p2.doc.url' value='http://www.eclipse.org'/>
+        <property name='org.eclipse.equinox.p2.bundle.localization' value='plugin'/>
+        <property name='maven-groupId' value='org.eclipse.osgi'/>
+        <property name='maven-artifactId' value='org.eclipse.osgi.services'/>
+        <property name='maven-version' value='3.5.100-SNAPSHOT'/>
+      </properties>
+      <provides size='20'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='org.eclipse.osgi.services' version='3.5.100.v20160504-1419'/>
+        <provided namespace='osgi.bundle' name='org.eclipse.osgi.services' version='3.5.100.v20160504-1419'/>
+        <provided namespace='java.package' name='org.osgi.service.cm' version='1.5.0'/>
+        <provided namespace='java.package' name='org.osgi.service.component' version='1.2.2'/>
+        <provided namespace='java.package' name='org.osgi.service.component.annotations' version='1.2.0'/>
+        <provided namespace='java.package' name='org.osgi.service.device' version='1.1.0'/>
+        <provided namespace='java.package' name='org.osgi.service.event' version='1.3.1'/>
+        <provided namespace='java.package' name='org.osgi.service.http' version='1.2.1'/>
+        <provided namespace='java.package' name='org.osgi.service.http.context' version='1.0.0'/>
+        <provided namespace='java.package' name='org.osgi.service.http.runtime' version='1.0.0'/>
+        <provided namespace='java.package' name='org.osgi.service.http.runtime.dto' version='1.0.0'/>
+        <provided namespace='java.package' name='org.osgi.service.http.whiteboard' version='1.0.0'/>
+        <provided namespace='java.package' name='org.osgi.service.log' version='1.3.0'/>
+        <provided namespace='java.package' name='org.osgi.service.metatype' version='1.3.0'/>
+        <provided namespace='java.package' name='org.osgi.service.provisioning' version='1.2.0'/>
+        <provided namespace='java.package' name='org.osgi.service.upnp' version='1.2.0'/>
+        <provided namespace='java.package' name='org.osgi.service.useradmin' version='1.1.0'/>
+        <provided namespace='java.package' name='org.osgi.service.wireadmin' version='1.0.1'/>
+        <provided namespace='org.eclipse.equinox.p2.eclipse.type' name='bundle' version='1.0.0'/>
+        <provided namespace='org.eclipse.equinox.p2.localization' name='df_LT' version='1.0.0'/>
+      </provides>
+      <requires size='17'>
+        <required namespace='java.package' name='org.osgi.service.useradmin' range='[1.1.0,1.2.0)'/>
+        <required namespace='java.package' name='javax.servlet.http' range='0.0.0' optional='true' greedy='false'/>
+        <required namespace='java.package' name='org.osgi.framework.dto' range='1.8.0'/>
+        <required namespace='java.package' name='org.osgi.service.metatype' range='[1.3.0,1.4.0)'/>
+        <required namespace='java.package' name='org.osgi.service.wireadmin' range='[1.0.0,1.1.0)'/>
+        <required namespace='java.package' name='org.osgi.dto' range='1.0.0'/>
+        <required namespace='java.package' name='org.osgi.service.http' range='[1.2.0,1.3.0)'/>
+        <required namespace='java.package' name='org.osgi.service.provisioning' range='[1.2.0,1.3.0)'/>
+        <required namespace='java.package' name='org.osgi.service.device' range='[1.1.0,1.2.0)'/>
+        <required namespace='java.package' name='org.osgi.service.upnp' range='[1.2.0,1.3.0)'/>
+        <required namespace='java.package' name='org.osgi.service.cm' range='[1.5.0,1.6.0)'/>
+        <required namespace='java.package' name='org.osgi.service.log' range='[1.3.0,1.4.0)'/>
+        <required namespace='java.package' name='javax.servlet' range='0.0.0' optional='true' greedy='false'/>
+        <required namespace='java.package' name='org.osgi.service.event' range='[1.3.0,1.4.0)'/>
+        <required namespace='java.package' name='org.osgi.service.component' range='[1.2.0,1.3.0)'/>
+        <required namespace='java.package' name='org.osgi.framework' range='1.6.0'/>
+        <required namespace='java.package' name='org.osgi.service.component.annotations' range='[1.2.0,1.3.0)'/>
+      </requires>
+      <artifacts size='1'>
+        <artifact classifier='osgi.bundle' id='org.eclipse.osgi.services' version='3.5.100.v20160504-1419'/>
+      </artifacts>
+      <touchpoint id='org.eclipse.equinox.p2.osgi' version='1.0.0'/>
+      <touchpointData size='1'>
+        <instructions size='1'>
+          <instruction key='manifest'>
+            Bundle-SymbolicName: org.eclipse.osgi.services&#xA;Bundle-Version: 3.5.100.v20160504-1419
+          </instruction>
+        </instructions>
+      </touchpointData>
+    </unit>
+    <unit id='com.fasterxml.jackson.core.jackson-databind' version='2.8.1' singleton='false'>
+      <update id='com.fasterxml.jackson.core.jackson-databind' range='[0.0.0,2.8.1)' severity='0'/>
+      <properties size='2'>
+        <property name='org.eclipse.equinox.p2.name' value='jackson-databind'/>
+        <property name='org.eclipse.equinox.p2.provider' value='FasterXML'/>
+      </properties>
+      <provides size='23'>
+        <provided namespace='osgi.bundle' name='com.fasterxml.jackson.core.jackson-databind' version='2.8.1'/>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='com.fasterxml.jackson.core.jackson-databind' version='2.8.1'/>
+        <provided namespace='org.eclipse.equinox.p2.eclipse.type' name='bundle' version='1.0.0'/>
+        <provided namespace='java.package' name='com.fasterxml.jackson.databind' version='2.8.1'/>
+        <provided namespace='java.package' name='com.fasterxml.jackson.databind.annotation' version='2.8.1'/>
+        <provided namespace='java.package' name='com.fasterxml.jackson.databind.cfg' version='2.8.1'/>
+        <provided namespace='java.package' name='com.fasterxml.jackson.databind.deser' version='2.8.1'/>
+        <provided namespace='java.package' name='com.fasterxml.jackson.databind.deser.impl' version='2.8.1'/>
+        <provided namespace='java.package' name='com.fasterxml.jackson.databind.deser.std' version='2.8.1'/>
+        <provided namespace='java.package' name='com.fasterxml.jackson.databind.exc' version='2.8.1'/>
+        <provided namespace='java.package' name='com.fasterxml.jackson.databind.ext' version='2.8.1'/>
+        <provided namespace='java.package' name='com.fasterxml.jackson.databind.introspect' version='2.8.1'/>
+        <provided namespace='java.package' name='com.fasterxml.jackson.databind.jsonFormatVisitors' version='2.8.1'/>
+        <provided namespace='java.package' name='com.fasterxml.jackson.databind.jsonschema' version='2.8.1'/>
+        <provided namespace='java.package' name='com.fasterxml.jackson.databind.jsontype' version='2.8.1'/>
+        <provided namespace='java.package' name='com.fasterxml.jackson.databind.jsontype.impl' version='2.8.1'/>
+        <provided namespace='java.package' name='com.fasterxml.jackson.databind.module' version='2.8.1'/>
+        <provided namespace='java.package' name='com.fasterxml.jackson.databind.node' version='2.8.1'/>
+        <provided namespace='java.package' name='com.fasterxml.jackson.databind.ser' version='2.8.1'/>
+        <provided namespace='java.package' name='com.fasterxml.jackson.databind.ser.impl' version='2.8.1'/>
+        <provided namespace='java.package' name='com.fasterxml.jackson.databind.ser.std' version='2.8.1'/>
+        <provided namespace='java.package' name='com.fasterxml.jackson.databind.type' version='2.8.1'/>
+        <provided namespace='java.package' name='com.fasterxml.jackson.databind.util' version='2.8.1'/>
+      </provides>
+      <requires size='35'>
+        <required namespace='java.package' name='com.fasterxml.jackson.annotation' range='[2.8.0,3.0.0)'/>
+        <required namespace='java.package' name='com.fasterxml.jackson.core' range='[2.8.0,3.0.0)'/>
+        <required namespace='java.package' name='com.fasterxml.jackson.core.base' range='[2.8.0,3.0.0)'/>
+        <required namespace='java.package' name='com.fasterxml.jackson.core.filter' range='[2.8.0,3.0.0)'/>
+        <required namespace='java.package' name='com.fasterxml.jackson.core.format' range='[2.8.0,3.0.0)'/>
+        <required namespace='java.package' name='com.fasterxml.jackson.core.io' range='[2.8.0,3.0.0)'/>
+        <required namespace='java.package' name='com.fasterxml.jackson.core.json' range='[2.8.0,3.0.0)'/>
+        <required namespace='java.package' name='com.fasterxml.jackson.core.type' range='[2.8.0,3.0.0)'/>
+        <required namespace='java.package' name='com.fasterxml.jackson.core.util' range='[2.8.0,3.0.0)'/>
+        <required namespace='java.package' name='com.fasterxml.jackson.databind' range='[2.8.0,3.0.0)'/>
+        <required namespace='java.package' name='com.fasterxml.jackson.databind.annotation' range='[2.8.0,3.0.0)'/>
+        <required namespace='java.package' name='com.fasterxml.jackson.databind.cfg' range='[2.8.0,3.0.0)'/>
+        <required namespace='java.package' name='com.fasterxml.jackson.databind.deser' range='[2.8.0,3.0.0)'/>
+        <required namespace='java.package' name='com.fasterxml.jackson.databind.deser.impl' range='[2.8.0,3.0.0)'/>
+        <required namespace='java.package' name='com.fasterxml.jackson.databind.deser.std' range='[2.8.0,3.0.0)'/>
+        <required namespace='java.package' name='com.fasterxml.jackson.databind.exc' range='[2.8.0,3.0.0)'/>
+        <required namespace='java.package' name='com.fasterxml.jackson.databind.ext' range='[2.8.0,3.0.0)'/>
+        <required namespace='java.package' name='com.fasterxml.jackson.databind.introspect' range='[2.8.0,3.0.0)'/>
+        <required namespace='java.package' name='com.fasterxml.jackson.databind.jsonFormatVisitors' range='[2.8.0,3.0.0)'/>
+        <required namespace='java.package' name='com.fasterxml.jackson.databind.jsonschema' range='[2.8.0,3.0.0)'/>
+        <required namespace='java.package' name='com.fasterxml.jackson.databind.jsontype' range='[2.8.0,3.0.0)'/>
+        <required namespace='java.package' name='com.fasterxml.jackson.databind.jsontype.impl' range='[2.8.0,3.0.0)'/>
+        <required namespace='java.package' name='com.fasterxml.jackson.databind.node' range='[2.8.0,3.0.0)'/>
+        <required namespace='java.package' name='com.fasterxml.jackson.databind.ser' range='[2.8.0,3.0.0)'/>
+        <required namespace='java.package' name='com.fasterxml.jackson.databind.ser.impl' range='[2.8.0,3.0.0)'/>
+        <required namespace='java.package' name='com.fasterxml.jackson.databind.ser.std' range='[2.8.0,3.0.0)'/>
+        <required namespace='java.package' name='com.fasterxml.jackson.databind.type' range='[2.8.0,3.0.0)'/>
+        <required namespace='java.package' name='com.fasterxml.jackson.databind.util' range='[2.8.0,3.0.0)'/>
+        <required namespace='java.package' name='javax.xml.datatype' range='0.0.0'/>
+        <required namespace='java.package' name='javax.xml.namespace' range='0.0.0'/>
+        <required namespace='java.package' name='javax.xml.parsers' range='0.0.0'/>
+        <required namespace='java.package' name='org.w3c.dom' range='0.0.0'/>
+        <required namespace='java.package' name='org.w3c.dom.bootstrap' range='0.0.0'/>
+        <required namespace='java.package' name='org.w3c.dom.ls' range='0.0.0'/>
+        <required namespace='java.package' name='org.xml.sax' range='0.0.0'/>
+      </requires>
+      <artifacts size='1'>
+        <artifact classifier='osgi.bundle' id='com.fasterxml.jackson.core.jackson-databind' version='2.8.1'/>
+      </artifacts>
+      <touchpoint id='org.eclipse.equinox.p2.osgi' version='1.0.0'/>
+      <touchpointData size='1'>
+        <instructions size='1'>
+          <instruction key='manifest'>
+            Manifest-Version: 1.0&#xA;Bundle-SymbolicName: com.fasterxml.jackson.core.jackson-databind&#xA;Bundle-Version: 2.8.1
+          </instruction>
+        </instructions>
+      </touchpointData>
+    </unit>
+    <unit id='org.eclipse.osgi' version='3.11.2.v20161107-1947'>
+      <update id='org.eclipse.osgi' range='[0.0.0,3.11.2.v20161107-1947)' severity='0'/>
+      <properties size='10'>
+        <property name='df_LT.eclipse.org' value='Eclipse.org - Equinox'/>
+        <property name='df_LT.systemBundle' value='OSGi System Bundle'/>
+        <property name='org.eclipse.equinox.p2.name' value='%systemBundle'/>
+        <property name='org.eclipse.equinox.p2.description' value='%systemBundle'/>
+        <property name='org.eclipse.equinox.p2.provider' value='%eclipse.org'/>
+        <property name='org.eclipse.equinox.p2.doc.url' value='http://www.eclipse.org'/>
+        <property name='org.eclipse.equinox.p2.bundle.localization' value='systembundle'/>
+        <property name='maven-groupId' value='org.eclipse.osgi'/>
+        <property name='maven-artifactId' value='org.eclipse.osgi'/>
+        <property name='maven-version' value='3.11.2-SNAPSHOT'/>
+      </properties>
+      <provides size='70'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='org.eclipse.osgi' version='3.11.2.v20161107-1947'/>
+        <provided namespace='osgi.bundle' name='org.eclipse.osgi' version='3.11.2.v20161107-1947'/>
+        <provided namespace='java.package' name='org.eclipse.core.runtime.adaptor' version='0.0.0'/>
+        <provided namespace='java.package' name='org.eclipse.core.runtime.internal.adaptor' version='0.0.0'/>
+        <provided namespace='java.package' name='org.eclipse.equinox.log' version='1.0.0'/>
+        <provided namespace='java.package' name='org.eclipse.osgi.container' version='1.1.0'/>
+        <provided namespace='java.package' name='org.eclipse.osgi.container.builders' version='1.0.0'/>
+        <provided namespace='java.package' name='org.eclipse.osgi.container.namespaces' version='1.0.0'/>
+        <provided namespace='java.package' name='org.eclipse.osgi.framework.console' version='1.1.0'/>
+        <provided namespace='java.package' name='org.eclipse.osgi.framework.eventmgr' version='1.2.0'/>
+        <provided namespace='java.package' name='org.eclipse.osgi.framework.internal.reliablefile' version='0.0.0'/>
+        <provided namespace='java.package' name='org.eclipse.osgi.framework.log' version='1.1.0'/>
+        <provided namespace='java.package' name='org.eclipse.osgi.framework.util' version='0.0.0'/>
+        <provided namespace='java.package' name='org.eclipse.osgi.internal.debug' version='0.0.0'/>
+        <provided namespace='java.package' name='org.eclipse.osgi.internal.framework' version='0.0.0'/>
+        <provided namespace='java.package' name='org.eclipse.osgi.internal.hookregistry' version='0.0.0'/>
+        <provided namespace='java.package' name='org.eclipse.osgi.internal.loader' version='0.0.0'/>
+        <provided namespace='java.package' name='org.eclipse.osgi.internal.loader.buddy' version='0.0.0'/>
+        <provided namespace='java.package' name='org.eclipse.osgi.internal.loader.classpath' version='0.0.0'/>
+        <provided namespace='java.package' name='org.eclipse.osgi.internal.loader.sources' version='0.0.0'/>
+        <provided namespace='java.package' name='org.eclipse.osgi.internal.location' version='0.0.0'/>
+        <provided namespace='java.package' name='org.eclipse.osgi.internal.messages' version='0.0.0'/>
+        <provided namespace='java.package' name='org.eclipse.osgi.internal.provisional.service.security' version='1.0.0'/>
+        <provided namespace='java.package' name='org.eclipse.osgi.internal.provisional.verifier' version='0.0.0'/>
+        <provided namespace='java.package' name='org.eclipse.osgi.internal.service.security' version='0.0.0'/>
+        <provided namespace='java.package' name='org.eclipse.osgi.internal.serviceregistry' version='0.0.0'/>
+        <provided namespace='java.package' name='org.eclipse.osgi.internal.signedcontent' version='0.0.0'/>
+        <provided namespace='java.package' name='org.eclipse.osgi.internal.url' version='0.0.0'/>
+        <provided namespace='java.package' name='org.eclipse.osgi.launch' version='1.0.0'/>
+        <provided namespace='java.package' name='org.eclipse.osgi.report.resolution' version='1.0.0'/>
+        <provided namespace='java.package' name='org.eclipse.osgi.service.datalocation' version='1.3.0'/>
+        <provided namespace='java.package' name='org.eclipse.osgi.service.debug' version='1.2.0'/>
+        <provided namespace='java.package' name='org.eclipse.osgi.service.environment' version='1.3.0'/>
+        <provided namespace='java.package' name='org.eclipse.osgi.service.localization' version='1.1.0'/>
+        <provided namespace='java.package' name='org.eclipse.osgi.service.pluginconversion' version='1.0.0'/>
+        <provided namespace='java.package' name='org.eclipse.osgi.service.resolver' version='1.6.0'/>
+        <provided namespace='java.package' name='org.eclipse.osgi.service.runnable' version='1.1.0'/>
+        <provided namespace='java.package' name='org.eclipse.osgi.service.security' version='1.0.0'/>
+        <provided namespace='java.package' name='org.eclipse.osgi.service.urlconversion' version='1.0.0'/>
+        <provided namespace='java.package' name='org.eclipse.osgi.signedcontent' version='1.0.0'/>
+        <provided namespace='java.package' name='org.eclipse.osgi.storage' version='0.0.0'/>
+        <provided namespace='java.package' name='org.eclipse.osgi.storage.bundlefile' version='0.0.0'/>
+        <provided namespace='java.package' name='org.eclipse.osgi.storage.url.reference' version='0.0.0'/>
+        <provided namespace='java.package' name='org.eclipse.osgi.storagemanager' version='1.0.0'/>
+        <provided namespace='java.package' name='org.eclipse.osgi.util' version='1.1.0'/>
+        <provided namespace='java.package' name='org.osgi.dto' version='1.0.0'/>
+        <provided namespace='java.package' name='org.osgi.framework' version='1.8.0'/>
+        <provided namespace='java.package' name='org.osgi.framework.dto' version='1.8.0'/>
+        <provided namespace='java.package' name='org.osgi.framework.hooks.bundle' version='1.1.0'/>
+        <provided namespace='java.package' name='org.osgi.framework.hooks.resolver' version='1.0.0'/>
+        <provided namespace='java.package' name='org.osgi.framework.hooks.service' version='1.1.0'/>
+        <provided namespace='java.package' name='org.osgi.framework.hooks.weaving' version='1.1.0'/>
+        <provided namespace='java.package' name='org.osgi.framework.launch' version='1.2.0'/>
+        <provided namespace='java.package' name='org.osgi.framework.namespace' version='1.1.0'/>
+        <provided namespace='java.package' name='org.osgi.framework.startlevel' version='1.0.0'/>
+        <provided namespace='java.package' name='org.osgi.framework.startlevel.dto' version='1.0.0'/>
+        <provided namespace='java.package' name='org.osgi.framework.wiring' version='1.2.0'/>
+        <provided namespace='java.package' name='org.osgi.framework.wiring.dto' version='1.2.0'/>
+        <provided namespace='java.package' name='org.osgi.resource' version='1.0.0'/>
+        <provided namespace='java.package' name='org.osgi.resource.dto' version='1.0.0'/>
+        <provided namespace='java.package' name='org.osgi.service.condpermadmin' version='1.1.1'/>
+        <provided namespace='java.package' name='org.osgi.service.log' version='1.3.0'/>
+        <provided namespace='java.package' name='org.osgi.service.packageadmin' version='1.2.0'/>
+        <provided namespace='java.package' name='org.osgi.service.permissionadmin' version='1.2.0'/>
+        <provided namespace='java.package' name='org.osgi.service.resolver' version='1.0.1'/>
+        <provided namespace='java.package' name='org.osgi.service.startlevel' version='1.1.0'/>
+        <provided namespace='java.package' name='org.osgi.service.url' version='1.0.0'/>
+        <provided namespace='java.package' name='org.osgi.util.tracker' version='1.5.1'/>
+        <provided namespace='org.eclipse.equinox.p2.eclipse.type' name='bundle' version='1.0.0'/>
+        <provided namespace='org.eclipse.equinox.p2.localization' name='df_LT' version='1.0.0'/>
+      </provides>
+      <artifacts size='1'>
+        <artifact classifier='osgi.bundle' id='org.eclipse.osgi' version='3.11.2.v20161107-1947'/>
+      </artifacts>
+      <touchpoint id='org.eclipse.equinox.p2.osgi' version='1.0.0'/>
+      <touchpointData size='1'>
+        <instructions size='1'>
+          <instruction key='manifest'>
+            Bundle-SymbolicName: org.eclipse.osgi; singleton:=true&#xA;Bundle-Version: 3.11.2.v20161107-1947
+          </instruction>
+        </instructions>
+      </touchpointData>
+    </unit>
+    <unit id='org.eclipse.ecf.provider.jersey.client.feature.source.feature.group' version='1.1.0.201702022058' singleton='false'>
+      <update id='org.eclipse.ecf.provider.jersey.client.feature.source.feature.group' range='[0.0.0,1.1.0.201702022058)' severity='0'/>
+      <properties size='11'>
+        <property name='org.eclipse.equinox.p2.name' value='Jersey Remote Service Client Provider Feature Developer Resources'/>
+        <property name='org.eclipse.equinox.p2.description' value='This feature provides the a Remote Service distribution provider based upon the Jersey implementation&#xA;      of the Jax-RS specification.&#xA;      For tutorials, documentation, and examples with ECF&amp;apos;s Implementation of OSGi RS/RSA see&#xA;&#xA;https://wiki.eclipse.org/ECF#OSGi_Remote_Services'/>
+        <property name='org.eclipse.equinox.p2.description.url' value='http://www.eclipse.org/ecf'/>
+        <property name='org.eclipse.equinox.p2.provider' value='%providerName'/>
+        <property name='org.eclipse.equinox.p2.type.group' value='true'/>
+        <property name='maven-groupId' value='org.eclipse.ecf'/>
+        <property name='maven-artifactId' value='org.eclipse.ecf.provider.jersey.client.feature'/>
+        <property name='maven-version' value='1.1.0-SNAPSHOT'/>
+        <property name='maven-classifier' value='sources-feature'/>
+        <property name='df_LT.license' value='Eclipse Foundation Software User Agreement&#xA;April 9, 2014&#xA;&#xA;Usage Of Content&#xA;&#xA;THE ECLIPSE FOUNDATION MAKES AVAILABLE SOFTWARE, DOCUMENTATION, INFORMATION AND/OR&#xA;OTHER MATERIALS FOR OPEN SOURCE PROJECTS (COLLECTIVELY &quot;CONTENT&quot;).&#xA;USE OF THE CONTENT IS GOVERNED BY THE TERMS AND CONDITIONS OF THIS&#xA;AGREEMENT AND/OR THE TERMS AND CONDITIONS OF LICENSE AGREEMENTS OR&#xA;NOTICES INDICATED OR REFERENCED BELOW.  BY USING THE CONTENT, YOU&#xA;AGREE THAT YOUR USE OF THE CONTENT IS GOVERNED BY THIS AGREEMENT&#xA;AND/OR THE TERMS AND CONDITIONS OF ANY APPLICABLE LICENSE AGREEMENTS&#xA;OR NOTICES INDICATED OR REFERENCED BELOW.  IF YOU DO NOT AGREE TO THE&#xA;TERMS AND CONDITIONS OF THIS AGREEMENT AND THE TERMS AND CONDITIONS&#xA;OF ANY APPLICABLE LICENSE AGREEMENTS OR NOTICES INDICATED OR REFERENCED&#xA;BELOW, THEN YOU MAY NOT USE THE CONTENT.&#xA;&#xA;Applicable Licenses&#xA;&#xA;Unless otherwise indicated, all Content made available by the&#xA;Eclipse Foundation is provided to you under the terms and conditions of&#xA;the Eclipse Public License Version 1.0 (&quot;EPL&quot;). A copy of the EPL is&#xA;provided with this Content and is also available at http://www.eclipse.org/legal/epl-v10.html.&#xA;For purposes of the EPL, &quot;Program&quot; will mean the Content.&#xA;&#xA;Content includes, but is not limited to, source code, object code,&#xA;documentation and other files maintained in the Eclipse Foundation source code&#xA;repository (&quot;Repository&quot;) in software modules (&quot;Modules&quot;) and made available&#xA;as downloadable archives (&quot;Downloads&quot;).&#xA;&#xA;&#x9;- Content may be structured and packaged into modules to facilitate delivering,&#xA;&#x9;  extending, and upgrading the Content. Typical modules may include plug-ins (&quot;Plug-ins&quot;),&#xA;&#x9;  plug-in fragments (&quot;Fragments&quot;), and features (&quot;Features&quot;).&#xA;&#x9;- Each Plug-in or Fragment may be packaged as a sub-directory or JAR (Java(TM) ARchive)&#xA;&#x9;  in a directory named &quot;plugins&quot;.&#xA;&#x9;- A Feature is a bundle of one or more Plug-ins and/or Fragments and associated material.&#xA;&#x9;  Each Feature may be packaged as a sub-directory in a directory named &quot;features&quot;.&#xA;&#x9;  Within a Feature, files named &quot;feature.xml&quot; may contain a list of the names and version&#xA;&#x9;  numbers of the Plug-ins and/or Fragments associated with that Feature.&#xA;&#x9;- Features may also include other Features (&quot;Included Features&quot;). Within a Feature, files&#xA;&#x9;  named &quot;feature.xml&quot; may contain a list of the names and version numbers of Included Features.&#xA;&#xA;The terms and conditions governing Plug-ins and Fragments should be&#xA;contained in files named &quot;about.html&quot; (&quot;Abouts&quot;). The terms and&#xA;conditions governing Features and Included Features should be contained&#xA;in files named &quot;license.html&quot; (&quot;Feature Licenses&quot;). Abouts and Feature&#xA;Licenses may be located in any directory of a Download or Module&#xA;including, but not limited to the following locations:&#xA;&#xA;&#x9;- The top-level (root) directory&#xA;&#x9;- Plug-in and Fragment directories&#xA;&#x9;- Inside Plug-ins and Fragments packaged as JARs&#xA;&#x9;- Sub-directories of the directory named &quot;src&quot; of certain Plug-ins&#xA;&#x9;- Feature directories&#xA;&#xA;Note: if a Feature made available by the Eclipse Foundation is installed using the&#xA;Provisioning Technology (as defined below), you must agree to a license (&quot;Feature &#xA;Update License&quot;) during the installation process. If the Feature contains&#xA;Included Features, the Feature Update License should either provide you&#xA;with the terms and conditions governing the Included Features or inform&#xA;you where you can locate them. Feature Update Licenses may be found in&#xA;the &quot;license&quot; property of files named &quot;feature.properties&quot; found within a Feature.&#xA;Such Abouts, Feature Licenses, and Feature Update Licenses contain the&#xA;terms and conditions (or references to such terms and conditions) that&#xA;govern your use of the associated Content in that directory.&#xA;&#xA;THE ABOUTS, FEATURE LICENSES, AND FEATURE UPDATE LICENSES MAY REFER&#xA;TO THE EPL OR OTHER LICENSE AGREEMENTS, NOTICES OR TERMS AND CONDITIONS.&#xA;SOME OF THESE OTHER LICENSE AGREEMENTS MAY INCLUDE (BUT ARE NOT LIMITED TO):&#xA;&#xA;&#x9;- Eclipse Distribution License Version 1.0 (available at http://www.eclipse.org/licenses/edl-v1.0.html)&#xA;&#x9;- Common Public License Version 1.0 (available at http://www.eclipse.org/legal/cpl-v10.html)&#xA;&#x9;- Apache Software License 1.1 (available at http://www.apache.org/licenses/LICENSE)&#xA;&#x9;- Apache Software License 2.0 (available at http://www.apache.org/licenses/LICENSE-2.0)&#xA;&#x9;- Mozilla Public License Version 1.1 (available at http://www.mozilla.org/MPL/MPL-1.1.html)&#xA;&#xA;IT IS YOUR OBLIGATION TO READ AND ACCEPT ALL SUCH TERMS AND CONDITIONS PRIOR&#xA;TO USE OF THE CONTENT. If no About, Feature License, or Feature Update License&#xA;is provided, please contact the Eclipse Foundation to determine what terms and conditions&#xA;govern that particular Content.&#xA;&#xA;&#xA;Use of Provisioning Technology&#xA;&#xA;The Eclipse Foundation makes available provisioning software, examples of which include,&#xA;but are not limited to, p2 and the Eclipse Update Manager (&quot;Provisioning Technology&quot;) for&#xA;the purpose of allowing users to install software, documentation, information and/or&#xA;other materials (collectively &quot;Installable Software&quot;). This capability is provided with&#xA;the intent of allowing such users to install, extend and update Eclipse-based products.&#xA;Information about packaging Installable Software is available at&#xA;http://eclipse.org/equinox/p2/repository_packaging.html (&quot;Specification&quot;).&#xA;&#xA;You may use Provisioning Technology to allow other parties to install Installable Software.&#xA;You shall be responsible for enabling the applicable license agreements relating to the&#xA;Installable Software to be presented to, and accepted by, the users of the Provisioning Technology&#xA;in accordance with the Specification. By using Provisioning Technology in such a manner and&#xA;making it available in accordance with the Specification, you further acknowledge your&#xA;agreement to, and the acquisition of all necessary rights to permit the following:&#xA;&#xA;&#x9;1. A series of actions may occur (&quot;Provisioning Process&quot;) in which a user may execute&#xA;&#x9;   the Provisioning Technology on a machine (&quot;Target Machine&quot;) with the intent of installing,&#xA;&#x9;   extending or updating the functionality of an Eclipse-based product.&#xA;&#x9;2. During the Provisioning Process, the Provisioning Technology may cause third party&#xA;&#x9;   Installable Software or a portion thereof to be accessed and copied to the Target Machine.&#xA;&#x9;3. Pursuant to the Specification, you will provide to the user the terms and conditions that&#xA;&#x9;   govern the use of the Installable Software (&quot;Installable Software Agreement&quot;) and such&#xA;&#x9;   Installable Software Agreement shall be accessed from the Target Machine in accordance&#xA;&#x9;   with the Specification. Such Installable Software Agreement must inform the user of the&#xA;&#x9;   terms and conditions that govern the Installable Software and must solicit acceptance by&#xA;&#x9;   the end user in the manner prescribed in such Installable Software Agreement. Upon such&#xA;&#x9;   indication of agreement by the user, the provisioning Technology will complete installation&#xA;&#x9;   of the Installable Software.&#xA;&#xA;Cryptography&#xA;&#xA;Content may contain encryption software. The country in which you are&#xA;currently may have restrictions on the import, possession, and use,&#xA;and/or re-export to another country, of encryption software. BEFORE&#xA;using any encryption software, please check the country&apos;s laws,&#xA;regulations and policies concerning the import, possession, or use, and&#xA;re-export of encryption software, to see if this is permitted.&#xA;&#xA;Java and all Java-based trademarks are trademarks of Oracle Corporation in the United States, other countries, or both.'/>
+        <property name='df_LT.providerName' value='Eclipse.org - ECF'/>
+      </properties>
+      <provides size='2'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='org.eclipse.ecf.provider.jersey.client.feature.source.feature.group' version='1.1.0.201702022058'/>
+        <provided namespace='org.eclipse.equinox.p2.localization' name='df_LT' version='1.0.0'/>
+      </provides>
+      <requires size='5'>
+        <required namespace='org.eclipse.equinox.p2.iu' name='org.eclipse.ecf.provider.jersey.client.feature.feature.group' range='[1.1.0.201702022058,1.1.0.201702022058]'/>
+        <required namespace='org.eclipse.equinox.p2.iu' name='org.eclipse.ecf.provider.jaxrs.source' range='[1.1.0.201702022058,1.1.0.201702022058]'/>
+        <required namespace='org.eclipse.equinox.p2.iu' name='org.eclipse.ecf.provider.jaxrs.client.source' range='[1.1.0.201702022058,1.1.0.201702022058]'/>
+        <required namespace='org.eclipse.equinox.p2.iu' name='org.eclipse.ecf.provider.jersey.client.source' range='[1.1.0.201702022058,1.1.0.201702022058]'/>
+        <required namespace='org.eclipse.equinox.p2.iu' name='org.eclipse.ecf.provider.jersey.client.feature.source.feature.jar' range='[1.1.0.201702022058,1.1.0.201702022058]'>
+          <filter>
+            (org.eclipse.update.install.features=true)
+          </filter>
+        </required>
+      </requires>
+      <touchpoint id='null' version='0.0.0'/>
+      <licenses size='1'>
+        <license uri='%25licenseURL' url='%25licenseURL'>
+          %license
+        </license>
+      </licenses>
+      <copyright>
+        #################################################&#xA;# Copyright (c) 2016 Composent, Inc. and others. All rights reserved.&#xA;# This program and the accompanying materials are made available under the &#xA;# terms of the Eclipse Public License v1.0 which accompanies this &#xA;# distribution, and is available at &#xA;# http://www.eclipse.org/legal/epl-v10.html&#xA;#&#xA;# Contributors: Composent, Inc. - initial API and implementation&#xA;#################################################
+      </copyright>
+    </unit>
+    <unit id='org.glassfish.jersey.core.jersey-client' version='2.23.2' singleton='false'>
+      <update id='org.glassfish.jersey.core.jersey-client' range='[0.0.0,2.23.2)' severity='0'/>
+      <properties size='2'>
+        <property name='org.eclipse.equinox.p2.name' value='jersey-core-client'/>
+        <property name='org.eclipse.equinox.p2.provider' value='Oracle Corporation'/>
+      </properties>
+      <provides size='7'>
+        <provided namespace='osgi.bundle' name='org.glassfish.jersey.core.jersey-client' version='2.23.2'/>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='org.glassfish.jersey.core.jersey-client' version='2.23.2'/>
+        <provided namespace='org.eclipse.equinox.p2.eclipse.type' name='bundle' version='1.0.0'/>
+        <provided namespace='java.package' name='org.glassfish.jersey.client' version='2.23.2'/>
+        <provided namespace='java.package' name='org.glassfish.jersey.client.authentication' version='2.23.2'/>
+        <provided namespace='java.package' name='org.glassfish.jersey.client.filter' version='2.23.2'/>
+        <provided namespace='java.package' name='org.glassfish.jersey.client.spi' version='2.23.2'/>
+      </provides>
+      <requires size='28'>
+        <required namespace='java.package' name='javax.annotation' range='[1.2.0,2.0.0)'/>
+        <required namespace='java.package' name='javax.inject' range='[1.0.0,2.0.0)'/>
+        <required namespace='java.package' name='javax.net.ssl' range='0.0.0'/>
+        <required namespace='java.package' name='javax.ws.rs' range='[2.0.0,3.0.0)'/>
+        <required namespace='java.package' name='javax.ws.rs.client' range='[2.0.0,3.0.0)'/>
+        <required namespace='java.package' name='javax.ws.rs.core' range='[2.0.0,3.0.0)'/>
+        <required namespace='java.package' name='javax.ws.rs.ext' range='[2.0.0,3.0.0)'/>
+        <required namespace='java.package' name='jersey.repackaged.com.google.common.base' range='[2.23.0,3.0.0)'/>
+        <required namespace='java.package' name='jersey.repackaged.com.google.common.collect' range='[2.23.0,3.0.0)'/>
+        <required namespace='java.package' name='jersey.repackaged.com.google.common.util.concurrent' range='[2.23.0,3.0.0)'/>
+        <required namespace='java.package' name='org.glassfish.hk2.api' range='[2.5.0,3.0.0)'/>
+        <required namespace='java.package' name='org.glassfish.hk2.utilities' range='[2.5.0,3.0.0)'/>
+        <required namespace='java.package' name='org.glassfish.hk2.utilities.binding' range='[2.5.0,3.0.0)'/>
+        <required namespace='java.package' name='org.glassfish.jersey' range='[2.23.0,3.0.0)'/>
+        <required namespace='java.package' name='org.glassfish.jersey.client.spi' range='0.0.0'/>
+        <required namespace='java.package' name='org.glassfish.jersey.internal' range='[2.23.0,3.0.0)'/>
+        <required namespace='java.package' name='org.glassfish.jersey.internal.inject' range='[2.23.0,3.0.0)'/>
+        <required namespace='java.package' name='org.glassfish.jersey.internal.l10n' range='[2.23.0,3.0.0)'/>
+        <required namespace='java.package' name='org.glassfish.jersey.internal.spi' range='[2.23.0,3.0.0)'/>
+        <required namespace='java.package' name='org.glassfish.jersey.internal.util' range='[2.23.0,3.0.0)'/>
+        <required namespace='java.package' name='org.glassfish.jersey.internal.util.collection' range='[2.23.0,3.0.0)'/>
+        <required namespace='java.package' name='org.glassfish.jersey.message' range='[2.23.0,3.0.0)'/>
+        <required namespace='java.package' name='org.glassfish.jersey.message.internal' range='[2.23.0,3.0.0)'/>
+        <required namespace='java.package' name='org.glassfish.jersey.model.internal' range='[2.23.0,3.0.0)'/>
+        <required namespace='java.package' name='org.glassfish.jersey.process' range='[2.23.0,3.0.0)'/>
+        <required namespace='java.package' name='org.glassfish.jersey.process.internal' range='[2.23.0,3.0.0)'/>
+        <required namespace='java.package' name='org.glassfish.jersey.spi' range='[2.23.0,3.0.0)'/>
+        <required namespace='java.package' name='org.glassfish.jersey.uri' range='[2.23.0,3.0.0)'/>
+      </requires>
+      <artifacts size='1'>
+        <artifact classifier='osgi.bundle' id='org.glassfish.jersey.core.jersey-client' version='2.23.2'/>
+      </artifacts>
+      <touchpoint id='org.eclipse.equinox.p2.osgi' version='1.0.0'/>
+      <touchpointData size='1'>
+        <instructions size='1'>
+          <instruction key='manifest'>
+            Manifest-Version: 1.0&#xA;Bundle-SymbolicName: org.glassfish.jersey.core.jersey-client&#xA;Bundle-Version: 2.23.2
+          </instruction>
+        </instructions>
+      </touchpointData>
+    </unit>
+    <unit id='org.glassfish.jersey.core.jersey-server' version='2.23.2' singleton='false'>
+      <update id='org.glassfish.jersey.core.jersey-server' range='[0.0.0,2.23.2)' severity='0'/>
+      <properties size='2'>
+        <property name='org.eclipse.equinox.p2.name' value='jersey-core-server'/>
+        <property name='org.eclipse.equinox.p2.provider' value='Oracle Corporation'/>
+      </properties>
+      <provides size='28'>
+        <provided namespace='osgi.bundle' name='org.glassfish.jersey.core.jersey-server' version='2.23.2'/>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='org.glassfish.jersey.core.jersey-server' version='2.23.2'/>
+        <provided namespace='org.eclipse.equinox.p2.eclipse.type' name='bundle' version='1.0.0'/>
+        <provided namespace='java.package' name='org.glassfish.jersey.server.filter' version='2.23.2'/>
+        <provided namespace='java.package' name='org.glassfish.jersey.server.wadl.internal.generators.resourcedoc' version='2.23.2'/>
+        <provided namespace='java.package' name='org.glassfish.jersey.server.wadl' version='2.23.2'/>
+        <provided namespace='java.package' name='org.glassfish.jersey.server.internal' version='2.23.2'/>
+        <provided namespace='java.package' name='org.glassfish.jersey.server.internal.process' version='2.23.2'/>
+        <provided namespace='java.package' name='org.glassfish.jersey.server.spi' version='2.23.2'/>
+        <provided namespace='java.package' name='org.glassfish.jersey.server.wadl.config' version='2.23.2'/>
+        <provided namespace='java.package' name='org.glassfish.jersey.server.wadl.internal.generators.resourcedoc.xhtml' version='2.23.2'/>
+        <provided namespace='java.package' name='org.glassfish.jersey.server' version='2.23.2'/>
+        <provided namespace='java.package' name='org.glassfish.jersey.server.internal.inject' version='2.23.2'/>
+        <provided namespace='java.package' name='org.glassfish.jersey.server.model.internal' version='2.23.2'/>
+        <provided namespace='java.package' name='org.glassfish.jersey.server.internal.sonar' version='2.23.2'/>
+        <provided namespace='java.package' name='org.glassfish.jersey.server.internal.scanning' version='2.23.2'/>
+        <provided namespace='java.package' name='org.glassfish.jersey.server.internal.routing' version='2.23.2'/>
+        <provided namespace='java.package' name='org.glassfish.jersey.server.wadl.internal.generators' version='2.23.2'/>
+        <provided namespace='java.package' name='org.glassfish.jersey.server.filter.internal' version='2.23.2'/>
+        <provided namespace='java.package' name='org.glassfish.jersey.server.spi.internal' version='2.23.2'/>
+        <provided namespace='java.package' name='org.glassfish.jersey.server.wadl.internal.generators.resourcedoc.model' version='2.23.2'/>
+        <provided namespace='java.package' name='org.glassfish.jersey.server.monitoring' version='2.23.2'/>
+        <provided namespace='java.package' name='org.glassfish.jersey.server.wadl.processor' version='2.23.2'/>
+        <provided namespace='java.package' name='org.glassfish.jersey.server.model' version='2.23.2'/>
+        <provided namespace='java.package' name='org.glassfish.jersey.server.wadl.internal' version='2.23.2'/>
+        <provided namespace='java.package' name='org.glassfish.jersey.server.internal.monitoring.jmx' version='2.23.2'/>
+        <provided namespace='java.package' name='org.glassfish.jersey.server.internal.monitoring' version='2.23.2'/>
+        <provided namespace='java.package' name='com.sun.research.ws.wadl' version='2.23.2'/>
+      </provides>
+      <requires size='46'>
+        <required namespace='java.package' name='javax.annotation' range='[1.2.0,2.0.0)'/>
+        <required namespace='java.package' name='javax.annotation.security' range='[1.2.0,2.0.0)'/>
+        <required namespace='java.package' name='javax.inject' range='[1.0.0,2.0.0)'/>
+        <required namespace='java.package' name='javax.management' range='0.0.0'/>
+        <required namespace='java.package' name='javax.validation' range='[1.1.0,2.0.0)'/>
+        <required namespace='java.package' name='javax.ws.rs' range='[2.0.0,3.0.0)'/>
+        <required namespace='java.package' name='javax.ws.rs.client' range='[2.0.0,3.0.0)'/>
+        <required namespace='java.package' name='javax.ws.rs.container' range='[2.0.0,3.0.0)'/>
+        <required namespace='java.package' name='javax.ws.rs.core' range='[2.0.0,3.0.0)'/>
+        <required namespace='java.package' name='javax.ws.rs.ext' range='[2.0.0,3.0.0)'/>
+        <required namespace='java.package' name='javax.xml.bind' range='0.0.0'/>
+        <required namespace='java.package' name='javax.xml.bind.annotation' range='0.0.0'/>
+        <required namespace='java.package' name='javax.xml.bind.annotation.adapters' range='0.0.0'/>
+        <required namespace='java.package' name='javax.xml.namespace' range='0.0.0'/>
+        <required namespace='java.package' name='javax.xml.parsers' range='0.0.0'/>
+        <required namespace='java.package' name='javax.xml.transform' range='0.0.0'/>
+        <required namespace='java.package' name='javax.xml.transform.sax' range='0.0.0'/>
+        <required namespace='java.package' name='javax.xml.transform.stream' range='0.0.0'/>
+        <required namespace='java.package' name='jersey.repackaged.com.google.common.base' range='[2.23.0,3.0.0)'/>
+        <required namespace='java.package' name='jersey.repackaged.com.google.common.cache' range='[2.23.0,3.0.0)'/>
+        <required namespace='java.package' name='jersey.repackaged.com.google.common.collect' range='[2.23.0,3.0.0)'/>
+        <required namespace='java.package' name='jersey.repackaged.com.google.common.primitives' range='[2.23.0,3.0.0)'/>
+        <required namespace='java.package' name='jersey.repackaged.com.google.common.util.concurrent' range='[2.23.0,3.0.0)'/>
+        <required namespace='java.package' name='org.glassfish.hk2.api' range='[2.5.0,3.0.0)'/>
+        <required namespace='java.package' name='org.glassfish.hk2.utilities' range='[2.5.0,3.0.0)'/>
+        <required namespace='java.package' name='org.glassfish.hk2.utilities.binding' range='[2.5.0,3.0.0)'/>
+        <required namespace='java.package' name='org.glassfish.hk2.utilities.cache' range='[2.5.0,3.0.0)'/>
+        <required namespace='java.package' name='org.glassfish.jersey' range='[2.23.0,3.0.0)'/>
+        <required namespace='java.package' name='org.glassfish.jersey.client' range='[2.23.0,3.0.0)'/>
+        <required namespace='java.package' name='org.glassfish.jersey.internal' range='[2.23.0,3.0.0)'/>
+        <required namespace='java.package' name='org.glassfish.jersey.internal.inject' range='[2.23.0,3.0.0)'/>
+        <required namespace='java.package' name='org.glassfish.jersey.internal.l10n' range='[2.23.0,3.0.0)'/>
+        <required namespace='java.package' name='org.glassfish.jersey.internal.spi' range='[2.23.0,3.0.0)'/>
+        <required namespace='java.package' name='org.glassfish.jersey.internal.util' range='[2.23.0,3.0.0)'/>
+        <required namespace='java.package' name='org.glassfish.jersey.internal.util.collection' range='[2.23.0,3.0.0)'/>
+        <required namespace='java.package' name='org.glassfish.jersey.message' range='[2.23.0,3.0.0)'/>
+        <required namespace='java.package' name='org.glassfish.jersey.message.internal' range='[2.23.0,3.0.0)'/>
+        <required namespace='java.package' name='org.glassfish.jersey.model' range='[2.23.0,3.0.0)'/>
+        <required namespace='java.package' name='org.glassfish.jersey.model.internal' range='[2.23.0,3.0.0)'/>
+        <required namespace='java.package' name='org.glassfish.jersey.process' range='[2.23.0,3.0.0)'/>
+        <required namespace='java.package' name='org.glassfish.jersey.process.internal' range='[2.23.0,3.0.0)'/>
+        <required namespace='java.package' name='org.glassfish.jersey.spi' range='[2.23.0,3.0.0)'/>
+        <required namespace='java.package' name='org.glassfish.jersey.uri' range='[2.23.0,3.0.0)'/>
+        <required namespace='java.package' name='org.glassfish.jersey.uri.internal' range='[2.23.0,3.0.0)'/>
+        <required namespace='java.package' name='org.jvnet.hk2.external.runtime' range='[2.5.0,3.0.0)'/>
+        <required namespace='java.package' name='org.xml.sax' range='0.0.0'/>
+      </requires>
+      <artifacts size='1'>
+        <artifact classifier='osgi.bundle' id='org.glassfish.jersey.core.jersey-server' version='2.23.2'/>
+      </artifacts>
+      <touchpoint id='org.eclipse.equinox.p2.osgi' version='1.0.0'/>
+      <touchpointData size='1'>
+        <instructions size='1'>
+          <instruction key='manifest'>
+            Manifest-Version: 1.0&#xA;Bundle-SymbolicName: org.glassfish.jersey.core.jersey-server&#xA;Bundle-Version: 2.23.2
+          </instruction>
+        </instructions>
+      </touchpointData>
+    </unit>
+    <unit id='javax.inject' version='1.0.0.v20091030' singleton='false'>
+      <update id='javax.inject' range='[0.0.0,1.0.0.v20091030)' severity='0'/>
+      <properties size='5'>
+        <property name='df_LT.bundleName' value='Atinject Dependency Injection Annotations'/>
+        <property name='df_LT.bundleProvider' value='Eclipse.org'/>
+        <property name='org.eclipse.equinox.p2.name' value='%bundleName'/>
+        <property name='org.eclipse.equinox.p2.provider' value='%bundleProvider'/>
+        <property name='org.eclipse.equinox.p2.bundle.localization' value='plugin'/>
+      </properties>
+      <provides size='5'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='javax.inject' version='1.0.0.v20091030'/>
+        <provided namespace='osgi.bundle' name='javax.inject' version='1.0.0.v20091030'/>
+        <provided namespace='java.package' name='javax.inject' version='1.0.0'/>
+        <provided namespace='org.eclipse.equinox.p2.eclipse.type' name='bundle' version='1.0.0'/>
+        <provided namespace='org.eclipse.equinox.p2.localization' name='df_LT' version='1.0.0'/>
+      </provides>
+      <artifacts size='1'>
+        <artifact classifier='osgi.bundle' id='javax.inject' version='1.0.0.v20091030'/>
+      </artifacts>
+      <touchpoint id='org.eclipse.equinox.p2.osgi' version='1.0.0'/>
+      <touchpointData size='1'>
+        <instructions size='1'>
+          <instruction key='manifest'>
+            Bundle-SymbolicName: javax.inject&#xA;Bundle-Version: 1.0.0.v20091030
+          </instruction>
+        </instructions>
+      </touchpointData>
+    </unit>
+    <unit id='org.glassfish.jersey.ext.jersey-entity-filtering' version='2.23.2' singleton='false'>
+      <update id='org.glassfish.jersey.ext.jersey-entity-filtering' range='[0.0.0,2.23.2)' severity='0'/>
+      <properties size='2'>
+        <property name='org.eclipse.equinox.p2.name' value='jersey-ext-entity-filtering'/>
+        <property name='org.eclipse.equinox.p2.provider' value='Oracle Corporation'/>
+      </properties>
+      <provides size='6'>
+        <provided namespace='osgi.bundle' name='org.glassfish.jersey.ext.jersey-entity-filtering' version='2.23.2'/>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='org.glassfish.jersey.ext.jersey-entity-filtering' version='2.23.2'/>
+        <provided namespace='org.eclipse.equinox.p2.eclipse.type' name='bundle' version='1.0.0'/>
+        <provided namespace='java.package' name='org.glassfish.jersey.message.filtering.spi' version='2.23.2'/>
+        <provided namespace='java.package' name='org.glassfish.jersey.message.filtering' version='2.23.2'/>
+        <provided namespace='java.package' name='org.glassfish.jersey.message.filtering.internal' version='2.23.2'/>
+      </provides>
+      <requires size='20'>
+        <required namespace='java.package' name='javax.annotation' range='[1.2.0,2.0.0)'/>
+        <required namespace='java.package' name='javax.annotation.security' range='[1.2.0,2.0.0)'/>
+        <required namespace='java.package' name='javax.inject' range='[1.0.0,2.0.0)'/>
+        <required namespace='java.package' name='javax.ws.rs' range='[2.0.0,3.0.0)'/>
+        <required namespace='java.package' name='javax.ws.rs.core' range='[2.0.0,3.0.0)'/>
+        <required namespace='java.package' name='javax.xml.bind' range='0.0.0'/>
+        <required namespace='java.package' name='jersey.repackaged.com.google.common.base' range='[2.23.0,3.0.0)'/>
+        <required namespace='java.package' name='jersey.repackaged.com.google.common.cache' range='[2.23.0,3.0.0)'/>
+        <required namespace='java.package' name='jersey.repackaged.com.google.common.collect' range='[2.23.0,3.0.0)'/>
+        <required namespace='java.package' name='org.glassfish.hk2.api' range='[2.5.0,3.0.0)'/>
+        <required namespace='java.package' name='org.glassfish.hk2.utilities.binding' range='[2.5.0,3.0.0)'/>
+        <required namespace='java.package' name='org.glassfish.jersey.internal.inject' range='[2.23.0,3.0.0)'/>
+        <required namespace='java.package' name='org.glassfish.jersey.internal.l10n' range='[2.23.0,3.0.0)'/>
+        <required namespace='java.package' name='org.glassfish.jersey.internal.util' range='[2.23.0,3.0.0)'/>
+        <required namespace='java.package' name='org.glassfish.jersey.internal.util.collection' range='[2.23.0,3.0.0)'/>
+        <required namespace='java.package' name='org.glassfish.jersey.model.internal' range='[2.23.0,3.0.0)'/>
+        <required namespace='java.package' name='org.glassfish.jersey.server' range='[2.23.0,3.0.0)'/>
+        <required namespace='java.package' name='org.glassfish.jersey.server.filter' range='[2.23.0,3.0.0)'/>
+        <required namespace='java.package' name='org.glassfish.jersey.server.model' range='[2.23.0,3.0.0)'/>
+        <required namespace='java.package' name='org.glassfish.jersey.spi' range='[2.23.0,3.0.0)'/>
+      </requires>
+      <artifacts size='1'>
+        <artifact classifier='osgi.bundle' id='org.glassfish.jersey.ext.jersey-entity-filtering' version='2.23.2'/>
+      </artifacts>
+      <touchpoint id='org.eclipse.equinox.p2.osgi' version='1.0.0'/>
+      <touchpointData size='1'>
+        <instructions size='1'>
+          <instruction key='manifest'>
+            Manifest-Version: 1.0&#xA;Bundle-SymbolicName: org.glassfish.jersey.ext.jersey-entity-filtering&#xA;Bundle-Version: 2.23.2
+          </instruction>
+        </instructions>
+      </touchpointData>
+    </unit>
+    <unit id='javax.annotation' version='1.2.0.v201602091430' singleton='false'>
+      <update id='javax.annotation' range='[0.0.0,1.2.0.v201602091430)' severity='0'/>
+      <properties size='5'>
+        <property name='df_LT.bundleName' value='javax.annotation Bundle'/>
+        <property name='df_LT.bundleProvider' value='Eclipse Orbit'/>
+        <property name='org.eclipse.equinox.p2.name' value='%bundleName'/>
+        <property name='org.eclipse.equinox.p2.provider' value='%bundleProvider'/>
+        <property name='org.eclipse.equinox.p2.bundle.localization' value='plugin'/>
+      </properties>
+      <provides size='7'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='javax.annotation' version='1.2.0.v201602091430'/>
+        <provided namespace='osgi.bundle' name='javax.annotation' version='1.2.0.v201602091430'/>
+        <provided namespace='java.package' name='javax.annotation' version='1.2.0'/>
+        <provided namespace='java.package' name='javax.annotation.security' version='1.2.0'/>
+        <provided namespace='java.package' name='javax.annotation.sql' version='1.2.0'/>
+        <provided namespace='org.eclipse.equinox.p2.eclipse.type' name='bundle' version='1.0.0'/>
+        <provided namespace='org.eclipse.equinox.p2.localization' name='df_LT' version='1.0.0'/>
+      </provides>
+      <requires size='4'>
+        <required namespace='osgi.bundle' name='org.eclipse.osgi' range='0.0.0'/>
+        <required namespace='java.package' name='javax.annotation' range='1.2.0'/>
+        <required namespace='java.package' name='javax.annotation.security' range='1.2.0'/>
+        <required namespace='java.package' name='javax.annotation.sql' range='1.2.0'/>
+      </requires>
+      <artifacts size='1'>
+        <artifact classifier='osgi.bundle' id='javax.annotation' version='1.2.0.v201602091430'/>
+      </artifacts>
+      <touchpoint id='org.eclipse.equinox.p2.osgi' version='1.0.0'/>
+      <touchpointData size='1'>
+        <instructions size='1'>
+          <instruction key='manifest'>
+            Bundle-SymbolicName: javax.annotation&#xA;Bundle-Version: 1.2.0.v201602091430
+          </instruction>
+        </instructions>
+      </touchpointData>
+    </unit>
+    <unit id='org.glassfish.hk2.api' version='2.5.0.b05' singleton='false'>
+      <update id='org.glassfish.hk2.api' range='[0.0.0,2.5.0.b05)' severity='0'/>
+      <properties size='2'>
+        <property name='org.eclipse.equinox.p2.name' value='HK2 API module'/>
+        <property name='org.eclipse.equinox.p2.provider' value='Oracle Corporation'/>
+      </properties>
+      <provides size='10'>
+        <provided namespace='osgi.bundle' name='org.glassfish.hk2.api' version='2.5.0.b05'/>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='org.glassfish.hk2.api' version='2.5.0.b05'/>
+        <provided namespace='org.eclipse.equinox.p2.eclipse.type' name='bundle' version='1.0.0'/>
+        <provided namespace='java.package' name='org.glassfish.hk2.api' version='2.5.0'/>
+        <provided namespace='java.package' name='org.glassfish.hk2.api.messaging' version='2.5.0'/>
+        <provided namespace='java.package' name='org.glassfish.hk2.extension' version='2.5.0'/>
+        <provided namespace='java.package' name='org.glassfish.hk2.utilities' version='2.5.0'/>
+        <provided namespace='java.package' name='org.glassfish.hk2.utilities.binding' version='2.5.0'/>
+        <provided namespace='java.package' name='org.jvnet.hk2.annotations' version='2.5.0'/>
+        <provided namespace='java.package' name='com.sun.hk2.component' version='2.5.0'/>
+      </provides>
+      <requires size='7'>
+        <required namespace='java.package' name='javax.inject' range='0.0.0'/>
+        <required namespace='java.package' name='org.aopalliance.intercept' range='[1.0.0,2.0.0)'/>
+        <required namespace='java.package' name='org.glassfish.hk2.extension' range='[2.5.0,3.0.0)'/>
+        <required namespace='java.package' name='org.glassfish.hk2.osgiresourcelocator' range='[1.0.0,2.0.0)' optional='true' greedy='false'/>
+        <required namespace='java.package' name='org.glassfish.hk2.utilities.general' range='[2.5.0,3.0.0)'/>
+        <required namespace='java.package' name='org.glassfish.hk2.utilities.reflection' range='[2.5.0,3.0.0)'/>
+        <required namespace='java.package' name='org.jvnet.hk2.component' range='[2.5.0,3.0.0)'/>
+      </requires>
+      <artifacts size='1'>
+        <artifact classifier='osgi.bundle' id='org.glassfish.hk2.api' version='2.5.0.b05'/>
+      </artifacts>
+      <touchpoint id='org.eclipse.equinox.p2.osgi' version='1.0.0'/>
+      <touchpointData size='1'>
+        <instructions size='1'>
+          <instruction key='manifest'>
+            Manifest-Version: 1.0&#xA;Bundle-SymbolicName: org.glassfish.hk2.api&#xA;Bundle-Version: 2.5.0.b05
+          </instruction>
+        </instructions>
+      </touchpointData>
+    </unit>
+    <unit id='org.glassfish.jersey.bundles.repackaged.jersey-guava' version='2.23.2' singleton='false'>
+      <update id='org.glassfish.jersey.bundles.repackaged.jersey-guava' range='[0.0.0,2.23.2)' severity='0'/>
+      <properties size='2'>
+        <property name='org.eclipse.equinox.p2.name' value='jersey-repackaged-guava'/>
+        <property name='org.eclipse.equinox.p2.provider' value='Oracle Corporation'/>
+      </properties>
+      <provides size='12'>
+        <provided namespace='osgi.bundle' name='org.glassfish.jersey.bundles.repackaged.jersey-guava' version='2.23.2'/>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='org.glassfish.jersey.bundles.repackaged.jersey-guava' version='2.23.2'/>
+        <provided namespace='org.eclipse.equinox.p2.eclipse.type' name='bundle' version='1.0.0'/>
+        <provided namespace='java.package' name='jersey.repackaged.com.google.common.hash' version='2.23.2'/>
+        <provided namespace='java.package' name='jersey.repackaged.com.google.common.io' version='2.23.2'/>
+        <provided namespace='java.package' name='jersey.repackaged.com.google.common.primitives' version='2.23.2'/>
+        <provided namespace='java.package' name='jersey.repackaged.com.google.common.cache' version='2.23.2'/>
+        <provided namespace='java.package' name='jersey.repackaged.com.google.common.util.concurrent' version='2.23.2'/>
+        <provided namespace='java.package' name='jersey.repackaged.com.google.common.collect' version='2.23.2'/>
+        <provided namespace='java.package' name='jersey.repackaged.com.google.common.math' version='2.23.2'/>
+        <provided namespace='java.package' name='jersey.repackaged.com.google.common.base' version='2.23.2'/>
+        <provided namespace='java.package' name='jersey.repackaged.com.google.common.net' version='2.23.2'/>
+      </provides>
+      <requires size='3'>
+        <required namespace='java.package' name='javax.annotation' range='[1.2.0,2.0.0)' optional='true' greedy='false'/>
+        <required namespace='java.package' name='javax.inject' range='[1.0.0,2.0.0)' optional='true' greedy='false'/>
+        <required namespace='java.package' name='sun.misc' range='0.0.0' optional='true' greedy='false'/>
+      </requires>
+      <artifacts size='1'>
+        <artifact classifier='osgi.bundle' id='org.glassfish.jersey.bundles.repackaged.jersey-guava' version='2.23.2'/>
+      </artifacts>
+      <touchpoint id='org.eclipse.equinox.p2.osgi' version='1.0.0'/>
+      <touchpointData size='1'>
+        <instructions size='1'>
+          <instruction key='manifest'>
+            Manifest-Version: 1.0&#xA;Bundle-SymbolicName: org.glassfish.jersey.bundles.repackaged.jersey-gu&#xA; ava&#xA;Bundle-Version: 2.23.2
+          </instruction>
+        </instructions>
+      </touchpointData>
+    </unit>
+    <unit id='org.glassfish.hk2.osgi-resource-locator' version='2.3.0.b10_v201508191500' singleton='false'>
+      <update id='org.glassfish.hk2.osgi-resource-locator' range='[0.0.0,2.3.0.b10_v201508191500)' severity='0'/>
+      <properties size='7'>
+        <property name='df_LT.pluginName' value='OSGi resource locator'/>
+        <property name='df_LT.providerName' value='Eclipse Orbit'/>
+        <property name='org.eclipse.equinox.p2.name' value='%pluginName'/>
+        <property name='org.eclipse.equinox.p2.description' value='Used by various API providers that rely on META-INF/services mechanism to locate providers.'/>
+        <property name='org.eclipse.equinox.p2.provider' value='%providerName'/>
+        <property name='org.eclipse.equinox.p2.doc.url' value='http://www.oracle.com'/>
+        <property name='org.eclipse.equinox.p2.bundle.localization' value='plugin'/>
+      </properties>
+      <provides size='5'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='org.glassfish.hk2.osgi-resource-locator' version='2.3.0.b10_v201508191500'/>
+        <provided namespace='osgi.bundle' name='org.glassfish.hk2.osgi-resource-locator' version='2.3.0.b10_v201508191500'/>
+        <provided namespace='java.package' name='org.glassfish.hk2.osgiresourcelocator' version='1.0.1'/>
+        <provided namespace='org.eclipse.equinox.p2.eclipse.type' name='bundle' version='1.0.0'/>
+        <provided namespace='org.eclipse.equinox.p2.localization' name='df_LT' version='1.0.0'/>
+      </provides>
+      <requires size='2'>
+        <required namespace='java.package' name='org.glassfish.hk2.osgiresourcelocator' range='1.0.1'/>
+        <required namespace='java.package' name='org.osgi.framework' range='[1.5.0,2.0.0)'/>
+      </requires>
+      <artifacts size='1'>
+        <artifact classifier='osgi.bundle' id='org.glassfish.hk2.osgi-resource-locator' version='2.3.0.b10_v201508191500'/>
+      </artifacts>
+      <touchpoint id='org.eclipse.equinox.p2.osgi' version='1.0.0'/>
+      <touchpointData size='1'>
+        <instructions size='1'>
+          <instruction key='manifest'>
+            Bundle-SymbolicName: org.glassfish.hk2.osgi-resource-locator&#xA;Bundle-Version: 2.3.0.b10_v201508191500
+          </instruction>
+        </instructions>
+      </touchpointData>
+    </unit>
+    <unit id='org.eclipse.ecf.identity' version='3.8.0.v20161203-2153'>
+      <update id='org.eclipse.ecf.identity' range='[0.0.0,3.8.0.v20161203-2153)' severity='0'/>
+      <properties size='8'>
+        <property name='df_LT.plugin.provider' value='Eclipse.org - ECF'/>
+        <property name='df_LT.plugin.name' value='ECF Identity Core API'/>
+        <property name='org.eclipse.equinox.p2.name' value='%plugin.name'/>
+        <property name='org.eclipse.equinox.p2.provider' value='%plugin.provider'/>
+        <property name='org.eclipse.equinox.p2.bundle.localization' value='plugin'/>
+        <property name='maven-groupId' value='org.eclipse.ecf'/>
+        <property name='maven-artifactId' value='org.eclipse.ecf.identity'/>
+        <property name='maven-version' value='3.8.0-SNAPSHOT'/>
+      </properties>
+      <provides size='7'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='org.eclipse.ecf.identity' version='3.8.0.v20161203-2153'/>
+        <provided namespace='osgi.bundle' name='org.eclipse.ecf.identity' version='3.8.0.v20161203-2153'/>
+        <provided namespace='java.package' name='org.eclipse.ecf.core.identity' version='3.3.0'/>
+        <provided namespace='java.package' name='org.eclipse.ecf.core.util' version='3.4.0'/>
+        <provided namespace='java.package' name='org.eclipse.ecf.internal.core.identity' version='3.2.0'/>
+        <provided namespace='org.eclipse.equinox.p2.eclipse.type' name='bundle' version='1.0.0'/>
+        <provided namespace='org.eclipse.equinox.p2.localization' name='df_LT' version='1.0.0'/>
+      </provides>
+      <requires size='6'>
+        <required namespace='osgi.bundle' name='org.eclipse.equinox.common' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.equinox.registry' range='0.0.0' optional='true' greedy='false'/>
+        <required namespace='java.package' name='org.eclipse.osgi.service.debug' range='1.0.0'/>
+        <required namespace='java.package' name='org.osgi.framework' range='1.3.0'/>
+        <required namespace='java.package' name='org.osgi.service.log' range='1.3.0'/>
+        <required namespace='java.package' name='org.osgi.util.tracker' range='1.3.2'/>
+      </requires>
+      <artifacts size='1'>
+        <artifact classifier='osgi.bundle' id='org.eclipse.ecf.identity' version='3.8.0.v20161203-2153'/>
+      </artifacts>
+      <touchpoint id='org.eclipse.equinox.p2.osgi' version='1.0.0'/>
+      <touchpointData size='1'>
+        <instructions size='1'>
+          <instruction key='manifest'>
+            Bundle-SymbolicName: org.eclipse.ecf.identity;singleton:=true&#xA;Bundle-Version: 3.8.0.v20161203-2153
+          </instruction>
+        </instructions>
+      </touchpointData>
+    </unit>
+    <unit id='org.eclipse.core.jobs' version='3.8.0.v20160509-0411'>
+      <update id='org.eclipse.core.jobs' range='[0.0.0,3.8.0.v20160509-0411)' severity='0'/>
+      <properties size='8'>
+        <property name='df_LT.pluginName' value='Eclipse Jobs Mechanism'/>
+        <property name='df_LT.providerName' value='Eclipse.org'/>
+        <property name='org.eclipse.equinox.p2.name' value='%pluginName'/>
+        <property name='org.eclipse.equinox.p2.provider' value='%providerName'/>
+        <property name='org.eclipse.equinox.p2.bundle.localization' value='plugin'/>
+        <property name='maven-groupId' value='org.eclipse.core'/>
+        <property name='maven-artifactId' value='org.eclipse.core.jobs'/>
+        <property name='maven-version' value='3.8.0-SNAPSHOT'/>
+      </properties>
+      <provides size='6'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='org.eclipse.core.jobs' version='3.8.0.v20160509-0411'/>
+        <provided namespace='osgi.bundle' name='org.eclipse.core.jobs' version='3.8.0.v20160509-0411'/>
+        <provided namespace='java.package' name='org.eclipse.core.internal.jobs' version='0.0.0'/>
+        <provided namespace='java.package' name='org.eclipse.core.runtime.jobs' version='0.0.0'/>
+        <provided namespace='org.eclipse.equinox.p2.eclipse.type' name='bundle' version='1.0.0'/>
+        <provided namespace='org.eclipse.equinox.p2.localization' name='df_LT' version='1.0.0'/>
+      </provides>
+      <requires size='6'>
+        <required namespace='osgi.bundle' name='org.eclipse.equinox.common' range='[3.8.0,4.0.0)'/>
+        <required namespace='java.package' name='org.eclipse.osgi.service.debug' range='0.0.0'/>
+        <required namespace='java.package' name='org.eclipse.osgi.util' range='0.0.0'/>
+        <required namespace='java.package' name='org.osgi.framework' range='1.3.0'/>
+        <required namespace='java.package' name='org.osgi.service.packageadmin' range='0.0.0'/>
+        <required namespace='java.package' name='org.osgi.util.tracker' range='0.0.0'/>
+      </requires>
+      <artifacts size='1'>
+        <artifact classifier='osgi.bundle' id='org.eclipse.core.jobs' version='3.8.0.v20160509-0411'/>
+      </artifacts>
+      <touchpoint id='org.eclipse.equinox.p2.osgi' version='1.0.0'/>
+      <touchpointData size='1'>
+        <instructions size='1'>
+          <instruction key='manifest'>
+            Bundle-SymbolicName: org.eclipse.core.jobs; singleton:=true&#xA;Bundle-Version: 3.8.0.v20160509-0411
+          </instruction>
+        </instructions>
+      </touchpointData>
+    </unit>
+    <unit id='org.eclipse.ecf.provider.jaxrs' version='1.1.0.201702022058' singleton='false'>
+      <update id='org.eclipse.ecf.provider.jaxrs' range='[0.0.0,1.1.0.201702022058)' severity='0'/>
+      <properties size='5'>
+        <property name='org.eclipse.equinox.p2.name' value='ECF Dist Provider - Jax RS Support'/>
+        <property name='org.eclipse.equinox.p2.provider' value='Eclipse.org - ECF'/>
+        <property name='maven-groupId' value='org.eclipse.ecf'/>
+        <property name='maven-artifactId' value='org.eclipse.ecf.provider.jaxrs'/>
+        <property name='maven-version' value='1.1.0-SNAPSHOT'/>
+      </properties>
+      <provides size='4'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='org.eclipse.ecf.provider.jaxrs' version='1.1.0.201702022058'/>
+        <provided namespace='osgi.bundle' name='org.eclipse.ecf.provider.jaxrs' version='1.1.0.201702022058'/>
+        <provided namespace='java.package' name='org.eclipse.ecf.provider.jaxrs' version='1.1.0'/>
+        <provided namespace='org.eclipse.equinox.p2.eclipse.type' name='bundle' version='1.0.0'/>
+      </provides>
+      <requires size='8'>
+        <required namespace='osgi.bundle' name='org.eclipse.ecf' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.equinox.common' range='0.0.0'/>
+        <required namespace='java.package' name='javax.ws.rs.core' range='2.0.1'/>
+        <required namespace='java.package' name='javax.ws.rs.ext' range='2.0.1'/>
+        <required namespace='java.package' name='org.eclipse.ecf.remoteservice' range='7.2.0'/>
+        <required namespace='java.package' name='org.eclipse.ecf.remoteservice.provider' range='1.0.0'/>
+        <required namespace='java.package' name='org.osgi.framework' range='0.0.0'/>
+        <required namespace='java.package' name='org.osgi.service.component.annotations' range='1.2.0' optional='true' greedy='false'/>
+      </requires>
+      <artifacts size='1'>
+        <artifact classifier='osgi.bundle' id='org.eclipse.ecf.provider.jaxrs' version='1.1.0.201702022058'/>
+      </artifacts>
+      <touchpoint id='org.eclipse.equinox.p2.osgi' version='1.0.0'/>
+      <touchpointData size='1'>
+        <instructions size='1'>
+          <instruction key='manifest'>
+            Bundle-SymbolicName: org.eclipse.ecf.provider.jaxrs&#xA;Bundle-Version: 1.1.0.201702022058
+          </instruction>
+        </instructions>
+      </touchpointData>
+    </unit>
+    <unit id='org.eclipse.ecf.remoteservice.asyncproxy' version='2.0.100.v20160907-0906' singleton='false'>
+      <update id='org.eclipse.ecf.remoteservice.asyncproxy' range='[0.0.0,2.0.100.v20160907-0906)' severity='0'/>
+      <properties size='8'>
+        <property name='df_LT.bundle.name' value='ECF RemoteServices AsyncProxy API Java8'/>
+        <property name='df_LT.bundle.provider' value='Eclipse.org - ECF'/>
+        <property name='org.eclipse.equinox.p2.name' value='%bundle.name'/>
+        <property name='org.eclipse.equinox.p2.provider' value='%bundle.provider'/>
+        <property name='org.eclipse.equinox.p2.bundle.localization' value='bundle'/>
+        <property name='maven-groupId' value='org.eclipse.ecf'/>
+        <property name='maven-artifactId' value='org.eclipse.ecf.remoteservice.asyncproxy'/>
+        <property name='maven-version' value='2.0.100-SNAPSHOT'/>
+      </properties>
+      <provides size='5'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='org.eclipse.ecf.remoteservice.asyncproxy' version='2.0.100.v20160907-0906'/>
+        <provided namespace='osgi.bundle' name='org.eclipse.ecf.remoteservice.asyncproxy' version='2.0.100.v20160907-0906'/>
+        <provided namespace='java.package' name='org.eclipse.ecf.remoteservice.asyncproxy' version='2.0.0'/>
+        <provided namespace='org.eclipse.equinox.p2.eclipse.type' name='bundle' version='1.0.0'/>
+        <provided namespace='org.eclipse.equinox.p2.localization' name='df_LT' version='1.0.0'/>
+      </provides>
+      <requires size='1'>
+        <required namespace='java.package' name='org.eclipse.equinox.concurrent.future' range='0.0.0'/>
+      </requires>
+      <artifacts size='1'>
+        <artifact classifier='osgi.bundle' id='org.eclipse.ecf.remoteservice.asyncproxy' version='2.0.100.v20160907-0906'/>
+      </artifacts>
+      <touchpoint id='org.eclipse.equinox.p2.osgi' version='1.0.0'/>
+      <touchpointData size='1'>
+        <instructions size='1'>
+          <instruction key='manifest'>
+            Bundle-SymbolicName: org.eclipse.ecf.remoteservice.asyncproxy&#xA;Bundle-Version: 2.0.100.v20160907-0906
+          </instruction>
+        </instructions>
+      </touchpointData>
+    </unit>
+    <unit id='org.eclipse.ecf.provider.jersey.server.feature.feature.jar' version='1.1.0.201702022058'>
+      <properties size='7'>
+        <property name='org.eclipse.equinox.p2.name' value='ECF Remote Services Jersey Server Provider'/>
+        <property name='org.eclipse.equinox.p2.description' value='This feature provides a client Remote Service Distribution provider based upon the Jersey implementation&#xA;      of the Jax-RS specification.&#xA;      For tutorials, documentation, and examples with ECF&apos;s Implementation of OSGi RS/RSA see&#xA;&#xA;https://wiki.eclipse.org/ECF#OSGi_Remote_Services'/>
+        <property name='org.eclipse.equinox.p2.description.url' value='http://www.eclipse.org/ecf'/>
+        <property name='org.eclipse.equinox.p2.provider' value='%providerName'/>
+        <property name='maven-groupId' value='org.eclipse.ecf'/>
+        <property name='maven-artifactId' value='org.eclipse.ecf.provider.jersey.server.feature'/>
+        <property name='maven-version' value='1.1.0-SNAPSHOT'/>
+      </properties>
+      <provides size='3'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='org.eclipse.ecf.provider.jersey.server.feature.feature.jar' version='1.1.0.201702022058'/>
+        <provided namespace='org.eclipse.equinox.p2.eclipse.type' name='feature' version='1.0.0'/>
+        <provided namespace='org.eclipse.update.feature' name='org.eclipse.ecf.provider.jersey.server.feature' version='1.1.0.201702022058'/>
+      </provides>
+      <filter>
+        (org.eclipse.update.install.features=true)
+      </filter>
+      <artifacts size='1'>
+        <artifact classifier='org.eclipse.update.feature' id='org.eclipse.ecf.provider.jersey.server.feature' version='1.1.0.201702022058'/>
+      </artifacts>
+      <touchpoint id='org.eclipse.equinox.p2.osgi' version='1.0.0'/>
+      <touchpointData size='1'>
+        <instructions size='1'>
+          <instruction key='zipped'>
+            true
+          </instruction>
+        </instructions>
+      </touchpointData>
+      <licenses size='1'>
+        <license uri='%25licenseURL' url='%25licenseURL'>
+          %license
+        </license>
+      </licenses>
+      <copyright>
+        #################################################&#xA;# Copyright (c) 2016 Composent, Inc. and others. All rights reserved.&#xA;# This program and the accompanying materials are made available under the &#xA;# terms of the Eclipse Public License v1.0 which accompanies this &#xA;# distribution, and is available at &#xA;# http://www.eclipse.org/legal/epl-v10.html&#xA;#&#xA;# Contributors: Composent, Inc. - initial API and implementation&#xA;#################################################
+      </copyright>
+    </unit>
+    <unit id='com.fasterxml.jackson.jaxrs.jackson-jaxrs-base' version='2.8.1' singleton='false'>
+      <update id='com.fasterxml.jackson.jaxrs.jackson-jaxrs-base' range='[0.0.0,2.8.1)' severity='0'/>
+      <properties size='2'>
+        <property name='org.eclipse.equinox.p2.name' value='Jackson-JAXRS-base'/>
+        <property name='org.eclipse.equinox.p2.provider' value='FasterXML'/>
+      </properties>
+      <provides size='7'>
+        <provided namespace='osgi.bundle' name='com.fasterxml.jackson.jaxrs.jackson-jaxrs-base' version='2.8.1'/>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='com.fasterxml.jackson.jaxrs.jackson-jaxrs-base' version='2.8.1'/>
+        <provided namespace='org.eclipse.equinox.p2.eclipse.type' name='bundle' version='1.0.0'/>
+        <provided namespace='java.package' name='com.fasterxml.jackson.jaxrs.annotation' version='2.8.1'/>
+        <provided namespace='java.package' name='com.fasterxml.jackson.jaxrs.base' version='2.8.1'/>
+        <provided namespace='java.package' name='com.fasterxml.jackson.jaxrs.cfg' version='2.8.1'/>
+        <provided namespace='java.package' name='com.fasterxml.jackson.jaxrs.util' version='2.8.1'/>
+      </provides>
+      <requires size='13'>
+        <required namespace='java.package' name='javax.ws.rs.core' range='[2.0.0,2.1.0)'/>
+        <required namespace='java.package' name='javax.ws.rs.ext' range='[2.0.0,2.1.0)'/>
+        <required namespace='java.package' name='com.fasterxml.jackson.annotation' range='[2.8.0,3.0.0)'/>
+        <required namespace='java.package' name='com.fasterxml.jackson.core' range='[2.8.0,3.0.0)'/>
+        <required namespace='java.package' name='com.fasterxml.jackson.databind' range='[2.8.0,3.0.0)'/>
+        <required namespace='java.package' name='com.fasterxml.jackson.databind.cfg' range='[2.8.0,3.0.0)'/>
+        <required namespace='java.package' name='com.fasterxml.jackson.databind.introspect' range='[2.8.0,3.0.0)'/>
+        <required namespace='java.package' name='com.fasterxml.jackson.databind.type' range='[2.8.0,3.0.0)'/>
+        <required namespace='java.package' name='com.fasterxml.jackson.databind.util' range='[2.8.0,3.0.0)'/>
+        <required namespace='java.package' name='com.fasterxml.jackson.jaxrs.annotation' range='[2.8.0,3.0.0)'/>
+        <required namespace='java.package' name='com.fasterxml.jackson.jaxrs.cfg' range='[2.8.0,3.0.0)'/>
+        <required namespace='java.package' name='com.fasterxml.jackson.jaxrs.util' range='[2.8.0,3.0.0)'/>
+        <required namespace='java.package' name='javax.ws.rs' range='[2.0.0,2.1.0)'/>
+      </requires>
+      <artifacts size='1'>
+        <artifact classifier='osgi.bundle' id='com.fasterxml.jackson.jaxrs.jackson-jaxrs-base' version='2.8.1'/>
+      </artifacts>
+      <touchpoint id='org.eclipse.equinox.p2.osgi' version='1.0.0'/>
+      <touchpointData size='1'>
+        <instructions size='1'>
+          <instruction key='manifest'>
+            Manifest-Version: 1.0&#xA;Bundle-SymbolicName: com.fasterxml.jackson.jaxrs.jackson-jaxrs-base&#xA;Bundle-Version: 2.8.1
+          </instruction>
+        </instructions>
+      </touchpointData>
+    </unit>
+    <unit id='com.fasterxml.jackson.core.jackson-annotations' version='2.8.1' singleton='false'>
+      <update id='com.fasterxml.jackson.core.jackson-annotations' range='[0.0.0,2.8.1)' severity='0'/>
+      <properties size='2'>
+        <property name='org.eclipse.equinox.p2.name' value='Jackson-annotations'/>
+        <property name='org.eclipse.equinox.p2.provider' value='FasterXML'/>
+      </properties>
+      <provides size='4'>
+        <provided namespace='osgi.bundle' name='com.fasterxml.jackson.core.jackson-annotations' version='2.8.1'/>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='com.fasterxml.jackson.core.jackson-annotations' version='2.8.1'/>
+        <provided namespace='org.eclipse.equinox.p2.eclipse.type' name='bundle' version='1.0.0'/>
+        <provided namespace='java.package' name='com.fasterxml.jackson.annotation' version='2.8.1'/>
+      </provides>
+      <artifacts size='1'>
+        <artifact classifier='osgi.bundle' id='com.fasterxml.jackson.core.jackson-annotations' version='2.8.1'/>
+      </artifacts>
+      <touchpoint id='org.eclipse.equinox.p2.osgi' version='1.0.0'/>
+      <touchpointData size='1'>
+        <instructions size='1'>
+          <instruction key='manifest'>
+            Manifest-Version: 1.0&#xA;Bundle-SymbolicName: com.fasterxml.jackson.core.jackson-annotations&#xA;Bundle-Version: 2.8.1
+          </instruction>
+        </instructions>
+      </touchpointData>
+    </unit>
+    <unit id='org.eclipse.ecf.provider.jersey.client' version='1.1.0.201702022058' singleton='false'>
+      <update id='org.eclipse.ecf.provider.jersey.client' range='[0.0.0,1.1.0.201702022058)' severity='0'/>
+      <properties size='5'>
+        <property name='org.eclipse.equinox.p2.name' value='ECF Jersey Remote Services Client'/>
+        <property name='org.eclipse.equinox.p2.provider' value='Eclipse.org - ECF'/>
+        <property name='maven-groupId' value='org.eclipse.ecf'/>
+        <property name='maven-artifactId' value='org.eclipse.ecf.provider.jersey.client'/>
+        <property name='maven-version' value='1.1.0-SNAPSHOT'/>
+      </properties>
+      <provides size='4'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='org.eclipse.ecf.provider.jersey.client' version='1.1.0.201702022058'/>
+        <provided namespace='osgi.bundle' name='org.eclipse.ecf.provider.jersey.client' version='1.1.0.201702022058'/>
+        <provided namespace='java.package' name='org.eclipse.ecf.provider.jersey.client' version='1.1.0'/>
+        <provided namespace='org.eclipse.equinox.p2.eclipse.type' name='bundle' version='1.0.0'/>
+      </provides>
+      <requires size='19'>
+        <required namespace='osgi.bundle' name='org.eclipse.ecf' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.equinox.common' range='0.0.0'/>
+        <required namespace='java.package' name='com.fasterxml.jackson.core' range='2.5.0'/>
+        <required namespace='java.package' name='com.fasterxml.jackson.databind' range='2.5.0'/>
+        <required namespace='java.package' name='javax.ws.rs.client' range='2.0.1'/>
+        <required namespace='java.package' name='javax.ws.rs.core' range='2.0.1'/>
+        <required namespace='java.package' name='javax.ws.rs.ext' range='2.0.1'/>
+        <required namespace='java.package' name='org.eclipse.ecf.provider.jaxrs' range='1.0.0'/>
+        <required namespace='java.package' name='org.eclipse.ecf.provider.jaxrs.client' range='1.1.0'/>
+        <required namespace='java.package' name='org.eclipse.ecf.remoteservice' range='7.2.0'/>
+        <required namespace='java.package' name='org.eclipse.ecf.remoteservice.asyncproxy' range='0.0.0'/>
+        <required namespace='java.package' name='org.eclipse.ecf.remoteservice.client' range='8.0.0'/>
+        <required namespace='java.package' name='org.eclipse.ecf.remoteservice.provider' range='1.0.0'/>
+        <required namespace='java.package' name='org.eclipse.equinox.concurrent.future' range='1.1.0'/>
+        <required namespace='java.package' name='org.glassfish.jersey' range='2.14.1'/>
+        <required namespace='java.package' name='org.glassfish.jersey.client' range='2.14.1'/>
+        <required namespace='java.package' name='org.glassfish.jersey.jackson' range='2.14.1'/>
+        <required namespace='java.package' name='org.osgi.framework' range='0.0.0'/>
+        <required namespace='java.package' name='org.osgi.service.component.annotations' range='1.2.0' optional='true' greedy='false'/>
+      </requires>
+      <artifacts size='1'>
+        <artifact classifier='osgi.bundle' id='org.eclipse.ecf.provider.jersey.client' version='1.1.0.201702022058'/>
+      </artifacts>
+      <touchpoint id='org.eclipse.equinox.p2.osgi' version='1.0.0'/>
+      <touchpointData size='1'>
+        <instructions size='1'>
+          <instruction key='manifest'>
+            Bundle-SymbolicName: org.eclipse.ecf.provider.jersey.client&#xA;Bundle-Version: 1.1.0.201702022058
+          </instruction>
+        </instructions>
+      </touchpointData>
+    </unit>
+    <unit id='org.eclipse.ecf.provider.jersey.client.source' version='1.1.0.201702022058' singleton='false'>
+      <update id='org.eclipse.ecf.provider.jersey.client.source' range='[0.0.0,1.1.0.201702022058)' severity='0'/>
+      <properties size='9'>
+        <property name='df_LT.bundleVendor' value='Eclipse.org - ECF'/>
+        <property name='df_LT.bundleName' value='ECF Jersey Remote Services Client Source'/>
+        <property name='org.eclipse.equinox.p2.name' value='%bundleName'/>
+        <property name='org.eclipse.equinox.p2.provider' value='%bundleVendor'/>
+        <property name='org.eclipse.equinox.p2.bundle.localization' value='OSGI-INF/l10n/bundle-src'/>
+        <property name='maven-groupId' value='org.eclipse.ecf'/>
+        <property name='maven-artifactId' value='org.eclipse.ecf.provider.jersey.client'/>
+        <property name='maven-version' value='1.1.0-SNAPSHOT'/>
+        <property name='maven-classifier' value='sources'/>
+      </properties>
+      <provides size='4'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='org.eclipse.ecf.provider.jersey.client.source' version='1.1.0.201702022058'/>
+        <provided namespace='osgi.bundle' name='org.eclipse.ecf.provider.jersey.client.source' version='1.1.0.201702022058'/>
+        <provided namespace='org.eclipse.equinox.p2.eclipse.type' name='source' version='1.0.0'/>
+        <provided namespace='org.eclipse.equinox.p2.localization' name='df_LT' version='1.0.0'/>
+      </provides>
+      <artifacts size='1'>
+        <artifact classifier='osgi.bundle' id='org.eclipse.ecf.provider.jersey.client.source' version='1.1.0.201702022058'/>
+      </artifacts>
+      <touchpoint id='org.eclipse.equinox.p2.osgi' version='1.0.0'/>
+      <touchpointData size='1'>
+        <instructions size='1'>
+          <instruction key='manifest'>
+            Bundle-SymbolicName: org.eclipse.ecf.provider.jersey.client.source&#xA;Bundle-Version: 1.1.0.201702022058
+          </instruction>
+        </instructions>
+      </touchpointData>
+    </unit>
+    <unit id='com.fasterxml.jackson.jaxrs.jackson-jaxrs-json-provider' version='2.8.1' singleton='false'>
+      <update id='com.fasterxml.jackson.jaxrs.jackson-jaxrs-json-provider' range='[0.0.0,2.8.1)' severity='0'/>
+      <properties size='2'>
+        <property name='org.eclipse.equinox.p2.name' value='Jackson-JAXRS-JSON'/>
+        <property name='org.eclipse.equinox.p2.provider' value='FasterXML'/>
+      </properties>
+      <provides size='5'>
+        <provided namespace='osgi.bundle' name='com.fasterxml.jackson.jaxrs.jackson-jaxrs-json-provider' version='2.8.1'/>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='com.fasterxml.jackson.jaxrs.jackson-jaxrs-json-provider' version='2.8.1'/>
+        <provided namespace='org.eclipse.equinox.p2.eclipse.type' name='bundle' version='1.0.0'/>
+        <provided namespace='java.package' name='com.fasterxml.jackson.jaxrs.json' version='2.8.1'/>
+        <provided namespace='java.package' name='com.fasterxml.jackson.jaxrs.json.annotation' version='2.8.1'/>
+      </provides>
+      <requires size='14'>
+        <required namespace='java.package' name='javax.ws.rs' range='[2.0.0,2.1.0)'/>
+        <required namespace='java.package' name='javax.ws.rs.core' range='[2.0.0,2.1.0)'/>
+        <required namespace='java.package' name='javax.ws.rs.ext' range='[2.0.0,2.1.0)'/>
+        <required namespace='java.package' name='com.fasterxml.jackson.module.jaxb' range='[2.8.0,3.0.0)' optional='true' greedy='false'/>
+        <required namespace='java.package' name='com.fasterxml.jackson.annotation' range='[2.8.0,3.0.0)'/>
+        <required namespace='java.package' name='com.fasterxml.jackson.core' range='[2.8.0,3.0.0)'/>
+        <required namespace='java.package' name='com.fasterxml.jackson.core.util' range='[2.8.0,3.0.0)'/>
+        <required namespace='java.package' name='com.fasterxml.jackson.databind' range='[2.8.0,3.0.0)'/>
+        <required namespace='java.package' name='com.fasterxml.jackson.databind.cfg' range='[2.8.0,3.0.0)'/>
+        <required namespace='java.package' name='com.fasterxml.jackson.databind.introspect' range='[2.8.0,3.0.0)'/>
+        <required namespace='java.package' name='com.fasterxml.jackson.databind.util' range='[2.8.0,3.0.0)'/>
+        <required namespace='java.package' name='com.fasterxml.jackson.jaxrs.base' range='[2.8.0,3.0.0)'/>
+        <required namespace='java.package' name='com.fasterxml.jackson.jaxrs.cfg' range='[2.8.0,3.0.0)'/>
+        <required namespace='java.package' name='com.fasterxml.jackson.jaxrs.json.annotation' range='[2.8.0,3.0.0)'/>
+      </requires>
+      <artifacts size='1'>
+        <artifact classifier='osgi.bundle' id='com.fasterxml.jackson.jaxrs.jackson-jaxrs-json-provider' version='2.8.1'/>
+      </artifacts>
+      <touchpoint id='org.eclipse.equinox.p2.osgi' version='1.0.0'/>
+      <touchpointData size='1'>
+        <instructions size='1'>
+          <instruction key='manifest'>
+            Manifest-Version: 1.0&#xA;Bundle-SymbolicName: com.fasterxml.jackson.jaxrs.jackson-jaxrs-json-pr&#xA; ovider&#xA;Bundle-Version: 2.8.1
+          </instruction>
+        </instructions>
+      </touchpointData>
+    </unit>
+    <unit id='javax.validation.api' version='1.1.0.Final' singleton='false'>
+      <update id='javax.validation.api' range='[0.0.0,1.1.0.Final)' severity='0'/>
+      <properties size='1'>
+        <property name='org.eclipse.equinox.p2.name' value='Bean Validation API'/>
+      </properties>
+      <provides size='11'>
+        <provided namespace='osgi.bundle' name='javax.validation.api' version='1.1.0.Final'/>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='javax.validation.api' version='1.1.0.Final'/>
+        <provided namespace='org.eclipse.equinox.p2.eclipse.type' name='bundle' version='1.0.0'/>
+        <provided namespace='java.package' name='javax.validation.groups' version='1.1.0.Final'/>
+        <provided namespace='java.package' name='javax.validation.metadata' version='1.1.0.Final'/>
+        <provided namespace='java.package' name='javax.validation' version='1.1.0.Final'/>
+        <provided namespace='java.package' name='javax.validation.executable' version='1.1.0.Final'/>
+        <provided namespace='java.package' name='javax.validation.constraintvalidation' version='1.1.0.Final'/>
+        <provided namespace='java.package' name='javax.validation.spi' version='1.1.0.Final'/>
+        <provided namespace='java.package' name='javax.validation.bootstrap' version='1.1.0.Final'/>
+        <provided namespace='java.package' name='javax.validation.constraints' version='1.1.0.Final'/>
+      </provides>
+      <artifacts size='1'>
+        <artifact classifier='osgi.bundle' id='javax.validation.api' version='1.1.0.Final'/>
+      </artifacts>
+      <touchpoint id='org.eclipse.equinox.p2.osgi' version='1.0.0'/>
+      <touchpointData size='1'>
+        <instructions size='1'>
+          <instruction key='manifest'>
+            Manifest-Version: 1.0&#xA;Bundle-SymbolicName: javax.validation.api&#xA;Bundle-Version: 1.1.0.Final
+          </instruction>
+        </instructions>
+      </touchpointData>
+    </unit>
+    <unit id='org.glassfish.hk2.utils' version='2.5.0.b05' singleton='false'>
+      <update id='org.glassfish.hk2.utils' range='[0.0.0,2.5.0.b05)' severity='0'/>
+      <properties size='2'>
+        <property name='org.eclipse.equinox.p2.name' value='HK2 Implementation Utilities'/>
+        <property name='org.eclipse.equinox.p2.provider' value='Oracle Corporation'/>
+      </properties>
+      <provides size='9'>
+        <provided namespace='osgi.bundle' name='org.glassfish.hk2.utils' version='2.5.0.b05'/>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='org.glassfish.hk2.utils' version='2.5.0.b05'/>
+        <provided namespace='org.eclipse.equinox.p2.eclipse.type' name='bundle' version='1.0.0'/>
+        <provided namespace='java.package' name='org.glassfish.hk2.utilities.cache' version='2.5.0'/>
+        <provided namespace='java.package' name='org.glassfish.hk2.utilities.general' version='2.5.0'/>
+        <provided namespace='java.package' name='org.glassfish.hk2.utilities.reflection' version='2.5.0'/>
+        <provided namespace='java.package' name='org.glassfish.hk2.utilities.reflection.internal' version='2.5.0'/>
+        <provided namespace='java.package' name='org.jvnet.hk2.component' version='2.5.0'/>
+        <provided namespace='java.package' name='org.jvnet.tiger_types' version='2.5.0'/>
+      </provides>
+      <requires size='2'>
+        <required namespace='java.package' name='javax.annotation' range='0.0.0'/>
+        <required namespace='java.package' name='javax.inject' range='0.0.0'/>
+      </requires>
+      <artifacts size='1'>
+        <artifact classifier='osgi.bundle' id='org.glassfish.hk2.utils' version='2.5.0.b05'/>
+      </artifacts>
+      <touchpoint id='org.eclipse.equinox.p2.osgi' version='1.0.0'/>
+      <touchpointData size='1'>
+        <instructions size='1'>
+          <instruction key='manifest'>
+            Manifest-Version: 1.0&#xA;Bundle-SymbolicName: org.glassfish.hk2.utils&#xA;Bundle-Version: 2.5.0.b05
+          </instruction>
+        </instructions>
+      </touchpointData>
+    </unit>
+    <unit id='org.aopalliance' version='1.0.0.v201105210816' singleton='false'>
+      <update id='org.aopalliance' range='[0.0.0,1.0.0.v201105210816)' severity='0'/>
+      <properties size='4'>
+        <property name='df_LT.Bundle-Name' value='Aopalliance Plug-in'/>
+        <property name='df_LT.Bundle-Vendor' value='Eclipse Orbit'/>
+        <property name='org.eclipse.equinox.p2.name' value='%Bundle-Name'/>
+        <property name='org.eclipse.equinox.p2.provider' value='%Bundle-Vendor'/>
+      </properties>
+      <provides size='6'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='org.aopalliance' version='1.0.0.v201105210816'/>
+        <provided namespace='osgi.bundle' name='org.aopalliance' version='1.0.0.v201105210816'/>
+        <provided namespace='java.package' name='org.aopalliance.aop' version='1.0.0'/>
+        <provided namespace='java.package' name='org.aopalliance.intercept' version='1.0.0'/>
+        <provided namespace='org.eclipse.equinox.p2.eclipse.type' name='bundle' version='1.0.0'/>
+        <provided namespace='org.eclipse.equinox.p2.localization' name='df_LT' version='1.0.0'/>
+      </provides>
+      <artifacts size='1'>
+        <artifact classifier='osgi.bundle' id='org.aopalliance' version='1.0.0.v201105210816'/>
+      </artifacts>
+      <touchpoint id='org.eclipse.equinox.p2.osgi' version='1.0.0'/>
+      <touchpointData size='1'>
+        <instructions size='1'>
+          <instruction key='manifest'>
+            Bundle-SymbolicName: org.aopalliance&#xA;Bundle-Version: 1.0.0.v201105210816
+          </instruction>
+        </instructions>
+      </touchpointData>
+    </unit>
+    <unit id='org.eclipse.ecf.provider.jersey.client.feature.feature.group' version='1.1.0.201702022058' singleton='false'>
+      <update id='org.eclipse.ecf.provider.jersey.client.feature.feature.group' range='[0.0.0,1.1.0.201702022058)' severity='0'/>
+      <properties size='8'>
+        <property name='org.eclipse.equinox.p2.name' value='Jersey Remote Service Client Provider Feature'/>
+        <property name='org.eclipse.equinox.p2.description' value='This feature provides the a Remote Service distribution provider based upon the Jersey implementation&#xA;      of the Jax-RS specification.&#xA;      For tutorials, documentation, and examples with ECF&apos;s Implementation of OSGi RS/RSA see&#xA;&#xA;https://wiki.eclipse.org/ECF#OSGi_Remote_Services'/>
+        <property name='org.eclipse.equinox.p2.description.url' value='http://www.eclipse.org/ecf'/>
+        <property name='org.eclipse.equinox.p2.provider' value='%providerName'/>
+        <property name='org.eclipse.equinox.p2.type.group' value='true'/>
+        <property name='maven-groupId' value='org.eclipse.ecf'/>
+        <property name='maven-artifactId' value='org.eclipse.ecf.provider.jersey.client.feature'/>
+        <property name='maven-version' value='1.1.0-SNAPSHOT'/>
+      </properties>
+      <provides size='1'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='org.eclipse.ecf.provider.jersey.client.feature.feature.group' version='1.1.0.201702022058'/>
+      </provides>
+      <requires size='5'>
+        <required namespace='org.eclipse.equinox.p2.iu' name='javax.ws.rs' range='[2.0.1.v201504171603,2.0.1.v201504171603]'/>
+        <required namespace='org.eclipse.equinox.p2.iu' name='org.eclipse.ecf.provider.jaxrs' range='[1.1.0.201702022058,1.1.0.201702022058]'/>
+        <required namespace='org.eclipse.equinox.p2.iu' name='org.eclipse.ecf.provider.jaxrs.client' range='[1.1.0.201702022058,1.1.0.201702022058]'/>
+        <required namespace='org.eclipse.equinox.p2.iu' name='org.eclipse.ecf.provider.jersey.client' range='[1.1.0.201702022058,1.1.0.201702022058]'/>
+        <required namespace='org.eclipse.equinox.p2.iu' name='org.eclipse.ecf.provider.jersey.client.feature.feature.jar' range='[1.1.0.201702022058,1.1.0.201702022058]'>
+          <filter>
+            (org.eclipse.update.install.features=true)
+          </filter>
+        </required>
+      </requires>
+      <touchpoint id='null' version='0.0.0'/>
+      <licenses size='1'>
+        <license uri='%25licenseURL' url='%25licenseURL'>
+          %license
+        </license>
+      </licenses>
+      <copyright>
+        #################################################&#xA;# Copyright (c) 2016 Composent, Inc. and others. All rights reserved.&#xA;# This program and the accompanying materials are made available under the &#xA;# terms of the Eclipse Public License v1.0 which accompanies this &#xA;# distribution, and is available at &#xA;# http://www.eclipse.org/legal/epl-v10.html&#xA;#&#xA;# Contributors: Composent, Inc. - initial API and implementation&#xA;#################################################
+      </copyright>
+    </unit>
+    <unit id='org.eclipse.equinox.common' version='3.8.0.v20160509-1230'>
+      <update id='org.eclipse.equinox.common' range='[0.0.0,3.8.0.v20160509-1230)' severity='0'/>
+      <properties size='8'>
+        <property name='df_LT.pluginName' value='Common Eclipse Runtime'/>
+        <property name='df_LT.providerName' value='Eclipse.org - Equinox'/>
+        <property name='org.eclipse.equinox.p2.name' value='%pluginName'/>
+        <property name='org.eclipse.equinox.p2.provider' value='%providerName'/>
+        <property name='org.eclipse.equinox.p2.bundle.localization' value='plugin'/>
+        <property name='maven-groupId' value='org.eclipse.equinox'/>
+        <property name='maven-artifactId' value='org.eclipse.equinox.common'/>
+        <property name='maven-version' value='3.8.0-SNAPSHOT'/>
+      </properties>
+      <provides size='8'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='org.eclipse.equinox.common' version='3.8.0.v20160509-1230'/>
+        <provided namespace='osgi.bundle' name='org.eclipse.equinox.common' version='3.8.0.v20160509-1230'/>
+        <provided namespace='java.package' name='org.eclipse.core.internal.boot' version='0.0.0'/>
+        <provided namespace='java.package' name='org.eclipse.core.internal.runtime' version='0.0.0'/>
+        <provided namespace='java.package' name='org.eclipse.core.runtime' version='3.5.0'/>
+        <provided namespace='java.package' name='org.eclipse.equinox.events' version='1.0.0'/>
+        <provided namespace='org.eclipse.equinox.p2.eclipse.type' name='bundle' version='1.0.0'/>
+        <provided namespace='org.eclipse.equinox.p2.localization' name='df_LT' version='1.0.0'/>
+      </provides>
+      <requires size='12'>
+        <required namespace='java.package' name='org.eclipse.equinox.log' range='[1.0.0,2.0.0)'/>
+        <required namespace='java.package' name='org.eclipse.osgi.framework.log' range='[1.1.0,2.0.0)'/>
+        <required namespace='java.package' name='org.eclipse.osgi.service.datalocation' range='0.0.0'/>
+        <required namespace='java.package' name='org.eclipse.osgi.service.debug' range='0.0.0'/>
+        <required namespace='java.package' name='org.eclipse.osgi.service.localization' range='0.0.0'/>
+        <required namespace='java.package' name='org.eclipse.osgi.service.urlconversion' range='0.0.0'/>
+        <required namespace='java.package' name='org.eclipse.osgi.util' range='0.0.0'/>
+        <required namespace='java.package' name='org.osgi.framework' range='0.0.0'/>
+        <required namespace='java.package' name='org.osgi.service.log' range='[1.3.0,2.0.0)'/>
+        <required namespace='java.package' name='org.osgi.service.packageadmin' range='0.0.0'/>
+        <required namespace='java.package' name='org.osgi.service.url' range='0.0.0'/>
+        <required namespace='java.package' name='org.osgi.util.tracker' range='0.0.0'/>
+      </requires>
+      <artifacts size='1'>
+        <artifact classifier='osgi.bundle' id='org.eclipse.equinox.common' version='3.8.0.v20160509-1230'/>
+      </artifacts>
+      <touchpoint id='org.eclipse.equinox.p2.osgi' version='1.0.0'/>
+      <touchpointData size='1'>
+        <instructions size='1'>
+          <instruction key='manifest'>
+            Bundle-SymbolicName: org.eclipse.equinox.common; singleton:=true&#xA;Bundle-Version: 3.8.0.v20160509-1230
+          </instruction>
+        </instructions>
+      </touchpointData>
+    </unit>
+    <unit id='org.eclipse.ecf.discovery' version='5.0.200.v20160905-1122'>
+      <update id='org.eclipse.ecf.discovery' range='[0.0.0,5.0.200.v20160905-1122)' severity='0'/>
+      <properties size='8'>
+        <property name='df_LT.plugin.provider' value='Eclipse.org - ECF'/>
+        <property name='df_LT.plugin.name' value='ECF Discovery API'/>
+        <property name='org.eclipse.equinox.p2.name' value='%plugin.name'/>
+        <property name='org.eclipse.equinox.p2.provider' value='%plugin.provider'/>
+        <property name='org.eclipse.equinox.p2.bundle.localization' value='plugin'/>
+        <property name='maven-groupId' value='org.eclipse.ecf'/>
+        <property name='maven-artifactId' value='org.eclipse.ecf.discovery'/>
+        <property name='maven-version' value='5.0.200-SNAPSHOT'/>
+      </properties>
+      <provides size='8'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='org.eclipse.ecf.discovery' version='5.0.200.v20160905-1122'/>
+        <provided namespace='osgi.bundle' name='org.eclipse.ecf.discovery' version='5.0.200.v20160905-1122'/>
+        <provided namespace='java.package' name='org.eclipse.ecf.discovery' version='4.1.0'/>
+        <provided namespace='java.package' name='org.eclipse.ecf.discovery.identity' version='3.0.0'/>
+        <provided namespace='java.package' name='org.eclipse.ecf.discovery.service' version='2.0.0'/>
+        <provided namespace='java.package' name='org.eclipse.ecf.internal.discovery' version='3.0.0'/>
+        <provided namespace='org.eclipse.equinox.p2.eclipse.type' name='bundle' version='1.0.0'/>
+        <provided namespace='org.eclipse.equinox.p2.localization' name='df_LT' version='1.0.0'/>
+      </provides>
+      <requires size='7'>
+        <required namespace='osgi.bundle' name='org.eclipse.equinox.common' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.ecf' range='3.4.0'/>
+        <required namespace='java.package' name='org.eclipse.core.runtime.jobs' range='0.0.0'/>
+        <required namespace='java.package' name='org.eclipse.equinox.concurrent.future' range='1.0.0'/>
+        <required namespace='java.package' name='org.osgi.framework' range='0.0.0'/>
+        <required namespace='java.package' name='org.osgi.service.log' range='1.3.0'/>
+        <required namespace='java.package' name='org.osgi.util.tracker' range='0.0.0'/>
+      </requires>
+      <artifacts size='1'>
+        <artifact classifier='osgi.bundle' id='org.eclipse.ecf.discovery' version='5.0.200.v20160905-1122'/>
+      </artifacts>
+      <touchpoint id='org.eclipse.equinox.p2.osgi' version='1.0.0'/>
+      <touchpointData size='1'>
+        <instructions size='1'>
+          <instruction key='manifest'>
+            Bundle-SymbolicName: org.eclipse.ecf.discovery;singleton:=true&#xA;Bundle-Version: 5.0.200.v20160905-1122
+          </instruction>
+        </instructions>
+      </touchpointData>
+    </unit>
+    <unit id='org.eclipse.ecf.osgi.services.remoteserviceadmin.proxy' version='1.0.0.v20160907-0906' singleton='false'>
+      <update id='org.eclipse.ecf.osgi.services.remoteserviceadmin.proxy' range='[0.0.0,1.0.0.v20160907-0906)' severity='0'/>
+      <properties size='5'>
+        <property name='org.eclipse.equinox.p2.name' value='ECF Remote Service Admin (RSA) Proxy'/>
+        <property name='org.eclipse.equinox.p2.provider' value='Eclipse.org - ECF'/>
+        <property name='maven-groupId' value='org.eclipse.ecf'/>
+        <property name='maven-artifactId' value='org.eclipse.ecf.osgi.services.remoteserviceadmin.proxy'/>
+        <property name='maven-version' value='1.0.0-SNAPSHOT'/>
+      </properties>
+      <provides size='3'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='org.eclipse.ecf.osgi.services.remoteserviceadmin.proxy' version='1.0.0.v20160907-0906'/>
+        <provided namespace='osgi.bundle' name='org.eclipse.ecf.osgi.services.remoteserviceadmin.proxy' version='1.0.0.v20160907-0906'/>
+        <provided namespace='org.eclipse.equinox.p2.eclipse.type' name='bundle' version='1.0.0'/>
+      </provides>
+      <artifacts size='1'>
+        <artifact classifier='osgi.bundle' id='org.eclipse.ecf.osgi.services.remoteserviceadmin.proxy' version='1.0.0.v20160907-0906'/>
+      </artifacts>
+      <touchpoint id='org.eclipse.equinox.p2.osgi' version='1.0.0'/>
+      <touchpointData size='1'>
+        <instructions size='1'>
+          <instruction key='manifest'>
+            Bundle-SymbolicName: org.eclipse.ecf.osgi.services.remoteserviceadmin.proxy&#xA;Bundle-Version: 1.0.0.v20160907-0906
+          </instruction>
+        </instructions>
+      </touchpointData>
+    </unit>
+    <unit id='org.glassfish.jersey.containers.jersey-container-servlet-core' version='2.23.2' singleton='false'>
+      <update id='org.glassfish.jersey.containers.jersey-container-servlet-core' range='[0.0.0,2.23.2)' severity='0'/>
+      <properties size='2'>
+        <property name='org.eclipse.equinox.p2.name' value='jersey-container-servlet-core'/>
+        <property name='org.eclipse.equinox.p2.provider' value='Oracle Corporation'/>
+      </properties>
+      <provides size='7'>
+        <provided namespace='osgi.bundle' name='org.glassfish.jersey.containers.jersey-container-servlet-core' version='2.23.2'/>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='org.glassfish.jersey.containers.jersey-container-servlet-core' version='2.23.2'/>
+        <provided namespace='org.eclipse.equinox.p2.eclipse.type' name='bundle' version='1.0.0'/>
+        <provided namespace='java.package' name='org.glassfish.jersey.servlet.spi' version='2.23.2'/>
+        <provided namespace='java.package' name='org.glassfish.jersey.servlet.internal' version='2.23.2'/>
+        <provided namespace='java.package' name='org.glassfish.jersey.servlet.internal.spi' version='2.23.2'/>
+        <provided namespace='java.package' name='org.glassfish.jersey.servlet' version='2.23.2'/>
+      </provides>
+      <requires size='25'>
+        <required namespace='java.package' name='javax.inject' range='[1.0.0,2.0.0)'/>
+        <required namespace='java.package' name='javax.naming' range='0.0.0'/>
+        <required namespace='java.package' name='javax.persistence' range='0.0.0' optional='true' greedy='false'/>
+        <required namespace='java.package' name='javax.servlet' range='[2.4.0,4.0.0)'/>
+        <required namespace='java.package' name='javax.servlet.http' range='[2.4.0,4.0.0)'/>
+        <required namespace='java.package' name='javax.ws.rs' range='[2.0.0,3.0.0)'/>
+        <required namespace='java.package' name='javax.ws.rs.core' range='[2.0.0,3.0.0)'/>
+        <required namespace='java.package' name='jersey.repackaged.com.google.common.base' range='[2.23.0,3.0.0)'/>
+        <required namespace='java.package' name='jersey.repackaged.com.google.common.collect' range='[2.23.0,3.0.0)'/>
+        <required namespace='java.package' name='jersey.repackaged.com.google.common.util.concurrent' range='[2.23.0,3.0.0)'/>
+        <required namespace='java.package' name='org.glassfish.hk2.api' range='[2.5.0,3.0.0)'/>
+        <required namespace='java.package' name='org.glassfish.hk2.utilities' range='[2.5.0,3.0.0)'/>
+        <required namespace='java.package' name='org.glassfish.hk2.utilities.binding' range='[2.5.0,3.0.0)'/>
+        <required namespace='java.package' name='org.glassfish.jersey.internal' range='[2.23.0,3.0.0)'/>
+        <required namespace='java.package' name='org.glassfish.jersey.internal.inject' range='[2.23.0,3.0.0)'/>
+        <required namespace='java.package' name='org.glassfish.jersey.internal.l10n' range='[2.23.0,3.0.0)'/>
+        <required namespace='java.package' name='org.glassfish.jersey.internal.util' range='[2.23.0,3.0.0)'/>
+        <required namespace='java.package' name='org.glassfish.jersey.internal.util.collection' range='[2.23.0,3.0.0)'/>
+        <required namespace='java.package' name='org.glassfish.jersey.message.internal' range='[2.23.0,3.0.0)'/>
+        <required namespace='java.package' name='org.glassfish.jersey.process.internal' range='[2.23.0,3.0.0)'/>
+        <required namespace='java.package' name='org.glassfish.jersey.server' range='[2.23.0,3.0.0)'/>
+        <required namespace='java.package' name='org.glassfish.jersey.server.internal' range='[2.23.0,3.0.0)'/>
+        <required namespace='java.package' name='org.glassfish.jersey.server.internal.scanning' range='[2.23.0,3.0.0)'/>
+        <required namespace='java.package' name='org.glassfish.jersey.server.spi' range='[2.23.0,3.0.0)'/>
+        <required namespace='java.package' name='org.glassfish.jersey.uri' range='[2.23.0,3.0.0)'/>
+      </requires>
+      <artifacts size='1'>
+        <artifact classifier='osgi.bundle' id='org.glassfish.jersey.containers.jersey-container-servlet-core' version='2.23.2'/>
+      </artifacts>
+      <touchpoint id='org.eclipse.equinox.p2.osgi' version='1.0.0'/>
+      <touchpointData size='1'>
+        <instructions size='1'>
+          <instruction key='manifest'>
+            Manifest-Version: 1.0&#xA;Bundle-SymbolicName: org.glassfish.jersey.containers.jersey-container-&#xA; servlet-core&#xA;Bundle-Version: 2.23.2
+          </instruction>
+        </instructions>
+      </touchpointData>
+    </unit>
+    <unit id='org.eclipse.ecf.provider.jersey.server.feature.feature.group' version='1.1.0.201702022058' singleton='false'>
+      <update id='org.eclipse.ecf.provider.jersey.server.feature.feature.group' range='[0.0.0,1.1.0.201702022058)' severity='0'/>
+      <properties size='8'>
+        <property name='org.eclipse.equinox.p2.name' value='ECF Remote Services Jersey Server Provider'/>
+        <property name='org.eclipse.equinox.p2.description' value='This feature provides a client Remote Service Distribution provider based upon the Jersey implementation&#xA;      of the Jax-RS specification.&#xA;      For tutorials, documentation, and examples with ECF&apos;s Implementation of OSGi RS/RSA see&#xA;&#xA;https://wiki.eclipse.org/ECF#OSGi_Remote_Services'/>
+        <property name='org.eclipse.equinox.p2.description.url' value='http://www.eclipse.org/ecf'/>
+        <property name='org.eclipse.equinox.p2.provider' value='%providerName'/>
+        <property name='org.eclipse.equinox.p2.type.group' value='true'/>
+        <property name='maven-groupId' value='org.eclipse.ecf'/>
+        <property name='maven-artifactId' value='org.eclipse.ecf.provider.jersey.server.feature'/>
+        <property name='maven-version' value='1.1.0-SNAPSHOT'/>
+      </properties>
+      <provides size='1'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='org.eclipse.ecf.provider.jersey.server.feature.feature.group' version='1.1.0.201702022058'/>
+      </provides>
+      <requires size='5'>
+        <required namespace='org.eclipse.equinox.p2.iu' name='javax.ws.rs' range='[2.0.1.v201504171603,2.0.1.v201504171603]'/>
+        <required namespace='org.eclipse.equinox.p2.iu' name='org.eclipse.ecf.provider.jaxrs' range='[1.1.0.201702022058,1.1.0.201702022058]'/>
+        <required namespace='org.eclipse.equinox.p2.iu' name='org.eclipse.ecf.provider.jaxrs.server' range='[1.1.0.201702022058,1.1.0.201702022058]'/>
+        <required namespace='org.eclipse.equinox.p2.iu' name='org.eclipse.ecf.provider.jersey.server' range='[1.0.0.201702022058,1.0.0.201702022058]'/>
+        <required namespace='org.eclipse.equinox.p2.iu' name='org.eclipse.ecf.provider.jersey.server.feature.feature.jar' range='[1.1.0.201702022058,1.1.0.201702022058]'>
+          <filter>
+            (org.eclipse.update.install.features=true)
+          </filter>
+        </required>
+      </requires>
+      <touchpoint id='null' version='0.0.0'/>
+      <licenses size='1'>
+        <license uri='%25licenseURL' url='%25licenseURL'>
+          %license
+        </license>
+      </licenses>
+      <copyright>
+        #################################################&#xA;# Copyright (c) 2016 Composent, Inc. and others. All rights reserved.&#xA;# This program and the accompanying materials are made available under the &#xA;# terms of the Eclipse Public License v1.0 which accompanies this &#xA;# distribution, and is available at &#xA;# http://www.eclipse.org/legal/epl-v10.html&#xA;#&#xA;# Contributors: Composent, Inc. - initial API and implementation&#xA;#################################################
+      </copyright>
+    </unit>
+    <unit id='javax.servlet' version='3.1.0.v201410161800' singleton='false'>
+      <update id='javax.servlet' range='[0.0.0,3.1.0.v201410161800)' severity='0'/>
+      <properties size='8'>
+        <property name='df_LT.bundleName' value='Servlet API Bundle'/>
+        <property name='df_LT.bundleDescription' value='Java(TM) Servlet 3.1 API Design Specification'/>
+        <property name='df_LT.bundleProvider' value='Eclipse Orbit'/>
+        <property name='org.eclipse.equinox.p2.name' value='%bundleName'/>
+        <property name='org.eclipse.equinox.p2.description' value='%bundleDescription'/>
+        <property name='org.eclipse.equinox.p2.provider' value='%bundleProvider'/>
+        <property name='org.eclipse.equinox.p2.doc.url' value='https://glassfish.dev.java.net'/>
+        <property name='org.eclipse.equinox.p2.bundle.localization' value='plugin'/>
+      </properties>
+      <provides size='8'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='javax.servlet' version='3.1.0.v201410161800'/>
+        <provided namespace='osgi.bundle' name='javax.servlet' version='3.1.0.v201410161800'/>
+        <provided namespace='java.package' name='javax.servlet' version='3.1.0'/>
+        <provided namespace='java.package' name='javax.servlet.annotation' version='3.1.0'/>
+        <provided namespace='java.package' name='javax.servlet.descriptor' version='3.1.0'/>
+        <provided namespace='java.package' name='javax.servlet.http' version='3.1.0'/>
+        <provided namespace='org.eclipse.equinox.p2.eclipse.type' name='bundle' version='1.0.0'/>
+        <provided namespace='org.eclipse.equinox.p2.localization' name='df_LT' version='1.0.0'/>
+      </provides>
+      <requires size='4'>
+        <required namespace='java.package' name='javax.servlet' range='3.1.0'/>
+        <required namespace='java.package' name='javax.servlet.annotation' range='3.1.0'/>
+        <required namespace='java.package' name='javax.servlet.descriptor' range='3.1.0'/>
+        <required namespace='java.package' name='javax.servlet.http' range='3.1.0'/>
+      </requires>
+      <artifacts size='1'>
+        <artifact classifier='osgi.bundle' id='javax.servlet' version='3.1.0.v201410161800'/>
+      </artifacts>
+      <touchpoint id='org.eclipse.equinox.p2.osgi' version='1.0.0'/>
+      <touchpointData size='1'>
+        <instructions size='1'>
+          <instruction key='manifest'>
+            Bundle-SymbolicName: javax.servlet&#xA;Bundle-Version: 3.1.0.v201410161800
+          </instruction>
+        </instructions>
+      </touchpointData>
+    </unit>
+    <unit id='org.eclipse.ecf.osgi.services.remoteserviceadmin' version='4.5.0.v20161114-0030' singleton='false'>
+      <update id='org.eclipse.ecf.osgi.services.remoteserviceadmin' range='[0.0.0,4.5.0.v20161114-0030)' severity='0'/>
+      <properties size='8'>
+        <property name='df_LT.bundle.name' value='ECF Remote Service Admin (RSA) Implementation'/>
+        <property name='df_LT.bundle.provider' value='Eclipse.org - ECF'/>
+        <property name='org.eclipse.equinox.p2.name' value='%bundle.name'/>
+        <property name='org.eclipse.equinox.p2.provider' value='%bundle.provider'/>
+        <property name='org.eclipse.equinox.p2.bundle.localization' value='bundle'/>
+        <property name='maven-groupId' value='org.eclipse.ecf'/>
+        <property name='maven-artifactId' value='org.eclipse.ecf.osgi.services.remoteserviceadmin'/>
+        <property name='maven-version' value='4.5.0-SNAPSHOT'/>
+      </properties>
+      <provides size='6'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='org.eclipse.ecf.osgi.services.remoteserviceadmin' version='4.5.0.v20161114-0030'/>
+        <provided namespace='osgi.bundle' name='org.eclipse.ecf.osgi.services.remoteserviceadmin' version='4.5.0.v20161114-0030'/>
+        <provided namespace='java.package' name='org.eclipse.ecf.internal.osgi.services.remoteserviceadmin' version='0.0.0'/>
+        <provided namespace='java.package' name='org.eclipse.ecf.osgi.services.remoteserviceadmin' version='1.3.0'/>
+        <provided namespace='org.eclipse.equinox.p2.eclipse.type' name='bundle' version='1.0.0'/>
+        <provided namespace='org.eclipse.equinox.p2.localization' name='df_LT' version='1.0.0'/>
+      </provides>
+      <requires size='24'>
+        <required namespace='osgi.bundle' name='org.eclipse.ecf.osgi.services.remoteserviceadmin.proxy' range='1.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.equinox.common' range='0.0.0'/>
+        <required namespace='java.package' name='javax.xml.parsers' range='0.0.0'/>
+        <required namespace='java.package' name='org.eclipse.ecf.core' range='3.0.0'/>
+        <required namespace='java.package' name='org.eclipse.ecf.core.events' range='3.1.0'/>
+        <required namespace='java.package' name='org.eclipse.ecf.core.identity' range='3.2.0'/>
+        <required namespace='java.package' name='org.eclipse.ecf.core.jobs' range='1.1.0'/>
+        <required namespace='java.package' name='org.eclipse.ecf.core.security' range='3.1.0'/>
+        <required namespace='java.package' name='org.eclipse.ecf.core.util' range='3.2.0'/>
+        <required namespace='java.package' name='org.eclipse.ecf.discovery' range='4.1.0'/>
+        <required namespace='java.package' name='org.eclipse.ecf.discovery.identity' range='0.0.0'/>
+        <required namespace='java.package' name='org.eclipse.ecf.remoteservice' range='7.2.0'/>
+        <required namespace='java.package' name='org.eclipse.ecf.remoteservice.events' range='6.0.0'/>
+        <required namespace='java.package' name='org.eclipse.ecf.remoteservice.util' range='8.2.0'/>
+        <required namespace='java.package' name='org.eclipse.equinox.concurrent.future' range='1.0.0'/>
+        <required namespace='java.package' name='org.eclipse.osgi.framework.eventmgr' range='0.0.0'/>
+        <required namespace='java.package' name='org.osgi.framework' range='1.3.0'/>
+        <required namespace='java.package' name='org.osgi.framework.hooks.service' range='1.1.0'/>
+        <required namespace='java.package' name='org.osgi.framework.wiring' range='[1.0.0,2.0.0)'/>
+        <required namespace='java.package' name='org.osgi.service.event' range='0.0.0'/>
+        <required namespace='java.package' name='org.osgi.service.log' range='0.0.0'/>
+        <required namespace='java.package' name='org.osgi.service.remoteserviceadmin' range='1.1.0'/>
+        <required namespace='java.package' name='org.osgi.util.tracker' range='0.0.0'/>
+        <required namespace='java.package' name='org.xml.sax' range='0.0.0'/>
+      </requires>
+      <artifacts size='1'>
+        <artifact classifier='osgi.bundle' id='org.eclipse.ecf.osgi.services.remoteserviceadmin' version='4.5.0.v20161114-0030'/>
+      </artifacts>
+      <touchpoint id='org.eclipse.equinox.p2.osgi' version='1.0.0'/>
+      <touchpointData size='1'>
+        <instructions size='1'>
+          <instruction key='manifest'>
+            Bundle-SymbolicName: org.eclipse.ecf.osgi.services.remoteserviceadmin&#xA;Bundle-Version: 4.5.0.v20161114-0030
+          </instruction>
+        </instructions>
+      </touchpointData>
+    </unit>
+    <unit id='org.eclipse.ecf.remoteservice' version='8.11.0.v20160907-0906' singleton='false'>
+      <update id='org.eclipse.ecf.remoteservice' range='[0.0.0,8.11.0.v20160907-0906)' severity='0'/>
+      <properties size='8'>
+        <property name='df_LT.plugin.provider' value='Eclipse.org - ECF'/>
+        <property name='df_LT.plugin.name' value='ECF RemoteServices API'/>
+        <property name='org.eclipse.equinox.p2.name' value='%plugin.name'/>
+        <property name='org.eclipse.equinox.p2.provider' value='%plugin.provider'/>
+        <property name='org.eclipse.equinox.p2.bundle.localization' value='plugin'/>
+        <property name='maven-groupId' value='org.eclipse.ecf'/>
+        <property name='maven-artifactId' value='org.eclipse.ecf.remoteservice'/>
+        <property name='maven-version' value='8.11.0-SNAPSHOT'/>
+      </properties>
+      <provides size='11'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='org.eclipse.ecf.remoteservice' version='8.11.0.v20160907-0906'/>
+        <provided namespace='osgi.bundle' name='org.eclipse.ecf.remoteservice' version='8.11.0.v20160907-0906'/>
+        <provided namespace='java.package' name='org.eclipse.ecf.internal.remoteservice' version='0.0.0'/>
+        <provided namespace='java.package' name='org.eclipse.ecf.remoteservice' version='7.3.0'/>
+        <provided namespace='java.package' name='org.eclipse.ecf.remoteservice.client' version='8.1.0'/>
+        <provided namespace='java.package' name='org.eclipse.ecf.remoteservice.events' version='6.0.0'/>
+        <provided namespace='java.package' name='org.eclipse.ecf.remoteservice.provider' version='1.0.0'/>
+        <provided namespace='java.package' name='org.eclipse.ecf.remoteservice.util' version='8.2.0'/>
+        <provided namespace='java.package' name='org.eclipse.ecf.remoteservice.util.tracker' version='6.0.0'/>
+        <provided namespace='org.eclipse.equinox.p2.eclipse.type' name='bundle' version='1.0.0'/>
+        <provided namespace='org.eclipse.equinox.p2.localization' name='df_LT' version='1.0.0'/>
+      </provides>
+      <requires size='8'>
+        <required namespace='osgi.bundle' name='org.eclipse.equinox.common' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.ecf' range='0.0.0'/>
+        <required namespace='java.package' name='org.eclipse.ecf.core.util.reflection' range='2.2.100'/>
+        <required namespace='java.package' name='org.eclipse.ecf.remoteservice.asyncproxy' range='1.0.0'/>
+        <required namespace='java.package' name='org.eclipse.equinox.concurrent.future' range='1.0.0'/>
+        <required namespace='java.package' name='org.osgi.framework' range='0.0.0'/>
+        <required namespace='java.package' name='org.osgi.service.log' range='0.0.0'/>
+        <required namespace='java.package' name='org.osgi.util.tracker' range='0.0.0'/>
+      </requires>
+      <artifacts size='1'>
+        <artifact classifier='osgi.bundle' id='org.eclipse.ecf.remoteservice' version='8.11.0.v20160907-0906'/>
+      </artifacts>
+      <touchpoint id='org.eclipse.equinox.p2.osgi' version='1.0.0'/>
+      <touchpointData size='1'>
+        <instructions size='1'>
+          <instruction key='manifest'>
+            Bundle-SymbolicName: org.eclipse.ecf.remoteservice&#xA;Bundle-Version: 8.11.0.v20160907-0906
+          </instruction>
+        </instructions>
+      </touchpointData>
+    </unit>
+    <unit id='org.eclipse.ecf.provider.jersey.client.feature.source.feature.jar' version='1.1.0.201702022058'>
+      <properties size='10'>
+        <property name='org.eclipse.equinox.p2.name' value='Jersey Remote Service Client Provider Feature Developer Resources'/>
+        <property name='org.eclipse.equinox.p2.description' value='This feature provides the a Remote Service distribution provider based upon the Jersey implementation&#xA;      of the Jax-RS specification.&#xA;      For tutorials, documentation, and examples with ECF&amp;apos;s Implementation of OSGi RS/RSA see&#xA;&#xA;https://wiki.eclipse.org/ECF#OSGi_Remote_Services'/>
+        <property name='org.eclipse.equinox.p2.description.url' value='http://www.eclipse.org/ecf'/>
+        <property name='org.eclipse.equinox.p2.provider' value='%providerName'/>
+        <property name='df_LT.license' value='Eclipse Foundation Software User Agreement&#xA;April 9, 2014&#xA;&#xA;Usage Of Content&#xA;&#xA;THE ECLIPSE FOUNDATION MAKES AVAILABLE SOFTWARE, DOCUMENTATION, INFORMATION AND/OR&#xA;OTHER MATERIALS FOR OPEN SOURCE PROJECTS (COLLECTIVELY &quot;CONTENT&quot;).&#xA;USE OF THE CONTENT IS GOVERNED BY THE TERMS AND CONDITIONS OF THIS&#xA;AGREEMENT AND/OR THE TERMS AND CONDITIONS OF LICENSE AGREEMENTS OR&#xA;NOTICES INDICATED OR REFERENCED BELOW.  BY USING THE CONTENT, YOU&#xA;AGREE THAT YOUR USE OF THE CONTENT IS GOVERNED BY THIS AGREEMENT&#xA;AND/OR THE TERMS AND CONDITIONS OF ANY APPLICABLE LICENSE AGREEMENTS&#xA;OR NOTICES INDICATED OR REFERENCED BELOW.  IF YOU DO NOT AGREE TO THE&#xA;TERMS AND CONDITIONS OF THIS AGREEMENT AND THE TERMS AND CONDITIONS&#xA;OF ANY APPLICABLE LICENSE AGREEMENTS OR NOTICES INDICATED OR REFERENCED&#xA;BELOW, THEN YOU MAY NOT USE THE CONTENT.&#xA;&#xA;Applicable Licenses&#xA;&#xA;Unless otherwise indicated, all Content made available by the&#xA;Eclipse Foundation is provided to you under the terms and conditions of&#xA;the Eclipse Public License Version 1.0 (&quot;EPL&quot;). A copy of the EPL is&#xA;provided with this Content and is also available at http://www.eclipse.org/legal/epl-v10.html.&#xA;For purposes of the EPL, &quot;Program&quot; will mean the Content.&#xA;&#xA;Content includes, but is not limited to, source code, object code,&#xA;documentation and other files maintained in the Eclipse Foundation source code&#xA;repository (&quot;Repository&quot;) in software modules (&quot;Modules&quot;) and made available&#xA;as downloadable archives (&quot;Downloads&quot;).&#xA;&#xA;&#x9;- Content may be structured and packaged into modules to facilitate delivering,&#xA;&#x9;  extending, and upgrading the Content. Typical modules may include plug-ins (&quot;Plug-ins&quot;),&#xA;&#x9;  plug-in fragments (&quot;Fragments&quot;), and features (&quot;Features&quot;).&#xA;&#x9;- Each Plug-in or Fragment may be packaged as a sub-directory or JAR (Java(TM) ARchive)&#xA;&#x9;  in a directory named &quot;plugins&quot;.&#xA;&#x9;- A Feature is a bundle of one or more Plug-ins and/or Fragments and associated material.&#xA;&#x9;  Each Feature may be packaged as a sub-directory in a directory named &quot;features&quot;.&#xA;&#x9;  Within a Feature, files named &quot;feature.xml&quot; may contain a list of the names and version&#xA;&#x9;  numbers of the Plug-ins and/or Fragments associated with that Feature.&#xA;&#x9;- Features may also include other Features (&quot;Included Features&quot;). Within a Feature, files&#xA;&#x9;  named &quot;feature.xml&quot; may contain a list of the names and version numbers of Included Features.&#xA;&#xA;The terms and conditions governing Plug-ins and Fragments should be&#xA;contained in files named &quot;about.html&quot; (&quot;Abouts&quot;). The terms and&#xA;conditions governing Features and Included Features should be contained&#xA;in files named &quot;license.html&quot; (&quot;Feature Licenses&quot;). Abouts and Feature&#xA;Licenses may be located in any directory of a Download or Module&#xA;including, but not limited to the following locations:&#xA;&#xA;&#x9;- The top-level (root) directory&#xA;&#x9;- Plug-in and Fragment directories&#xA;&#x9;- Inside Plug-ins and Fragments packaged as JARs&#xA;&#x9;- Sub-directories of the directory named &quot;src&quot; of certain Plug-ins&#xA;&#x9;- Feature directories&#xA;&#xA;Note: if a Feature made available by the Eclipse Foundation is installed using the&#xA;Provisioning Technology (as defined below), you must agree to a license (&quot;Feature &#xA;Update License&quot;) during the installation process. If the Feature contains&#xA;Included Features, the Feature Update License should either provide you&#xA;with the terms and conditions governing the Included Features or inform&#xA;you where you can locate them. Feature Update Licenses may be found in&#xA;the &quot;license&quot; property of files named &quot;feature.properties&quot; found within a Feature.&#xA;Such Abouts, Feature Licenses, and Feature Update Licenses contain the&#xA;terms and conditions (or references to such terms and conditions) that&#xA;govern your use of the associated Content in that directory.&#xA;&#xA;THE ABOUTS, FEATURE LICENSES, AND FEATURE UPDATE LICENSES MAY REFER&#xA;TO THE EPL OR OTHER LICENSE AGREEMENTS, NOTICES OR TERMS AND CONDITIONS.&#xA;SOME OF THESE OTHER LICENSE AGREEMENTS MAY INCLUDE (BUT ARE NOT LIMITED TO):&#xA;&#xA;&#x9;- Eclipse Distribution License Version 1.0 (available at http://www.eclipse.org/licenses/edl-v1.0.html)&#xA;&#x9;- Common Public License Version 1.0 (available at http://www.eclipse.org/legal/cpl-v10.html)&#xA;&#x9;- Apache Software License 1.1 (available at http://www.apache.org/licenses/LICENSE)&#xA;&#x9;- Apache Software License 2.0 (available at http://www.apache.org/licenses/LICENSE-2.0)&#xA;&#x9;- Mozilla Public License Version 1.1 (available at http://www.mozilla.org/MPL/MPL-1.1.html)&#xA;&#xA;IT IS YOUR OBLIGATION TO READ AND ACCEPT ALL SUCH TERMS AND CONDITIONS PRIOR&#xA;TO USE OF THE CONTENT. If no About, Feature License, or Feature Update License&#xA;is provided, please contact the Eclipse Foundation to determine what terms and conditions&#xA;govern that particular Content.&#xA;&#xA;&#xA;Use of Provisioning Technology&#xA;&#xA;The Eclipse Foundation makes available provisioning software, examples of which include,&#xA;but are not limited to, p2 and the Eclipse Update Manager (&quot;Provisioning Technology&quot;) for&#xA;the purpose of allowing users to install software, documentation, information and/or&#xA;other materials (collectively &quot;Installable Software&quot;). This capability is provided with&#xA;the intent of allowing such users to install, extend and update Eclipse-based products.&#xA;Information about packaging Installable Software is available at&#xA;http://eclipse.org/equinox/p2/repository_packaging.html (&quot;Specification&quot;).&#xA;&#xA;You may use Provisioning Technology to allow other parties to install Installable Software.&#xA;You shall be responsible for enabling the applicable license agreements relating to the&#xA;Installable Software to be presented to, and accepted by, the users of the Provisioning Technology&#xA;in accordance with the Specification. By using Provisioning Technology in such a manner and&#xA;making it available in accordance with the Specification, you further acknowledge your&#xA;agreement to, and the acquisition of all necessary rights to permit the following:&#xA;&#xA;&#x9;1. A series of actions may occur (&quot;Provisioning Process&quot;) in which a user may execute&#xA;&#x9;   the Provisioning Technology on a machine (&quot;Target Machine&quot;) with the intent of installing,&#xA;&#x9;   extending or updating the functionality of an Eclipse-based product.&#xA;&#x9;2. During the Provisioning Process, the Provisioning Technology may cause third party&#xA;&#x9;   Installable Software or a portion thereof to be accessed and copied to the Target Machine.&#xA;&#x9;3. Pursuant to the Specification, you will provide to the user the terms and conditions that&#xA;&#x9;   govern the use of the Installable Software (&quot;Installable Software Agreement&quot;) and such&#xA;&#x9;   Installable Software Agreement shall be accessed from the Target Machine in accordance&#xA;&#x9;   with the Specification. Such Installable Software Agreement must inform the user of the&#xA;&#x9;   terms and conditions that govern the Installable Software and must solicit acceptance by&#xA;&#x9;   the end user in the manner prescribed in such Installable Software Agreement. Upon such&#xA;&#x9;   indication of agreement by the user, the provisioning Technology will complete installation&#xA;&#x9;   of the Installable Software.&#xA;&#xA;Cryptography&#xA;&#xA;Content may contain encryption software. The country in which you are&#xA;currently may have restrictions on the import, possession, and use,&#xA;and/or re-export to another country, of encryption software. BEFORE&#xA;using any encryption software, please check the country&apos;s laws,&#xA;regulations and policies concerning the import, possession, or use, and&#xA;re-export of encryption software, to see if this is permitted.&#xA;&#xA;Java and all Java-based trademarks are trademarks of Oracle Corporation in the United States, other countries, or both.'/>
+        <property name='df_LT.providerName' value='Eclipse.org - ECF'/>
+        <property name='maven-groupId' value='org.eclipse.ecf'/>
+        <property name='maven-artifactId' value='org.eclipse.ecf.provider.jersey.client.feature'/>
+        <property name='maven-version' value='1.1.0-SNAPSHOT'/>
+        <property name='maven-classifier' value='sources-feature'/>
+      </properties>
+      <provides size='3'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='org.eclipse.ecf.provider.jersey.client.feature.source.feature.jar' version='1.1.0.201702022058'/>
+        <provided namespace='org.eclipse.equinox.p2.eclipse.type' name='feature' version='1.0.0'/>
+        <provided namespace='org.eclipse.update.feature' name='org.eclipse.ecf.provider.jersey.client.feature.source' version='1.1.0.201702022058'/>
+      </provides>
+      <filter>
+        (org.eclipse.update.install.features=true)
+      </filter>
+      <artifacts size='1'>
+        <artifact classifier='org.eclipse.update.feature' id='org.eclipse.ecf.provider.jersey.client.feature.source' version='1.1.0.201702022058'/>
+      </artifacts>
+      <touchpoint id='org.eclipse.equinox.p2.osgi' version='1.0.0'/>
+      <touchpointData size='1'>
+        <instructions size='1'>
+          <instruction key='zipped'>
+            true
+          </instruction>
+        </instructions>
+      </touchpointData>
+      <licenses size='1'>
+        <license uri='%25licenseURL' url='%25licenseURL'>
+          %license
+        </license>
+      </licenses>
+      <copyright>
+        #################################################&#xA;# Copyright (c) 2016 Composent, Inc. and others. All rights reserved.&#xA;# This program and the accompanying materials are made available under the &#xA;# terms of the Eclipse Public License v1.0 which accompanies this &#xA;# distribution, and is available at &#xA;# http://www.eclipse.org/legal/epl-v10.html&#xA;#&#xA;# Contributors: Composent, Inc. - initial API and implementation&#xA;#################################################
+      </copyright>
+    </unit>
+    <unit id='javassist' version='3.20.0.GA' singleton='false'>
+      <update id='javassist' range='[0.0.0,3.20.0.GA)' severity='0'/>
+      <properties size='2'>
+        <property name='org.eclipse.equinox.p2.name' value='Javassist'/>
+        <property name='org.eclipse.equinox.p2.provider' value='Shigeru Chiba, www.javassist.org'/>
+      </properties>
+      <provides size='20'>
+        <provided namespace='osgi.bundle' name='javassist' version='3.20.0.GA'/>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='javassist' version='3.20.0.GA'/>
+        <provided namespace='org.eclipse.equinox.p2.eclipse.type' name='bundle' version='1.0.0'/>
+        <provided namespace='java.package' name='javassist.convert' version='3.20.0.GA'/>
+        <provided namespace='java.package' name='javassist.tools' version='3.20.0.GA'/>
+        <provided namespace='java.package' name='javassist.tools.reflect' version='3.20.0.GA'/>
+        <provided namespace='java.package' name='javassist.expr' version='3.20.0.GA'/>
+        <provided namespace='java.package' name='javassist.tools.rmi' version='3.20.0.GA'/>
+        <provided namespace='java.package' name='javassist.util' version='3.20.0.GA'/>
+        <provided namespace='java.package' name='javassist.bytecode.analysis' version='3.20.0.GA'/>
+        <provided namespace='java.package' name='javassist.bytecode.annotation' version='3.20.0.GA'/>
+        <provided namespace='java.package' name='javassist.bytecode.stackmap' version='3.20.0.GA'/>
+        <provided namespace='java.package' name='javassist.util.proxy' version='3.20.0.GA'/>
+        <provided namespace='java.package' name='javassist.compiler' version='3.20.0.GA'/>
+        <provided namespace='java.package' name='javassist.runtime' version='3.20.0.GA'/>
+        <provided namespace='java.package' name='javassist.bytecode' version='3.20.0.GA'/>
+        <provided namespace='java.package' name='javassist.scopedpool' version='3.20.0.GA'/>
+        <provided namespace='java.package' name='javassist.compiler.ast' version='3.20.0.GA'/>
+        <provided namespace='java.package' name='javassist' version='3.20.0.GA'/>
+        <provided namespace='java.package' name='javassist.tools.web' version='3.20.0.GA'/>
+      </provides>
+      <artifacts size='1'>
+        <artifact classifier='osgi.bundle' id='javassist' version='3.20.0.GA'/>
+      </artifacts>
+      <touchpoint id='org.eclipse.equinox.p2.osgi' version='1.0.0'/>
+      <touchpointData size='1'>
+        <instructions size='1'>
+          <instruction key='manifest'>
+            Manifest-Version: 1.0&#xA;Bundle-SymbolicName: javassist&#xA;Bundle-Version: 3.20.0.GA
+          </instruction>
+        </instructions>
+      </touchpointData>
+    </unit>
+    <unit id='org.eclipse.osgi.services.remoteserviceadmin' version='1.6.100.v20160907-0906' singleton='false'>
+      <update id='org.eclipse.osgi.services.remoteserviceadmin' range='[0.0.0,1.6.100.v20160907-0906)' severity='0'/>
+      <properties size='10'>
+        <property name='df_LT.bundle.description' value='OSGi Service Platform Release 6.0 Remote Service Admin Service Interfaces and Classes'/>
+        <property name='df_LT.bundle.name' value='OSGi R6 RemoteServiceAdmin API'/>
+        <property name='df_LT.bundle.provider' value='Eclipse.org - ECF'/>
+        <property name='org.eclipse.equinox.p2.name' value='%bundle.name'/>
+        <property name='org.eclipse.equinox.p2.description' value='%bundle.description'/>
+        <property name='org.eclipse.equinox.p2.provider' value='%bundle.provider'/>
+        <property name='org.eclipse.equinox.p2.bundle.localization' value='bundle'/>
+        <property name='maven-groupId' value='org.eclipse.ecf'/>
+        <property name='maven-artifactId' value='org.eclipse.osgi.services.remoteserviceadmin'/>
+        <property name='maven-version' value='1.6.100-SNAPSHOT'/>
+      </properties>
+      <provides size='6'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='org.eclipse.osgi.services.remoteserviceadmin' version='1.6.100.v20160907-0906'/>
+        <provided namespace='osgi.bundle' name='org.eclipse.osgi.services.remoteserviceadmin' version='1.6.100.v20160907-0906'/>
+        <provided namespace='java.package' name='org.osgi.service.remoteserviceadmin' version='1.1.0'/>
+        <provided namespace='java.package' name='org.osgi.service.remoteserviceadmin.namespace' version='1.0.0'/>
+        <provided namespace='org.eclipse.equinox.p2.eclipse.type' name='bundle' version='1.0.0'/>
+        <provided namespace='org.eclipse.equinox.p2.localization' name='df_LT' version='1.0.0'/>
+      </provides>
+      <requires size='2'>
+        <required namespace='java.package' name='org.osgi.framework' range='[1.7.0,2.0.0)'/>
+        <required namespace='java.package' name='org.osgi.resource' range='[1.0.0,2.0.0)'/>
+      </requires>
+      <artifacts size='1'>
+        <artifact classifier='osgi.bundle' id='org.eclipse.osgi.services.remoteserviceadmin' version='1.6.100.v20160907-0906'/>
+      </artifacts>
+      <touchpoint id='org.eclipse.equinox.p2.osgi' version='1.0.0'/>
+      <touchpointData size='1'>
+        <instructions size='1'>
+          <instruction key='manifest'>
+            Bundle-SymbolicName: org.eclipse.osgi.services.remoteserviceadmin&#xA;Bundle-Version: 1.6.100.v20160907-0906
+          </instruction>
+        </instructions>
+      </touchpointData>
+    </unit>
+    <unit id='com.fasterxml.jackson.core.jackson-core' version='2.8.1' singleton='false'>
+      <update id='com.fasterxml.jackson.core.jackson-core' range='[0.0.0,2.8.1)' severity='0'/>
+      <properties size='2'>
+        <property name='org.eclipse.equinox.p2.name' value='Jackson-core'/>
+        <property name='org.eclipse.equinox.p2.provider' value='FasterXML'/>
+      </properties>
+      <provides size='12'>
+        <provided namespace='osgi.bundle' name='com.fasterxml.jackson.core.jackson-core' version='2.8.1'/>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='com.fasterxml.jackson.core.jackson-core' version='2.8.1'/>
+        <provided namespace='org.eclipse.equinox.p2.eclipse.type' name='bundle' version='1.0.0'/>
+        <provided namespace='java.package' name='com.fasterxml.jackson.core' version='2.8.1'/>
+        <provided namespace='java.package' name='com.fasterxml.jackson.core.base' version='2.8.1'/>
+        <provided namespace='java.package' name='com.fasterxml.jackson.core.filter' version='2.8.1'/>
+        <provided namespace='java.package' name='com.fasterxml.jackson.core.format' version='2.8.1'/>
+        <provided namespace='java.package' name='com.fasterxml.jackson.core.io' version='2.8.1'/>
+        <provided namespace='java.package' name='com.fasterxml.jackson.core.json' version='2.8.1'/>
+        <provided namespace='java.package' name='com.fasterxml.jackson.core.sym' version='2.8.1'/>
+        <provided namespace='java.package' name='com.fasterxml.jackson.core.type' version='2.8.1'/>
+        <provided namespace='java.package' name='com.fasterxml.jackson.core.util' version='2.8.1'/>
+      </provides>
+      <artifacts size='1'>
+        <artifact classifier='osgi.bundle' id='com.fasterxml.jackson.core.jackson-core' version='2.8.1'/>
+      </artifacts>
+      <touchpoint id='org.eclipse.equinox.p2.osgi' version='1.0.0'/>
+      <touchpointData size='1'>
+        <instructions size='1'>
+          <instruction key='manifest'>
+            Manifest-Version: 1.0&#xA;Bundle-SymbolicName: com.fasterxml.jackson.core.jackson-core&#xA;Bundle-Version: 2.8.1
+          </instruction>
+        </instructions>
+      </touchpointData>
+    </unit>
+    <unit id='org.eclipse.ecf.provider.jaxrs.server' version='1.1.0.201702022058' singleton='false'>
+      <update id='org.eclipse.ecf.provider.jaxrs.server' range='[0.0.0,1.1.0.201702022058)' severity='0'/>
+      <properties size='5'>
+        <property name='org.eclipse.equinox.p2.name' value='ECF Dist Provider - Jax-RS Server Support'/>
+        <property name='org.eclipse.equinox.p2.provider' value='Eclipse.org - ECF'/>
+        <property name='maven-groupId' value='org.eclipse.ecf'/>
+        <property name='maven-artifactId' value='org.eclipse.ecf.provider.jaxrs.server'/>
+        <property name='maven-version' value='1.1.0-SNAPSHOT'/>
+      </properties>
+      <provides size='4'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='org.eclipse.ecf.provider.jaxrs.server' version='1.1.0.201702022058'/>
+        <provided namespace='osgi.bundle' name='org.eclipse.ecf.provider.jaxrs.server' version='1.1.0.201702022058'/>
+        <provided namespace='java.package' name='org.eclipse.ecf.provider.jaxrs.server' version='1.1.0'/>
+        <provided namespace='org.eclipse.equinox.p2.eclipse.type' name='bundle' version='1.0.0'/>
+      </provides>
+      <requires size='16'>
+        <required namespace='osgi.bundle' name='org.eclipse.ecf' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.equinox.common' range='0.0.0'/>
+        <required namespace='java.package' name='javax.servlet' range='2.6.0'/>
+        <required namespace='java.package' name='javax.ws.rs' range='2.0.1'/>
+        <required namespace='java.package' name='javax.ws.rs.client' range='2.0.1'/>
+        <required namespace='java.package' name='javax.ws.rs.container' range='2.0.1'/>
+        <required namespace='java.package' name='javax.ws.rs.core' range='2.0.1'/>
+        <required namespace='java.package' name='javax.ws.rs.ext' range='2.0.1'/>
+        <required namespace='java.package' name='org.eclipse.ecf.provider.jaxrs' range='1.1.0'/>
+        <required namespace='java.package' name='org.eclipse.ecf.remoteservice' range='7.2.0'/>
+        <required namespace='java.package' name='org.eclipse.ecf.remoteservice.client' range='8.0.0'/>
+        <required namespace='java.package' name='org.eclipse.ecf.remoteservice.events' range='6.0.0'/>
+        <required namespace='java.package' name='org.eclipse.ecf.remoteservice.provider' range='1.0.0'/>
+        <required namespace='java.package' name='org.eclipse.equinox.concurrent.future' range='0.0.0'/>
+        <required namespace='java.package' name='org.osgi.framework' range='0.0.0'/>
+        <required namespace='java.package' name='org.osgi.service.http' range='0.0.0'/>
+      </requires>
+      <artifacts size='1'>
+        <artifact classifier='osgi.bundle' id='org.eclipse.ecf.provider.jaxrs.server' version='1.1.0.201702022058'/>
+      </artifacts>
+      <touchpoint id='org.eclipse.equinox.p2.osgi' version='1.0.0'/>
+      <touchpointData size='1'>
+        <instructions size='1'>
+          <instruction key='manifest'>
+            Bundle-SymbolicName: org.eclipse.ecf.provider.jaxrs.server&#xA;Bundle-Version: 1.1.0.201702022058
+          </instruction>
+        </instructions>
+      </touchpointData>
+    </unit>
+    <unit id='org.eclipse.equinox.concurrent' version='1.1.0.v20130327-1442' singleton='false'>
+      <update id='org.eclipse.equinox.concurrent' range='[0.0.0,1.1.0.v20130327-1442)' severity='0'/>
+      <properties size='8'>
+        <property name='df_LT.pluginProvider' value='Eclipse.org - Equinox'/>
+        <property name='df_LT.pluginName' value='Equinox Concurrent API'/>
+        <property name='org.eclipse.equinox.p2.name' value='%pluginName'/>
+        <property name='org.eclipse.equinox.p2.provider' value='%pluginProvider'/>
+        <property name='org.eclipse.equinox.p2.bundle.localization' value='plugin'/>
+        <property name='maven-groupId' value='org.eclipse.equinox'/>
+        <property name='maven-artifactId' value='org.eclipse.equinox.concurrent'/>
+        <property name='maven-version' value='1.1.0-SNAPSHOT'/>
+      </properties>
+      <provides size='5'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='org.eclipse.equinox.concurrent' version='1.1.0.v20130327-1442'/>
+        <provided namespace='osgi.bundle' name='org.eclipse.equinox.concurrent' version='1.1.0.v20130327-1442'/>
+        <provided namespace='java.package' name='org.eclipse.equinox.concurrent.future' version='1.1.0'/>
+        <provided namespace='org.eclipse.equinox.p2.eclipse.type' name='bundle' version='1.0.0'/>
+        <provided namespace='org.eclipse.equinox.p2.localization' name='df_LT' version='1.0.0'/>
+      </provides>
+      <requires size='3'>
+        <required namespace='java.package' name='org.eclipse.core.runtime' range='3.4.0'/>
+        <required namespace='java.package' name='org.osgi.framework' range='1.3.0'/>
+        <required namespace='java.package' name='org.osgi.util.tracker' range='0.0.0'/>
+      </requires>
+      <artifacts size='1'>
+        <artifact classifier='osgi.bundle' id='org.eclipse.equinox.concurrent' version='1.1.0.v20130327-1442'/>
+      </artifacts>
+      <touchpoint id='org.eclipse.equinox.p2.osgi' version='1.0.0'/>
+      <touchpointData size='1'>
+        <instructions size='1'>
+          <instruction key='manifest'>
+            Bundle-SymbolicName: org.eclipse.equinox.concurrent&#xA;Bundle-Version: 1.1.0.v20130327-1442
+          </instruction>
+        </instructions>
+      </touchpointData>
+    </unit>
+    <unit id='org.eclipse.ecf.provider.jersey.server' version='1.0.0.201702022058' singleton='false'>
+      <update id='org.eclipse.ecf.provider.jersey.server' range='[0.0.0,1.0.0.201702022058)' severity='0'/>
+      <properties size='5'>
+        <property name='org.eclipse.equinox.p2.name' value='ECF Dist Provider - Jersey Jax RS Server'/>
+        <property name='org.eclipse.equinox.p2.provider' value='Eclipse.org - ECF'/>
+        <property name='maven-groupId' value='org.eclipse.ecf'/>
+        <property name='maven-artifactId' value='org.eclipse.ecf.provider.jersey.server'/>
+        <property name='maven-version' value='1.0.0-SNAPSHOT'/>
+      </properties>
+      <provides size='4'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='org.eclipse.ecf.provider.jersey.server' version='1.0.0.201702022058'/>
+        <provided namespace='osgi.bundle' name='org.eclipse.ecf.provider.jersey.server' version='1.0.0.201702022058'/>
+        <provided namespace='java.package' name='org.eclipse.ecf.provider.jersey.server' version='1.0.0'/>
+        <provided namespace='org.eclipse.equinox.p2.eclipse.type' name='bundle' version='1.0.0'/>
+      </provides>
+      <requires size='21'>
+        <required namespace='osgi.bundle' name='org.eclipse.ecf' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.equinox.common' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.ecf.identity' range='0.0.0'/>
+        <required namespace='java.package' name='javax.servlet' range='0.0.0'/>
+        <required namespace='java.package' name='javax.ws.rs' range='2.0.1'/>
+        <required namespace='java.package' name='javax.ws.rs.container' range='2.0.1'/>
+        <required namespace='java.package' name='javax.ws.rs.core' range='2.0.1'/>
+        <required namespace='java.package' name='javax.ws.rs.ext' range='2.0.1'/>
+        <required namespace='java.package' name='org.eclipse.ecf.osgi.services.remoteserviceadmin' range='1.2.0'/>
+        <required namespace='java.package' name='org.eclipse.ecf.provider.jaxrs' range='1.1.0'/>
+        <required namespace='java.package' name='org.eclipse.ecf.provider.jaxrs.server' range='1.1.0'/>
+        <required namespace='java.package' name='org.eclipse.ecf.remoteservice' range='0.0.0'/>
+        <required namespace='java.package' name='org.eclipse.ecf.remoteservice.provider' range='1.0.0'/>
+        <required namespace='java.package' name='org.eclipse.equinox.concurrent.future' range='0.0.0'/>
+        <required namespace='java.package' name='org.glassfish.jersey.server' range='2.14.1'/>
+        <required namespace='java.package' name='org.glassfish.jersey.server.model' range='2.14.1'/>
+        <required namespace='java.package' name='org.glassfish.jersey.server.spi' range='2.14.1'/>
+        <required namespace='java.package' name='org.glassfish.jersey.servlet' range='2.14.1'/>
+        <required namespace='java.package' name='org.osgi.framework' range='0.0.0'/>
+        <required namespace='java.package' name='org.osgi.service.component.annotations' range='1.2.0' optional='true' greedy='false'/>
+        <required namespace='java.package' name='org.osgi.service.http' range='1.2.1'/>
+      </requires>
+      <artifacts size='1'>
+        <artifact classifier='osgi.bundle' id='org.eclipse.ecf.provider.jersey.server' version='1.0.0.201702022058'/>
+      </artifacts>
+      <touchpoint id='org.eclipse.equinox.p2.osgi' version='1.0.0'/>
+      <touchpointData size='1'>
+        <instructions size='1'>
+          <instruction key='manifest'>
+            Bundle-SymbolicName: org.eclipse.ecf.provider.jersey.server&#xA;Bundle-Version: 1.0.0.201702022058
+          </instruction>
+        </instructions>
+      </touchpointData>
+    </unit>
+    <unit id='org.eclipse.ecf.provider.jaxrs.client.source' version='1.1.0.201702022058' singleton='false'>
+      <update id='org.eclipse.ecf.provider.jaxrs.client.source' range='[0.0.0,1.1.0.201702022058)' severity='0'/>
+      <properties size='9'>
+        <property name='df_LT.bundleVendor' value='Eclipse.org - ECF'/>
+        <property name='df_LT.bundleName' value='ECF Dist Provider - Jax-RS Client Support Source'/>
+        <property name='org.eclipse.equinox.p2.name' value='%bundleName'/>
+        <property name='org.eclipse.equinox.p2.provider' value='%bundleVendor'/>
+        <property name='org.eclipse.equinox.p2.bundle.localization' value='OSGI-INF/l10n/bundle-src'/>
+        <property name='maven-groupId' value='org.eclipse.ecf'/>
+        <property name='maven-artifactId' value='org.eclipse.ecf.provider.jaxrs.client'/>
+        <property name='maven-version' value='1.1.0-SNAPSHOT'/>
+        <property name='maven-classifier' value='sources'/>
+      </properties>
+      <provides size='4'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='org.eclipse.ecf.provider.jaxrs.client.source' version='1.1.0.201702022058'/>
+        <provided namespace='osgi.bundle' name='org.eclipse.ecf.provider.jaxrs.client.source' version='1.1.0.201702022058'/>
+        <provided namespace='org.eclipse.equinox.p2.eclipse.type' name='source' version='1.0.0'/>
+        <provided namespace='org.eclipse.equinox.p2.localization' name='df_LT' version='1.0.0'/>
+      </provides>
+      <artifacts size='1'>
+        <artifact classifier='osgi.bundle' id='org.eclipse.ecf.provider.jaxrs.client.source' version='1.1.0.201702022058'/>
+      </artifacts>
+      <touchpoint id='org.eclipse.equinox.p2.osgi' version='1.0.0'/>
+      <touchpointData size='1'>
+        <instructions size='1'>
+          <instruction key='manifest'>
+            Bundle-SymbolicName: org.eclipse.ecf.provider.jaxrs.client.source&#xA;Bundle-Version: 1.1.0.201702022058
+          </instruction>
+        </instructions>
+      </touchpointData>
+    </unit>
+  </units>
+</repository>
