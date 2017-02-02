@@ -87,7 +87,7 @@
           source="http:/www.eclipse.org/oomph/targlets/TargetDefinitionGenerator">
         <detail
             key="location">
-          <value>${org.eclipse.ecf.jaxrs.git.clone.location/releng/org.eclipse.ecf.jaxrs.releng.target/ecf-jaxrs-neon.target}</value>
+          <value>${org.eclipse.ecf.jaxrs.git.clone.location/releng/org.eclipse.ecf.jaxrs.releng.target/org.eclipse.ecf.jaxrs.releng.target.target}</value>
         </detail>
         <detail
             key="includeAllPlatforms">
@@ -287,7 +287,7 @@
         <repository
             url="http://agentlab.ru/eclipse/update/org.mockito/1.10.19/"/>
         <repository
-            url="http://agentlab.ru/p2/orbit/missing-swt-fragments/"/>
+            url="http://agentlab.ru/p2/orbit/missing-swt-fragments/updates/nightly"/>
         <repository
             url="http://download.eclipse.org/eclipse/updates/4.6/R-4.6.1-201609071200/"/>
         <repository
@@ -297,7 +297,7 @@
         <repository
             url="http://agentlab.ru/pd/p2/che/"/>
         <repository
-            url="http://download.eclipse.org/releases/neon/201610111000"/>
+            url="http://download.eclipse.org/releases/neon/"/>
       </repositoryList>
     </targlet>
   </setupTask>
@@ -321,6 +321,9 @@
       <predicate
           xsi:type="predicates:NamePredicate"
           pattern="setup-org.eclipse.ecf.jaxrs"/>
+      <predicate
+          xsi:type="predicates:NamePredicate"
+          pattern="com.mycorp.examples.hello.*"/>
     </sourceLocator>
   </setupTask>
   <setupTask
