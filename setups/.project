@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
-	<name>setup-org.eclipse.ecf.provider.jaxrs</name>
+	<name>setup-org.eclipse.ecf.jaxrs</name>
 	<comment></comment>
 	<projects>
 	</projects>
