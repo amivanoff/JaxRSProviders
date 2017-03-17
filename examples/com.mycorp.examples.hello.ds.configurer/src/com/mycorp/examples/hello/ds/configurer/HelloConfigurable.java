@@ -45,7 +45,8 @@ public class HelloConfigurable implements IHello, ManagedService {
      *      Hello service host says 'Hi' back to WWWWWWWW
      * </pre>
      */
-	public String hello() {
+	@Override
+    public String hello() {
 		return "Hello service host says 'Hi' back to WWWWWWWW";
 	}
 
@@ -72,7 +73,8 @@ public class HelloConfigurable implements IHello, ManagedService {
      * }
      * </pre>
      */
-	public HelloMessage hello2() {
+	@Override
+    public HelloMessage hello2() {
 		return new HelloMessage("RRR", "EEE");
 	}
 
@@ -110,7 +112,8 @@ public class HelloConfigurable implements IHello, ManagedService {
      * }
      * </pre>
      */
-	public HelloMessage hello3(String from) {
+	@Override
+    public HelloMessage hello3(String from) {
 		return new HelloMessage("RRR", "EEE");
 	}
 
@@ -143,7 +146,8 @@ public class HelloConfigurable implements IHello, ManagedService {
      * }
      * </pre>
      */
-	public HelloMessage hello4(HelloMessage message) {
+	@Override
+    public HelloMessage hello4(HelloMessage message) {
 		return message;
 	}
 
@@ -167,7 +171,14 @@ public class HelloConfigurable implements IHello, ManagedService {
 		System.out.println("Hello service modified");
 	}
 
-	public void updated(Dictionary<String, ?> properties) throws ConfigurationException {
+	@Override
+    public void updated(Dictionary<String, ?> properties) throws ConfigurationException {
 		System.out.println(properties);
 	}
+
+    @Override
+    public String getHello5(String urlToken, String urlLol, String text, String headerIfMatch, String queryPageSize) {
+        // TODO Auto-generated method stub
+        return null;
+    }
 }

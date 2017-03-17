@@ -14,10 +14,15 @@ import java.lang.reflect.Method;
 import java.lang.reflect.Modifier;
 import java.net.URI;
 import java.net.URISyntaxException;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
 
 import javax.servlet.Servlet;
+import javax.ws.rs.HttpMethod;
 import javax.ws.rs.Path;
 import javax.ws.rs.container.ContainerRequestFilter;
 import javax.ws.rs.container.ContainerResponseFilter;
@@ -53,10 +58,16 @@ import org.osgi.service.http.HttpService;
 @Component(service = IRemoteServiceDistributionProvider.class)
 public class JerseyServerDistributionProvider extends JaxRSServerDistributionProvider {
 
-	public static final String JERSEY_SERVER_CONFIG_NAME = "ecf.jaxrs.jersey.server";
+	public static final String JERSEY_SERVER_CONFIG_NAME = "ecf.jaxrs.jersey.server"; //$NON-NLS-1$
 
-	public static final String URI_PARAM = "uri";
-	public static final String URI_DEFAULT = "http://localhost:8080/jersey";
+	public static final String URI_PARAM = "uri"; //$NON-NLS-1$
+	public static final String URI_DEFAULT = "http://localhost:8080/jersey"; //$NON-NLS-1$
+
+	public static final String SERVICE_ALIAS_PARAM = "ecf.jaxrs.jersey.server.service.alias"; //$NON-NLS-1$
+    public static final String SERVER_ALIAS_PARAM = "ecf.jaxrs.jersey.server.alias"; //$NON-NLS-1$
+    public static final String EXPORTED_INTERFACES = "ecf.jaxrs.jersey.server.exported.interfaces"; //$NON-NLS-1$
+
+    private static final Map<String, Set<Resource>> aliasToSetResources = new HashMap<>();
 
 	public JerseyServerDistributionProvider() {
 		super();
@@ -79,11 +90,11 @@ public class JerseyServerDistributionProvider extends JaxRSServerDistributionPro
 				try {
 					return new JerseyServerContainer(new URI(uri), (ResourceConfig) configuration);
 				} catch (URISyntaxException e) {
-					throw new ContainerCreateException("Cannot create Jersey Server Container", e);
+					throw new ContainerCreateException("Cannot create Jersey Server Container", e); //$NON-NLS-1$
 				}
 			}
 		});
-		setDescription("Jersey Jax-RS Server Distribution Provider");
+		setDescription("Jersey Jax-RS Server Distribution Provider"); //$NON-NLS-1$
 		setServer(true);
 	}
 
@@ -240,15 +251,20 @@ public class JerseyServerDistributionProvider extends JaxRSServerDistributionPro
 
 		@Override
 		protected Servlet createServlet(RSARemoteServiceRegistration registration) {
-			ResourceConfig resourceConfig = (ResourceConfig) createConfigurable();
+		    ResourceConfig resourceConfig = (ResourceConfig) createConfigurable();
 			if (resourceConfig != null)
             {
                 resourceConfig.register(registration.getService());
             }
 
             Class<?> implClass = registration.getService().getClass();
+			String serverAlias = (String)registration.getProperty(SERVER_ALIAS_PARAM);
+
             for (Class<?> clazz : implClass.getInterfaces())
             {
+			  System.out.println(clazz.getCanonicalName());
+              if (((String)registration.getProperty(EXPORTED_INTERFACES)).contains(clazz.getCanonicalName()))
+              {
                 if (clazz.getAnnotation(Path.class) == null)
                 {
                     final Resource.Builder resourceBuilder = Resource.builder();
@@ -257,8 +273,16 @@ public class JerseyServerDistributionProvider extends JaxRSServerDistributionPro
                     String serviceResourcePath;
                     String methodResourcePath;
                     String methodName;
+					String pathParam;
+                    String serviceAliace =
+                        (String)registration.getProperty(JerseyServerDistributionProvider.SERVICE_ALIAS_PARAM);
 
                     //class
+                    if (serviceAliace != null && !serviceAliace.equals("")) { //$NON-NLS-1$
+                        serviceResourcePath = serviceAliace;
+                    } else {
+                        serviceResourcePath = buildServicePath(clazz.getSimpleName());
+                    }
                     serviceResourcePath = "/" + clazz.getSimpleName().toLowerCase();
                     resourceBuilder.path(serviceResourcePath);
                     resourceBuilder.name(implClass.getName());
@@ -268,26 +292,39 @@ public class JerseyServerDistributionProvider extends JaxRSServerDistributionPro
                     {
                         if (Modifier.isPublic(method.getModifiers()))
                         {
+							pathParam = pathParam(method);
                             methodName = method.getName().toLowerCase();
-                            methodResourcePath = "/" + methodName;
+
+
+                            methodResourcePath = buildMethodPath(methodName);
+                            if (pathParam != null)
+                            {
+                                methodResourcePath =
+                                    methodResourcePath.equals("/") ? pathParam : methodResourcePath + pathParam; //$NON-NLS-1$
+                            }
+
                             childResourceBuilder = resourceBuilder.addChildResource(methodResourcePath);
 
                             if (method.getAnnotation(Path.class) == null)
                             {
-                                if (method.getParameterCount() == 0)
+                                if (methodName.contains("get")) //$NON-NLS-1$
                                 {
-                                    methodBuilder = childResourceBuilder.addMethod("GET");
+                                    methodBuilder = childResourceBuilder.addMethod("GET"); //$NON-NLS-1$
                                 }
                                 else
                                 {
-                                    if (methodName.contains("delete"))
+                                    if (methodName.contains("delete")) //$NON-NLS-1$
                                     {
-                                        methodBuilder = childResourceBuilder.addMethod("DELETE");
+                                        methodBuilder = childResourceBuilder.addMethod("DELETE"); //$NON-NLS-1$
 
+                                    }
+									else if (methodName.contains("post")) //$NON-NLS-1$
+                                    {
+                                        methodBuilder = childResourceBuilder.addMethod("POST"); //$NON-NLS-1$
                                     }
                                     else
                                     {
-                                        methodBuilder = childResourceBuilder.addMethod("POST");
+                                        methodBuilder = childResourceBuilder.addMethod("PUT"); //$NON-NLS-1$
                                     }
                                     methodBuilder.consumes(MediaType.APPLICATION_JSON);//APPLICATION_JSON)TEXT_PLAIN_TYPE
                                 }
@@ -299,10 +336,12 @@ public class JerseyServerDistributionProvider extends JaxRSServerDistributionPro
                         }
                     }
                     final Resource resource = resourceBuilder.build();
-                    resourceConfig.registerResources(resource);
+					saveResourceByAlias(serverAlias, resource);
+                }
                 }
             }
-
+			Resource[] resources = getResourcesByServerAilas(serverAlias);
+            resourceConfig.registerResources(resources);
 			return new ServletContainer(resourceConfig);
 		}
 
@@ -323,4 +362,88 @@ public class JerseyServerDistributionProvider extends JaxRSServerDistributionPro
 		}
 
 	}
+
+	protected Resource[] getResourcesByServerAilas(String serverAlias) {
+        Resource[] resources = new Resource[aliasToSetResources.get(serverAlias).size()];
+        int i = 0;
+        if (resources.length != 0)
+        {
+            Iterator<Resource> iter = aliasToSetResources.get(serverAlias).iterator();
+            while (iter.hasNext())
+            {
+                resources[i++] = iter.next();
+            }
+        }
+        return resources;
+    }
+
+    protected void saveResourceByAlias(String alias, Resource resource) {
+        if (!aliasToSetResources.containsKey(alias))
+        {
+            Set<Resource> resources = new HashSet<>();
+            resources.add(resource);
+            aliasToSetResources.put(alias, resources);
+        }
+        else
+        {
+            Set<Resource> resources = aliasToSetResources.get(alias);
+            resources.add(resource);
+        }
+    }
+
+    protected String pathParam(Method method) {
+        StringBuilder strBuilder = new StringBuilder();
+        for (java.lang.reflect.Parameter p : method.getParameters())
+        {
+            if (p.getName().startsWith("url")) //$NON-NLS-1$
+            {
+                strBuilder.append("/{").append(p.getName()).append("}"); //$NON-NLS-1$//$NON-NLS-2$
+            }
+        }
+        return strBuilder.toString().length() == 0 ? null : strBuilder.toString();
+    }
+
+    protected String buildServicePath(String simpleClassName) {
+        StringBuilder servicePath = new StringBuilder();
+        servicePath.append("/"); //$NON-NLS-1$
+        String[] partsOfPath;
+        if (!simpleClassName.startsWith("I")) //$NON-NLS-1$
+        {
+            return simpleClassName.toLowerCase();
+        }
+        simpleClassName = simpleClassName.substring(1);
+
+        if (simpleClassName.endsWith("Service")) //$NON-NLS-1$
+        {
+            simpleClassName = simpleClassName.substring(0, simpleClassName.length() - "Service".length()); //$NON-NLS-1$
+        }
+
+        partsOfPath = simpleClassName.split("(?=\\p{Lu})"); //$NON-NLS-1$
+        for (String parts : partsOfPath)
+        {
+            servicePath.append(parts.toLowerCase() + "/"); //$NON-NLS-1$
+        }
+        servicePath.deleteCharAt(servicePath.length() - 1); // remove last '/'
+        return servicePath.toString();
+    }
+
+    protected String buildMethodPath(String methodName) {
+        if (methodName.startsWith(HttpMethod.GET.toLowerCase()))
+        {
+            methodName = methodName.substring(HttpMethod.GET.length());
+        }
+        else if (methodName.startsWith(HttpMethod.POST.toLowerCase()))
+        {
+            methodName = methodName.substring(HttpMethod.POST.length());
+        }
+        else if (methodName.startsWith(HttpMethod.DELETE.toLowerCase()))
+        {
+            methodName = methodName.substring(HttpMethod.DELETE.length());
+        }
+        else if (methodName.startsWith(HttpMethod.PUT.toLowerCase()))
+        {
+            methodName = methodName.substring(HttpMethod.PUT.length());
+        }
+        return methodName == "" ? "/" : "/" + methodName.toLowerCase(); //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
+    }
 }

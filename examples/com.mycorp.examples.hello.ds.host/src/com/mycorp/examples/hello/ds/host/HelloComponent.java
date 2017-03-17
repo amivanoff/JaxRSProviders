@@ -17,11 +17,12 @@ import com.mycorp.examples.hello.model.HelloMessage;
 	enabled = true
 	,immediate = true
 	,property = {
-		"service.exported.interfaces=*"
-		,"service.exported.configs=ecf.jaxrs.jersey.server"
-        , "service.pid=com.mycorp.examples.hello.ds.host.HelloComponent"
-		,"ecf.jaxrs.jersey.server.urlContext=http://localhost:8080"
-        , "ecf.jaxrs.jersey.server.uri=http://localhost:8080/hello"
+            "service.exported.interfaces=*"
+            ,"service.exported.configs=ecf.jaxrs.jersey.server"
+            , "service.pid=com.mycorp.examples.hello.ds.host.HelloComponent"
+            ,"ecf.jaxrs.jersey.server.urlContext=http://localhost:8080"
+            , "ecf.jaxrs.jersey.server.alias=/helloo"
+            , "ecf.jaxrs.jersey.server.uri=http://localhost:8080/hello"
 	}
 )
 public class HelloComponent
@@ -162,4 +163,11 @@ public class HelloComponent
 	public void updated(Dictionary<String, ?> properties) throws ConfigurationException {
 		System.out.println(properties);
 	}
+
+    @Override
+    public String getHello5(/*@PathParam("token")*/ String urltoken, String urllol, String text,
+        String headerIf_Match, String queryPageSize) {
+        System.err.println("received hello from=" + urltoken); //$NON-NLS-1$
+        return "Hello " + urltoken + " " + urllol + " " + text + " " + headerIf_Match; //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$ //$NON-NLS-4$
+    }
 }

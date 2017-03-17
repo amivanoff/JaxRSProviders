@@ -11,4 +11,6 @@ public interface IHello {
 	public HelloMessage hello3(String from);
 	
 	public HelloMessage hello4(HelloMessage message);
+
+	public String getHello5(String urlToken, String urlLol, String text, String headerIfMatch, String queryPageSize);
 }
