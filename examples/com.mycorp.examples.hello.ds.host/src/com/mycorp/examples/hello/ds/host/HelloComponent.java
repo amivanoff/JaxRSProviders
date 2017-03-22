@@ -20,9 +20,10 @@ import com.mycorp.examples.hello.model.HelloMessage;
             "service.exported.interfaces=*"
             ,"service.exported.configs=ecf.jaxrs.jersey.server"
             , "service.pid=com.mycorp.examples.hello.ds.host.HelloComponent"
-            ,"ecf.jaxrs.jersey.server.urlContext=http://localhost:8080"
-            , "ecf.jaxrs.jersey.server.alias=/helloo"
-            , "ecf.jaxrs.jersey.server.uri=http://localhost:8080/hello"
+        , "ecf.jaxrs.jersey.server.server.alias=/api",
+        "ecf.jaxrs.jersey.server.service.alias=/blob",
+        "ecf.jaxrs.jersey.server.uri=http://localhost:8080",
+        "ecf.jaxrs.jersey.server.exported.interfaces=com.mycorp.examples.hello.IHello"
 	}
 )
 public class HelloComponent
@@ -164,10 +165,10 @@ public class HelloComponent
 		System.out.println(properties);
 	}
 
-    @Override
-    public String getHello5(/*@PathParam("token")*/ String urltoken, String urllol, String text,
-        String headerIf_Match, String queryPageSize) {
-        System.err.println("received hello from=" + urltoken); //$NON-NLS-1$
-        return "Hello " + urltoken + " " + urllol + " " + text + " " + headerIf_Match; //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$ //$NON-NLS-4$
-    }
+//    @Override
+//    public String getHello5(/*@PathParam("token")*/ String urltoken, String urllol, String text,
+//        String headerIf_Match, String queryPageSize) {
+//        System.err.println("received hello from=" + urltoken); //$NON-NLS-1$
+//        return "Hello " + urltoken + " " + urllol + " " + text + " " + headerIf_Match; //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$ //$NON-NLS-4$
+//    }
 }

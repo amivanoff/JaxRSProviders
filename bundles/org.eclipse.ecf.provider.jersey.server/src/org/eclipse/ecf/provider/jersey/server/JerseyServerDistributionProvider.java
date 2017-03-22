@@ -64,7 +64,7 @@ public class JerseyServerDistributionProvider extends JaxRSServerDistributionPro
 	public static final String URI_DEFAULT = "http://localhost:8080/jersey"; //$NON-NLS-1$
 
 	public static final String SERVICE_ALIAS_PARAM = "ecf.jaxrs.jersey.server.service.alias"; //$NON-NLS-1$
-    public static final String SERVER_ALIAS_PARAM = "ecf.jaxrs.jersey.server.alias"; //$NON-NLS-1$
+    public static final String SERVER_ALIAS_PARAM = "ecf.jaxrs.jersey.server.server.alias"; //$NON-NLS-1$
     public static final String EXPORTED_INTERFACES = "ecf.jaxrs.jersey.server.exported.interfaces"; //$NON-NLS-1$
 
     private static final Map<String, Set<Resource>> aliasToSetResources = new HashMap<>();
@@ -86,7 +86,14 @@ public class JerseyServerDistributionProvider extends JaxRSServerDistributionPro
 			@Override
 			public IContainer createInstance(ContainerTypeDescription description, Map<String, ?> parameters,
 					Configuration configuration) throws ContainerCreateException {
-				String uri = getParameterValue(parameters, URI_PARAM, URI_DEFAULT);
+                String uri =
+                    getParameterValue(parameters, URI_PARAM, URI_DEFAULT);
+                String alias =
+                    getParameterValue(parameters, SERVER_ALIAS_PARAM.replaceFirst(JERSEY_SERVER_CONFIG_NAME + ".", "")); //$NON-NLS-1$ //$NON-NLS-2$
+                if (alias != null)
+                {
+                    uri += alias;
+                }
 				try {
 					return new JerseyServerContainer(new URI(uri), (ResourceConfig) configuration);
 				} catch (URISyntaxException e) {
@@ -242,7 +249,7 @@ public class JerseyServerDistributionProvider extends JaxRSServerDistributionPro
 			ServletContainer sc = (ServletContainer) this.servlet;
 			if (sc == null)
             {
-                throw new NullPointerException("Servlet cannot be null");
+                throw new NullPointerException("Servlet cannot be null"); //$NON-NLS-1$
             }
 			ResourceConfig config = new ResourceConfig(sc.getConfiguration());
 			config.register(reg.getService());
@@ -283,7 +290,6 @@ public class JerseyServerDistributionProvider extends JaxRSServerDistributionPro
                     } else {
                         serviceResourcePath = buildServicePath(clazz.getSimpleName());
                     }
-                    serviceResourcePath = "/" + clazz.getSimpleName().toLowerCase();
                     resourceBuilder.path(serviceResourcePath);
                     resourceBuilder.name(implClass.getName());
 

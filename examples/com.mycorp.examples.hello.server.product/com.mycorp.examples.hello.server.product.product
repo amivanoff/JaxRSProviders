@@ -7,9 +7,16 @@
    </configIni>
 
    <launcherArgs>
-      <programArgs>-os ${target.os} -ws ${target.ws} -arch ${target.arch} -nl ${target.nl} -consoleLog -console -debug -clean -configuration ./config -data ./data -user ./user
+      <programArgs>-os ${target.os} -ws ${target.ws} -arch ${target.arch} -nl ${target.nl} -consoleLog -console -debug -clean
       </programArgs>
-      <vmArgs>-Xms40m -Xmx384m -Declipse.ignoreApp=true -Dosgi.noShutdown=true -Dorg.eclipse.equinox.http.jetty.http.port=8080 -Declipse.log.level=ALL -Dlogback.configurationFile=logback.xml
+      <vmArgs>-Xms40m -Xmx384m
+ -Declipse.ignoreApp=true
+ -Dosgi.noShutdown=true 
+ -Dorg.eclipse.equinox.http.jetty.http.port=8080 
+ -Declipse.log.level=ALL 
+ -Dlogback.configurationFile=logback.xml 
+ -Dosgi.noShutdown=true 
+ -Declipse.ignoreApp=true
       </vmArgs>
       <vmArgsMac>-XstartOnFirstThread
       </vmArgsMac>
@@ -135,6 +142,8 @@
       <plugin id="org.slf4j.jul"/>
       <plugin id="org.slf4j.log4j"/>
       <plugin id="org.tukaani.xz"/>
+      <plugin id="priv"/>
+      <plugin id="privComp"/>
    </plugins>
 
    <configurations>
@@ -144,6 +153,7 @@
       <plugin id="org.eclipse.equinox.app" autoStart="true" startLevel="2" />
       <plugin id="org.eclipse.equinox.common" autoStart="true" startLevel="1" />
       <plugin id="org.eclipse.equinox.ds" autoStart="true" startLevel="1" />
+      <plugin id="org.eclipse.equinox.http.jetty" autoStart="true" startLevel="4" />
       <plugin id="org.eclipse.equinox.simpleconfigurator" autoStart="true" startLevel="1" />
       <plugin id="org.eclipse.osgi" autoStart="true" startLevel="-1" />
       <property name="org.eclipse.equinox.simpleconfigurator.configUrl" value="file\:./configuration/org.eclipse.equinox.simpleconfigurator/bundles.info" />

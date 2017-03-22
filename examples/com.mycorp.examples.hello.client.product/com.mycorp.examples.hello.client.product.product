@@ -7,9 +7,16 @@
    </configIni>
 
    <launcherArgs>
-      <programArgs>-os ${target.os} -ws ${target.ws} -arch ${target.arch} -nl ${target.nl} -consoleLog -console -debug -clean -configuration ./config -data ./data -user ./user
+      <programArgs>-os ${target.os} -ws ${target.ws} -arch ${target.arch} -nl ${target.nl} -consoleLog -console -debug -clean
       </programArgs>
-      <vmArgs>-Xms40m -Xmx384m -Declipse.ignoreApp=true -Dosgi.noShutdown=true -Declipse.log.level=ALL -Dlogback.configurationFile=logback.xml -Dorg.eclipse.equinox.http.jetty.autostart=false
+      <vmArgs>-Xms40m -Xmx384m
+ -Declipse.ignoreApp=true
+ -Dosgi.noShutdown=true 
+ -Dorg.eclipse.equinox.http.jetty.http.port=8080 
+ -Declipse.log.level=ALL 
+ -Dlogback.configurationFile=logback.xml 
+ -Dosgi.noShutdown=true 
+ -Declipse.ignoreApp=true
       </vmArgs>
       <vmArgsMac>-XstartOnFirstThread
       </vmArgsMac>
@@ -136,6 +143,8 @@
       <plugin id="org.slf4j.jul"/>
       <plugin id="org.slf4j.log4j"/>
       <plugin id="org.tukaani.xz"/>
+      <plugin id="priv"/>
+      <plugin id="privComp"/>
    </plugins>
 
    <configurations>

@@ -73,10 +73,10 @@ public class HelloConfigurable implements IHello, ManagedService {
      * }
      * </pre>
      */
-	@Override
+    @Override
     public HelloMessage hello2() {
-		return new HelloMessage("RRR", "EEE");
-	}
+        return new HelloMessage("RRR", "EEE");
+    }
 
 
     /**
@@ -112,10 +112,10 @@ public class HelloConfigurable implements IHello, ManagedService {
      * }
      * </pre>
      */
-	@Override
+    @Override
     public HelloMessage hello3(String from) {
-		return new HelloMessage("RRR", "EEE");
-	}
+        return new HelloMessage("RRR", "EEE");
+    }
 
     /**
      * <pre>HTTP Request
@@ -146,10 +146,10 @@ public class HelloConfigurable implements IHello, ManagedService {
      * }
      * </pre>
      */
-	@Override
+    @Override
     public HelloMessage hello4(HelloMessage message) {
-		return message;
-	}
+        return message;
+    }
 
 	@Activate
 	public void activate(ComponentContext context) throws IOException {
@@ -176,9 +176,9 @@ public class HelloConfigurable implements IHello, ManagedService {
 		System.out.println(properties);
 	}
 
-    @Override
-    public String getHello5(String urlToken, String urlLol, String text, String headerIfMatch, String queryPageSize) {
-        // TODO Auto-generated method stub
-        return null;
-    }
+//    @Override
+//    public String getHello5(String urlToken, String urlLol, String text, String headerIfMatch, String queryPageSize) {
+//        // TODO Auto-generated method stub
+//        return null;
+//    }
 }
