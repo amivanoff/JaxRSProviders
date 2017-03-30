@@ -13,12 +13,15 @@ import java.net.URI;
 import java.util.ArrayList;
 import java.util.Dictionary;
 import java.util.HashSet;
+import java.util.Hashtable;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
+import javax.servlet.Filter;
 import javax.servlet.Servlet;
+import javax.servlet.ServletContextListener;
 import javax.servlet.ServletException;
 import javax.ws.rs.core.Configurable;
 
@@ -26,6 +29,7 @@ import org.eclipse.ecf.core.identity.URIID;
 import org.eclipse.ecf.provider.jaxrs.JaxRSNamespace;
 import org.eclipse.ecf.remoteservice.AbstractRSAContainer;
 import org.eclipse.ecf.remoteservice.RSARemoteServiceContainerAdapter.RSARemoteServiceRegistration;
+import org.eclipse.equinox.http.servlet.ExtendedHttpService;
 import org.osgi.service.http.HttpContext;
 import org.osgi.service.http.HttpService;
 import org.osgi.service.http.NamespaceException;
@@ -91,14 +95,14 @@ public abstract class JaxRSServerContainer extends AbstractRSAContainer {
 				Object v = registration.getProperty(key);
 				if (valueType.isInstance(v))
                 {
-                    return (T) v;
+                    return (T)v;
                 }
 			}
 		}
 		return null;
 	}
 
-	protected abstract HttpService getHttpService();
+    protected abstract ExtendedHttpService getHttpService();
 
 	@SuppressWarnings("rawtypes")
 	protected Configurable createConfigurable() {
@@ -154,21 +158,47 @@ public abstract class JaxRSServerContainer extends AbstractRSAContainer {
 				// Create HttpContext
 				this.servletContext = createServletContext(reg);
 
-				HttpService svc = getHttpService();
+                ExtendedHttpService svc = getHttpService();
 				if (svc == null)
                 {
                     throw new NullPointerException("HttpService instance is null. It cannot to export JaxRS servlet="
 							+ servlet + ".  See subclass implementation of JaxRSServerContainer.getHttpService()");
                 }
 
-				try {
-					if (aliases.contains(servletAlias)) {
-						getHttpService().unregister(servletAlias);
-						svc.registerServlet(this.servletAlias, this.servlet, this.servletProperties, this.servletContext);
-					} else {
-						aliases.add(servletAlias);
-                        getHttpService().registerServlet(servletAlias, servlet, servletProperties, servletContext);
-					}
+                try
+                {
+
+                    for (Filter filter : getFilters())
+                    {
+                        String name = filter.getClass().getSimpleName();
+                        try
+                        {
+                            Dictionary<String, String> params = new Hashtable<>();
+                            params.put("filter-name", name);
+                            params.put("dispatcher", "REQUEST");
+                            params.put("dispatcher", "FORWARD");
+                            params.put("dispatcher", "INCLUDE");
+                            params.put("dispatcher", "ERROR");
+                            getHttpService().registerFilter("/*", filter, null, servletContext);
+                        }
+                        catch (NamespaceException e)
+                        {
+                            // TODO Auto-generated catch block
+                            e.printStackTrace();
+                        }
+                    }
+                    for (ServletContextListener lis : getListeners())
+                    {
+                        //servlet.getServletConfig().getServletContext().addListener(lis);
+                    }
+                    if (aliases.contains(servletAlias)) {
+						          getHttpService().unregister(servletAlias);
+						          svc.registerServlet(this.servletAlias, this.servlet, this.servletProperties, this.servletContext);
+					          } else {
+						          aliases.add(servletAlias);
+                      getHttpService().registerServlet(servletAlias, servlet, servletProperties, servletContext);
+					          }
+						
 				} catch (ServletException | NamespaceException e) {
 					throw new RuntimeException("Cannot register servlet with alias=" + servletAlias, e);
 				}
@@ -226,6 +256,10 @@ public abstract class JaxRSServerContainer extends AbstractRSAContainer {
                 removeRegistration(registration);
             }
 		}
-	}
+    }
+
+    protected abstract List<Filter> getFilters();
+
+    protected abstract List<ServletContextListener> getListeners();
 
 }

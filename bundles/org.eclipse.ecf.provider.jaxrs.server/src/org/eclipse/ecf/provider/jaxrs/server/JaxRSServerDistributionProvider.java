@@ -19,7 +19,7 @@ import javax.ws.rs.container.ContainerResponseFilter;
 
 import org.eclipse.ecf.core.provider.IContainerInstantiator;
 import org.eclipse.ecf.provider.jaxrs.JaxRSDistributionProvider;
-import org.osgi.service.http.HttpService;
+import org.eclipse.equinox.http.servlet.ExtendedHttpService;
 
 public abstract class JaxRSServerDistributionProvider extends JaxRSDistributionProvider {
 
@@ -40,19 +40,22 @@ public abstract class JaxRSServerDistributionProvider extends JaxRSDistributionP
 		super(name, instantiator, description, server);
 	}
 
-	private List<HttpService> httpServices = Collections.synchronizedList(new ArrayList<HttpService>());
+    private List<ExtendedHttpService> httpServices = Collections.synchronizedList(new ArrayList<ExtendedHttpService>());
 
-	public void bindHttpService(HttpService httpService) {
+    public void bindHttpService(ExtendedHttpService httpService)
+    {
 		if (httpService != null)
 			httpServices.add(httpService);
 	}
 
-	public void unbindHttpService(HttpService httpService) {
+    public void unbindHttpService(ExtendedHttpService httpService)
+    {
 		if (httpService != null)
 			httpServices.remove(httpService);
 	}
 
-	protected List<HttpService> getHttpServices() {
+    protected List<ExtendedHttpService> getHttpServices()
+    {
 		return httpServices;
 	}
 

@@ -14,6 +14,7 @@ import java.lang.reflect.Method;
 import java.lang.reflect.Modifier;
 import java.net.URI;
 import java.net.URISyntaxException;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Iterator;
@@ -21,7 +22,11 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
+import javax.servlet.Filter;
 import javax.servlet.Servlet;
+import javax.servlet.ServletConfig;
+import javax.servlet.ServletContextListener;
+import javax.servlet.ServletException;
 import javax.ws.rs.HttpMethod;
 import javax.ws.rs.Path;
 import javax.ws.rs.container.ContainerRequestFilter;
@@ -45,6 +50,7 @@ import org.eclipse.ecf.provider.jaxrs.server.JaxRSServerContainer;
 import org.eclipse.ecf.provider.jaxrs.server.JaxRSServerDistributionProvider;
 import org.eclipse.ecf.remoteservice.RSARemoteServiceContainerAdapter.RSARemoteServiceRegistration;
 import org.eclipse.ecf.remoteservice.provider.IRemoteServiceDistributionProvider;
+import org.eclipse.equinox.http.servlet.ExtendedHttpService;
 import org.glassfish.jersey.server.ResourceConfig;
 import org.glassfish.jersey.server.model.Resource;
 import org.glassfish.jersey.server.model.ResourceMethod;
@@ -53,7 +59,6 @@ import org.osgi.service.component.annotations.Activate;
 import org.osgi.service.component.annotations.Component;
 import org.osgi.service.component.annotations.Reference;
 import org.osgi.service.component.annotations.ReferenceCardinality;
-import org.osgi.service.http.HttpService;
 
 @Component(service = IRemoteServiceDistributionProvider.class)
 public class JerseyServerDistributionProvider extends JaxRSServerDistributionProvider {
@@ -68,6 +73,8 @@ public class JerseyServerDistributionProvider extends JaxRSServerDistributionPro
     public static final String EXPORTED_INTERFACES = "ecf.jaxrs.jersey.server.exported.interfaces"; //$NON-NLS-1$
 
     private static final Map<String, Set<Resource>> aliasToSetResources = new HashMap<>();
+
+    private IExtConfigService extConfigService;
 
 	public JerseyServerDistributionProvider() {
 		super();
@@ -107,12 +114,14 @@ public class JerseyServerDistributionProvider extends JaxRSServerDistributionPro
 
 	@Override
 	@Reference(cardinality = ReferenceCardinality.MANDATORY)
-	public void bindHttpService(HttpService httpService) {
+    public void bindHttpService(ExtendedHttpService httpService)
+    {
 		super.bindHttpService(httpService);
 	}
 
 	@Override
-	public void unbindHttpService(HttpService httpService) {
+    public void unbindHttpService(ExtendedHttpService httpService)
+    {
 		super.unbindHttpService(httpService);
 	}
 
@@ -228,6 +237,15 @@ public class JerseyServerDistributionProvider extends JaxRSServerDistributionPro
 		super.unbindContainerResponseFilter(instance);
 	}
 
+	public void bindIExtConfigService(IExtConfigService extConfigService)
+    {
+        this.extConfigService = extConfigService;
+    }
+
+    public void unbindIExtConfigService(IExtConfigService extConfigService)
+    {
+    }
+
 	public class JerseyServerContainer extends JaxRSServerContainer {
 
 		private ResourceConfig originalConfiguration;
@@ -253,7 +271,20 @@ public class JerseyServerDistributionProvider extends JaxRSServerDistributionPro
             }
 			ResourceConfig config = new ResourceConfig(sc.getConfiguration());
 			config.register(reg.getService());
-			((ServletContainer) servlet).reload(config);
+
+            if (extConfigService != null)
+            {
+                for (ServletContextListener o : extConfigService.getListeners())
+                {
+                    ((ServletContainer)servlet).getServletContext().addListener(o);
+                }
+                for (Filter o : extConfigService.getFilters())
+                {
+                    ((ServletContainer)servlet).getServletContext().addFilter(o.getClass().getSimpleName(), o);
+                }
+            }
+
+            ((ServletContainer)servlet).reload(config);
 		}
 
 		@Override
@@ -262,6 +293,20 @@ public class JerseyServerDistributionProvider extends JaxRSServerDistributionPro
 			if (resourceConfig != null)
             {
                 resourceConfig.register(registration.getService());
+
+                if (extConfigService != null)
+                {
+                    for (Object o : extConfigService.getConfigObjects())
+                    {
+                        resourceConfig.register(o);
+                    }
+                    /*
+                     * for (ServletContextListener o :
+                     * extConfigService.getListeners()) resourceConfig.register(o);
+                     * for (Filter o : extConfigService.getFilters())
+                     * resourceConfig.register(o);
+                     */
+                }
             }
 
             Class<?> implClass = registration.getService().getClass();
@@ -348,12 +393,28 @@ public class JerseyServerDistributionProvider extends JaxRSServerDistributionPro
             }
 			Resource[] resources = getResourcesByServerAilas(serverAlias);
             resourceConfig.registerResources(resources);
-			return new ServletContainer(resourceConfig);
+			ServletContainer sc = new ServletContainer(resourceConfig)
+            {
+                @Override
+                public void init(ServletConfig config) throws ServletException
+                {
+                    super.init(config);
+                }
+            };
+            /*
+             * for (ServletContextListener o : extConfigService.getListeners())
+             * sc.getServletContext().addListener(o); for (Filter o :
+             * extConfigService.getFilters())
+             * sc.getServletContext().addFilter(o.getClass().getName(), o);
+             */
+            // TODO Add Shiro Listener
+            return sc;
 		}
 
 		@Override
-		protected HttpService getHttpService() {
-			List<HttpService> svcs = getHttpServices();
+        protected ExtendedHttpService getHttpService()
+        {
+            List<ExtendedHttpService> svcs = getHttpServices();
 			return (svcs == null || svcs.size() == 0) ? null : svcs.get(0);
 		}
 
@@ -366,6 +427,32 @@ public class JerseyServerDistributionProvider extends JaxRSServerDistributionPro
                 ((ServletContainer) servlet).reload((ResourceConfig) c);
             }
 		}
+
+        @Override
+        protected List<Filter> getFilters()
+        {
+            if (extConfigService != null)
+            {
+                return extConfigService.getFilters();
+            }
+            else
+            {
+                return new ArrayList<>();
+            }
+        }
+
+        @Override
+        protected List<ServletContextListener> getListeners()
+        {
+            if (extConfigService != null)
+            {
+                return extConfigService.getListeners();
+            }
+            else
+            {
+                return new ArrayList<>();
+            }
+        }
 
 	}
 
