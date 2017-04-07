@@ -249,13 +249,17 @@
       <requirement
           name="org.eclipse.jetty.websocket.servlet"/>
       <requirement
-          name="org.glassfish.hk2.api"/>
+          name="org.glassfish.hk2.api"
+          versionRange="[2.5.0.b05,2.5.0.b05]"/>
       <requirement
-          name="org.glassfish.hk2.locator"/>
+          name="org.glassfish.hk2.locator"
+          versionRange="[2.5.0.b05,2.5.0.b05]"/>
       <requirement
-          name="org.glassfish.hk2.osgi-resource-locator"/>
+          name="org.glassfish.hk2.osgi-resource-locator"
+          versionRange="[1.0.0,2.0.0)"/>
       <requirement
-          name="org.glassfish.hk2.utils"/>
+          name="org.glassfish.hk2.utils"
+          versionRange="[2.5.0.b05,2.5.0.b05]"/>
       <requirement
           name="org.glassfish.jersey.containers.jersey-container-servlet"/>
       <requirement

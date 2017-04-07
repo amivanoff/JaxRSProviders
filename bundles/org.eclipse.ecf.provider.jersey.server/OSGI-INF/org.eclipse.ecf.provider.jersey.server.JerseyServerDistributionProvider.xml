@@ -14,5 +14,4 @@
    <reference bind="bindReaderInterceptor" cardinality="0..n" interface="javax.ws.rs.ext.ReaderInterceptor" name="ReaderInterceptor" policy="static" unbind="unbindReaderInterceptor"/>
    <reference bind="bindWriterInterceptor" cardinality="0..n" interface="javax.ws.rs.ext.WriterInterceptor" name="WriterInterceptor" policy="static" unbind="unbindWriterInterceptor"/>
    <implementation class="org.eclipse.ecf.provider.jersey.server.JerseyServerDistributionProvider"/>
-   <reference bind="bindIExtConfigService" cardinality="0..1" interface="org.eclipse.ecf.provider.jersey.server.IExtConfigService" name="IExtConfigService" policy="static" unbind="unbindIExtConfigService"/>
 </scr:component>
