@@ -276,6 +276,12 @@
           name="org.glassfish.jersey.media.jersey-media-json-jackson"/>
       <requirement
           name="org.objectweb.asm"/>
+      <requirement
+          name="org.aspectj.feature.group"/>
+      <requirement
+          name="org.eclipse.ajdt.feature.group"/>
+      <requirement
+          name="org.eclipse.equinox.weaving.sdk.feature.group"/>
       <repositoryList
           name="Neon">
         <repository
@@ -302,6 +308,8 @@
             url="http://agentlab.ru/pd/p2/che/"/>
         <repository
             url="http://download.eclipse.org/releases/neon/"/>
+        <repository
+            url="http://download.eclipse.org/tools/ajdt/46/dev/update"/>
       </repositoryList>
     </targlet>
   </setupTask>
