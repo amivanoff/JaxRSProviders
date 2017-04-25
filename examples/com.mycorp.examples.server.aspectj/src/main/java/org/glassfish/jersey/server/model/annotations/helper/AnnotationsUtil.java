@@ -11,6 +11,9 @@ import java.lang.reflect.Type;
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.ws.rs.HttpMethod;
+
+import org.glassfish.jersey.server.model.AnnotatedMethod;
 import org.glassfish.jersey.server.model.Parameter;
 import org.glassfish.jersey.server.model.annotaions.instance.CookieParamInstance;
 import org.glassfish.jersey.server.model.annotaions.instance.HeaderParamInstance;
@@ -23,12 +26,12 @@ import org.glassfish.jersey.server.model.annotaions.instance.QueryParamInstance;
  */
 public class AnnotationsUtil {
 
-	private static final String URL =  "url";
-	private static final String HEADER =  "header";
-	private static final String QUERY =  "query";
-	private static final String COOKIE =  "cookie";
+	private static final String URL_LITERAL = "url"; //$NON-NLS-1$
+	private static final String HEADER_LITERAL = "header"; //$NON-NLS-1$
+	private static final String QUERY_LITERAL = "query"; //$NON-NLS-1$
+	private static final String COOKIE_LITERAL = "cookie"; //$NON-NLS-1$
 
-	public static List<Parameter> createWithoutAnnotations(Method method, boolean paramEncoded) {
+	public static List<Parameter> createWithoutAnnotations(Method javaMethod, boolean paramEncoded) {
 
 		List<Parameter> parList = new ArrayList<>();
 
@@ -36,13 +39,12 @@ public class AnnotationsUtil {
 
 		try {
 
-			Class<?>[] paramTypes = new Class[] { Annotation[].class, Annotation.class, Parameter.Source.class, String.class, Class.class, Type.class, boolean.class };
-			Constructor<Parameter> parameterConstructor = Parameter.class.getConstructor(paramTypes);
+			Class<?>[] paramTypes = new Class[] { Annotation[].class, Annotation.class, Parameter.Source.class, String.class, Class.class, Type.class, boolean.class, String.class };
+			Constructor<Parameter> parameterConstructor = Parameter.class.getDeclaredConstructor(paramTypes);
 			parameterConstructor.setAccessible(true);
 
-			for (java.lang.reflect.Parameter p : method.getParameters()) {
-				if (p.getName().startsWith("url")) //$NON-NLS-1$
-				{
+			for (java.lang.reflect.Parameter p : javaMethod.getParameters()) {
+				if (p.getName().startsWith(URL_LITERAL)) {
 					PathParamInstance a = new PathParamInstance();
 					a.setValue(p.getName());
 					Annotation[] as = new PathParamInstance[1];
@@ -51,8 +53,7 @@ public class AnnotationsUtil {
 
 					parList.add(parameter);
 				}
-				else if (p.getName().startsWith("header")) //$NON-NLS-1$
-				{
+				else if (p.getName().startsWith(HEADER_LITERAL)) {
 					String header = createHeaderName(p.getName());
 
 					HeaderParamInstance a = new HeaderParamInstance();
@@ -64,8 +65,7 @@ public class AnnotationsUtil {
 
 					parList.add(parameter);
 				}
-				else if (p.getName().startsWith("query")) //$NON-NLS-1$
-				{
+				else if (p.getName().startsWith(QUERY_LITERAL)) {
 					String query = createQueryName(p.getName());
 					QueryParamInstance q = new QueryParamInstance();
 					q.setValue(query);
@@ -76,8 +76,7 @@ public class AnnotationsUtil {
 
 					parList.add(parameter);
 				}
-				else if (p.getName().startsWith("cookie")) //$NON-NLS-1$
-				{
+				else if (p.getName().startsWith(COOKIE_LITERAL)) {
 					String cookie = createCookieName(p.getName());
 					CookieParamInstance c = new CookieParamInstance();
 					c.setValue(cookie);
@@ -95,7 +94,7 @@ public class AnnotationsUtil {
 				}
 			}
 		}
-		catch (InstantiationException | IllegalAccessException | IllegalArgumentException | InvocationTargetException | NoSuchMethodException| SecurityException e) {
+		catch (InstantiationException | IllegalAccessException | IllegalArgumentException | InvocationTargetException | NoSuchMethodException | SecurityException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
@@ -103,20 +102,40 @@ public class AnnotationsUtil {
 		return parList;
 	}
 
+	public static boolean isNeedToModify(AnnotatedMethod method, Method javaMethod) {
+
+		boolean notParamAnnotations = true;
+
+		for (int i = 0; i < method.getParameterAnnotations().length; i++) {
+			if (method.getParameterAnnotations()[0].length != 0) {
+				notParamAnnotations = false;
+			}
+		}
+
+		if (method.getAnnotations().length == 0 && notParamAnnotations) {
+			if (javaMethod.getName().startsWith(HttpMethod.GET.toLowerCase()) || javaMethod.getName().contains(HttpMethod.POST.toLowerCase()) || javaMethod.getName().contains(HttpMethod.DELETE.toLowerCase()) || javaMethod.getName().contains(HttpMethod.PUT.toLowerCase())) {
+				return true;
+			}
+		}
+
+		return false;
+
+	}
+
 	private static String createCookieName(String query) {
-		query = query.substring("cookie".length()); //$NON-NLS-1$
+		query = query.substring(COOKIE_LITERAL.length());
 		return query;
 	}
 
 	private static String createQueryName(String query) {
-		query = query.substring("query".length()); //$NON-NLS-1$
+		query = query.substring(QUERY_LITERAL.length());
 		query = Character.toLowerCase(query.charAt(0)) + query.substring(1);
 		return query;
 	}
 
 	private static String createHeaderName(String header) {
 
-		header = header.substring("header".length()); //$NON-NLS-1$
+		header = header.substring(HEADER_LITERAL.length());
 
 		String[] partsOfHeader = header.split("(?=\\p{Lu})"); //$NON-NLS-1$
 
