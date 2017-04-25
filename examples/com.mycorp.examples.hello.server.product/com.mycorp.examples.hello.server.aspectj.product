@@ -156,12 +156,12 @@
    <configurations>
       <plugin id="com.mycorp.examples.server.test" autoStart="true" startLevel="3" />
       <plugin id="org.eclipse.core.runtime" autoStart="true" startLevel="2" />
-      <plugin id="org.eclipse.ecf.osgi.services.distribution" autoStart="true" startLevel="5" />
-      <plugin id="org.eclipse.ecf.osgi.services.remoteserviceadmin" autoStart="true" startLevel="5" />
+      <plugin id="org.eclipse.ecf.osgi.services.distribution" autoStart="true" startLevel="4" />
+      <plugin id="org.eclipse.ecf.osgi.services.remoteserviceadmin" autoStart="true" startLevel="4" />
       <plugin id="org.eclipse.equinox.app" autoStart="true" startLevel="2" />
       <plugin id="org.eclipse.equinox.common" autoStart="true" startLevel="1" />
       <plugin id="org.eclipse.equinox.ds" autoStart="true" startLevel="1" />
-      <plugin id="org.eclipse.equinox.http.jetty" autoStart="true" startLevel="4" />
+      <plugin id="org.eclipse.equinox.http.jetty" autoStart="true" startLevel="3" />
       <plugin id="org.eclipse.equinox.simpleconfigurator" autoStart="true" startLevel="1" />
       <plugin id="org.eclipse.equinox.weaving.aspectj" autoStart="true" startLevel="2" />
       <plugin id="org.eclipse.osgi" autoStart="true" startLevel="-1" />
