@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
-	<name>com.mycorp.examples.server.aspectj</name>
+	<name>org.eclipse.ecf.provider.jersey.server.aspectj</name>
 	<comment></comment>
 	<projects>
 	</projects>

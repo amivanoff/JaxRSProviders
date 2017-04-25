@@ -12,7 +12,7 @@
       <vmArgs>-Xms40m -Xmx384m
  -Declipse.ignoreApp=true
  -Dosgi.noShutdown=true 
- -Dorg.eclipse.equinox.http.jetty.http.port=8080 
+ -Dorg.eclipse.equinox.http.jetty.http.port=8080
  -Declipse.log.level=ALL 
  -Dlogback.configurationFile=logback.xml 
  -Dosgi.noShutdown=true 
@@ -54,8 +54,6 @@
       <plugin id="com.mycorp.examples.hello"/>
       <plugin id="com.mycorp.examples.hello.ds.host"/>
       <plugin id="com.mycorp.examples.hello.model"/>
-      <plugin id="com.mycorp.examples.server.aspectj"/>
-      <plugin id="com.mycorp.examples.server.test"/>
       <plugin id="javassist"/>
       <plugin id="javax.annotation"/>
       <plugin id="javax.inject"/>
@@ -83,6 +81,7 @@
       <plugin id="org.eclipse.ecf.provider.jaxrs"/>
       <plugin id="org.eclipse.ecf.provider.jaxrs.server"/>
       <plugin id="org.eclipse.ecf.provider.jersey.server"/>
+      <plugin id="org.eclipse.ecf.provider.jersey.server.aspectj"/>
       <plugin id="org.eclipse.ecf.provider.jmdns"/>
       <plugin id="org.eclipse.ecf.remoteservice"/>
       <plugin id="org.eclipse.ecf.remoteservice.asyncproxy"/>
@@ -154,7 +153,6 @@
    </plugins>
 
    <configurations>
-      <plugin id="com.mycorp.examples.server.test" autoStart="true" startLevel="3" />
       <plugin id="org.eclipse.core.runtime" autoStart="true" startLevel="2" />
       <plugin id="org.eclipse.ecf.osgi.services.distribution" autoStart="true" startLevel="4" />
       <plugin id="org.eclipse.ecf.osgi.services.remoteserviceadmin" autoStart="true" startLevel="4" />
