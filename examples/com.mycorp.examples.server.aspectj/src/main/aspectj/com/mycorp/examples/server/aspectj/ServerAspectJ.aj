@@ -15,14 +15,17 @@ import java.lang.reflect.Method;
 public aspect ServerAspectJ {
 	// Define a Pointcut is
 	// collection of JoinPoint call sayHello of class HelloAspectJDemo.
-	pointcut callSayHello(): call(public static List<Parameter>  org.glassfish.jersey.server.model.Parameter.create(Class, Class, Method, boolean))
-	 && within(org.glassfish.jersey.server.model.Parameter)	;
+	pointcut callSayHello(Class concreteClass, Class declaringClass, Method javaMethod, boolean keepEncoded):
+		call(public static List<Parameter>  org.glassfish.jersey.server.model.Parameter.create(Class, Class, Method, boolean))
+	 	 && args(concreteClass, declaringClass, javaMethod, keepEncoded)	;
 
-	before() : callSayHello() {
-		System.out.println("AspectJ: before callSayHello MY"); //$NON-NLS-1$
+	before(Class concreteClass, Class declaringClass, Method javaMethod, boolean keepEncoded) :
+		callSayHello(concreteClass, declaringClass, javaMethod, keepEncoded) {
+		System.out.println(concreteClass.toString() + " " + declaringClass.toString() + " " + javaMethod.toString()); //$NON-NLS-1$
 	}
 
-	after() : callSayHello()  {
-		System.out.println("AspectJ: after callSayHello MY"); //$NON-NLS-1$
+	after(Class concreteClass, Class declaringClass, Method javaMethod, boolean keepEncoded) :
+		callSayHello(concreteClass, declaringClass, javaMethod, keepEncoded)  {
+//			System.out.println("AspectJ: after callSayHello MY"); //$NON-NLS-1$
 	}
 }

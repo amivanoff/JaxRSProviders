@@ -7,7 +7,9 @@ Bundle-Vendor: MYCORP
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Require-Bundle: org.aspectj.weaver,
  org.aspectj.runtime
-Import-Package: org.glassfish.jersey.server.model;version="2.23.2",
+Import-Package: javax.ws.rs;version="2.0.1",
+ org.glassfish.hk2.api;version="2.5.0",
+ org.glassfish.jersey.server.model;version="2.23.2",
  org.osgi.framework;version="1.8.0"
 Export-Package: com.mycorp.examples.server.aspectj;aspects=ServerAspectJ
 Eclipse-SupplementBundle: org.glassfish.jersey.core.jersey-server
