@@ -83,6 +83,7 @@
     <module>releng/org.eclipse.ecf.jaxrs.releng.target</module>
     <module>bundles</module>
     <module>features</module>
+    <module>aspects</module>
     <!--<module>tests</module>-->
     <module>sites/org.eclipse.ecf.provider.jaxrs.site</module>
   </modules>

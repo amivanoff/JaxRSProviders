@@ -56,5 +56,12 @@ https://wiki.eclipse.org/ECF#OSGi_Remote_Services
          install-size="0"
          version="0.0.0"
          unpack="false"/>
+         
+    <plugin
+        id="org.eclipse.ecf.provider.jersey.server.aspectj"
+        download-size="0"
+        install-size="0"
+        version="0.0.0"
+        unpack="false"/>
 
 </feature>
