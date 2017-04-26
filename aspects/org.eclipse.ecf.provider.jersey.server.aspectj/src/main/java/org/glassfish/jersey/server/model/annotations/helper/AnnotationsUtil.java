@@ -10,6 +10,7 @@ import java.lang.reflect.Method;
 import java.lang.reflect.Type;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.logging.Logger;
 
 import javax.ws.rs.HttpMethod;
 
@@ -31,11 +32,16 @@ public class AnnotationsUtil {
 	private static final String QUERY_LITERAL = "query"; //$NON-NLS-1$
 	private static final String COOKIE_LITERAL = "cookie"; //$NON-NLS-1$
 
+	private static String TAG = AnnotationsUtil.class.getCanonicalName();
+	private static Logger log = Logger.getLogger(TAG);
+
 	public static List<Parameter> createWithoutAnnotations(Method javaMethod, boolean paramEncoded) {
 
 		List<Parameter> parList = new ArrayList<>();
 
 		Parameter parameter = null;
+
+		log.info(coolectMethodParametersInfo(javaMethod));
 
 		try {
 
@@ -151,6 +157,17 @@ public class AnnotationsUtil {
 		}
 
 		return header;
+	}
+
+	private static String coolectMethodParametersInfo(Method javaMethod) {
+		StringBuilder methodParameters = new StringBuilder();
+		methodParameters.append(javaMethod.toString()).append("{"); //$NON-NLS-1$
+		for (java.lang.reflect.Parameter p : javaMethod.getParameters()) {
+			methodParameters.append(" ").append(p.getName()); //$NON-NLS-1$
+		}
+		methodParameters.append(" }"); //$NON-NLS-1$
+
+		return methodParameters.toString();
 	}
 
 }

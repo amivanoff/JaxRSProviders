@@ -4,6 +4,7 @@
 package com.mycorp.examples.server.aspectj;
 
 import java.util.List;
+import java.util.logging.Logger;
 
 import javax.ws.rs.Encoded;
 
@@ -21,11 +22,15 @@ import java.lang.annotation.Annotation;
  *
  */
 public aspect ServerAspectJ {
+
+	private static String TAG = ServerAspectJ.class.getCanonicalName();
+	private static Logger log = Logger.getLogger(TAG);
+
 	List<Parameter> around(Class<?> concreteClass, Class<?> declaringClass, Method javaMethod, boolean keepEncoded) :
 		call(public static List<Parameter>  org.glassfish.jersey.server.model.Parameter.create(Class, Class, Method, boolean))
 	 	 && args(concreteClass, declaringClass, javaMethod, keepEncoded)
 	{
-		System.out.println(concreteClass.toString() + " " + declaringClass.toString() + " " + javaMethod.toString()); //$NON-NLS-1$//$NON-NLS-2$
+		log.info(concreteClass.toString() + " " + declaringClass.toString() + " " + javaMethod.toString()); //$NON-NLS-1$//$NON-NLS-2$
 
 		AnnotatedMethod method = new AnnotatedMethod(javaMethod);
 
