@@ -261,19 +261,26 @@
           name="org.glassfish.hk2.utils"
           versionRange="[2.5.0.b05,2.5.0.b05]"/>
       <requirement
-          name="org.glassfish.jersey.containers.jersey-container-servlet"/>
+          name="org.glassfish.jersey.containers.jersey-container-servlet"
+          versionRange="2.25.1"/>
       <requirement
-          name="org.glassfish.jersey.containers.jersey-container-servlet-core"/>
+          name="org.glassfish.jersey.containers.jersey-container-servlet-core"
+          versionRange="2.25.1"/>
       <requirement
-          name="org.glassfish.jersey.core.jersey-client"/>
+          name="org.glassfish.jersey.core.jersey-client"
+          versionRange="2.25.1"/>
       <requirement
-          name="org.glassfish.jersey.core.jersey-common"/>
+          name="org.glassfish.jersey.core.jersey-common"
+          versionRange="2.25.1"/>
       <requirement
-          name="org.glassfish.jersey.core.jersey-server"/>
+          name="org.glassfish.jersey.core.jersey-server"
+          versionRange="2.25.1"/>
       <requirement
-          name="org.glassfish.jersey.media.jersey-media-jaxb"/>
+          name="org.glassfish.jersey.media.jersey-media-jaxb"
+          versionRange="2.25.1"/>
       <requirement
-          name="org.glassfish.jersey.media.jersey-media-json-jackson"/>
+          name="org.glassfish.jersey.media.jersey-media-json-jackson"
+          versionRange="2.25.1"/>
       <requirement
           name="org.objectweb.asm"/>
       <requirement
@@ -310,6 +317,8 @@
             url="http://download.eclipse.org/releases/neon/"/>
         <repository
             url="http://download.eclipse.org/tools/ajdt/46/dev/update"/>
+        <repository
+            url="http://agentlab.ru/pd/p2/eclipseorbit/"/>
       </repositoryList>
     </targlet>
   </setupTask>
