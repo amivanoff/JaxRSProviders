@@ -5,7 +5,7 @@
    </description>
 	  
    <feature id="org.eclipse.ecf.provider.jersey.server.feature"><category name="org.eclipse.ecf.provider.jaxrs"/></feature>
-<!--   <feature id="org.eclipse.ecf.provider.jersey.server.feature.source"><category name="org.eclipse.ecf.provider.jaxrs"/></feature>-->
+   <feature id="org.eclipse.ecf.provider.jersey.server.feature.source"><category name="org.eclipse.ecf.provider.jaxrs"/></feature>
    
    <feature id="org.eclipse.ecf.provider.jersey.client.feature"><category name="org.eclipse.ecf.provider.jaxrs"/></feature>
    <feature id="org.eclipse.ecf.provider.jersey.client.feature.source"><category name="org.eclipse.ecf.provider.jaxrs"/></feature>

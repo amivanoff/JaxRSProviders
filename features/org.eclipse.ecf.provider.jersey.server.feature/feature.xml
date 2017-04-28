@@ -30,13 +30,6 @@ https://wiki.eclipse.org/ECF#OSGi_Remote_Services
    </license>
 
    <plugin
-         id="javax.ws.rs"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
-         unpack="false"/>
-
-   <plugin
          id="org.eclipse.ecf.provider.jaxrs"
          download-size="0"
          install-size="0"

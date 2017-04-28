@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <?pde version="3.8"?>
-<target name="Generated from JaxRSProviders" sequenceNumber="4">
+<target name="Generated from JaxRSProviders" sequenceNumber="6">
   <locations>
     <location includeAllPlatforms="true" includeConfigurePhase="true" includeMode="slicer" includeSource="true" type="InstallableUnit">
       <unit id="ch.qos.logback.classic" version="0.0.0"/>
@@ -38,7 +38,6 @@
       <unit id="org.hamcrest.integration" version="0.0.0"/>
       <unit id="org.hamcrest.library" version="0.0.0"/>
       <unit id="org.objectweb.asm" version="0.0.0"/>
-      <unit id="org.objenesis" version="0.0.0"/>
       <unit id="org.sat4j.core" version="0.0.0"/>
       <unit id="org.sat4j.pb" version="0.0.0"/>
       <unit id="org.slf4j.api" version="0.0.0"/>
@@ -46,7 +45,6 @@
       <unit id="org.slf4j.jcl" version="0.0.0"/>
       <unit id="org.slf4j.jul" version="0.0.0"/>
       <unit id="org.slf4j.log4j" version="0.0.0"/>
-      <unit id="org.tukaani.xz" version="0.0.0"/>
       <unit id="org.w3c.css.sac" version="0.0.0"/>
       <unit id="org.w3c.dom.events" version="0.0.0"/>
       <unit id="org.w3c.dom.smil" version="0.0.0"/>
@@ -67,6 +65,7 @@
     <location includeAllPlatforms="true" includeConfigurePhase="true" includeMode="slicer" includeSource="true" type="InstallableUnit">
       <unit id="com.codeaffine.osgi.test.util" version="0.0.0"/>
       <unit id="com.codeaffine.osgi.test.util.feature.feature.group" version="0.0.0"/>
+      <unit id="org.mockito.mockito-all" version="0.0.0"/>
       <repository location="http://fappel.github.io/xiliary"/>
     </location>
     <location includeAllPlatforms="true" includeConfigurePhase="true" includeMode="slicer" includeSource="true" type="InstallableUnit">
@@ -256,8 +255,6 @@
       <unit id="org.eclipse.ecf.example.collab" version="0.0.0"/>
       <unit id="org.eclipse.ecf.example.collab.editor" version="0.0.0"/>
       <unit id="org.eclipse.ecf.examples.eventadmin.app" version="0.0.0"/>
-      <unit id="org.eclipse.ecf.filetransfer" version="0.0.0"/>
-      <unit id="org.eclipse.ecf.filetransfer.feature.feature.group" version="0.0.0"/>
       <unit id="org.eclipse.ecf.filetransfer.httpclient4.feature.feature.group" version="0.0.0"/>
       <unit id="org.eclipse.ecf.filetransfer.httpclient4.ssl.feature.feature.group" version="0.0.0"/>
       <unit id="org.eclipse.ecf.filetransfer.ssl.feature.feature.group" version="0.0.0"/>
@@ -276,7 +273,6 @@
       <unit id="org.eclipse.ecf.provider" version="0.0.0"/>
       <unit id="org.eclipse.ecf.provider.bittorrent" version="0.0.0"/>
       <unit id="org.eclipse.ecf.provider.bittorrent.ui" version="0.0.0"/>
-      <unit id="org.eclipse.ecf.provider.filetransfer" version="0.0.0"/>
       <unit id="org.eclipse.ecf.provider.filetransfer.efs" version="0.0.0"/>
       <unit id="org.eclipse.ecf.provider.filetransfer.httpclient4" version="0.0.0"/>
       <unit id="org.eclipse.ecf.provider.filetransfer.httpclient4.ssl" version="0.0.0"/>
@@ -340,12 +336,7 @@
     </location>
     <location includeAllPlatforms="true" includeConfigurePhase="true" includeMode="slicer" includeSource="true" type="InstallableUnit">
       <unit id="com.fasterxml.jackson.core.jackson-annotations" version="0.0.0"/>
-      <unit id="com.fasterxml.jackson.core.jackson-core" version="0.0.0"/>
-      <unit id="com.fasterxml.jackson.core.jackson-databind" version="0.0.0"/>
       <unit id="com.fasterxml.jackson.datatype.jackson-datatype-guava" version="0.0.0"/>
-      <unit id="com.fasterxml.jackson.jaxrs.jackson-jaxrs-base" version="0.0.0"/>
-      <unit id="com.fasterxml.jackson.jaxrs.jackson-jaxrs-json-provider" version="0.0.0"/>
-      <unit id="com.fasterxml.jackson.module.jackson-module-jaxb-annotations" version="0.0.0"/>
       <unit id="javassist" version="0.0.0"/>
       <unit id="javax.validation.api" version="0.0.0"/>
       <unit id="org.apache.aries.spifly.dynamic.bundle" version="0.0.0"/>
@@ -354,15 +345,6 @@
       <unit id="org.glassfish.hk2.locator" version="0.0.0"/>
       <unit id="org.glassfish.hk2.osgi-resource-locator" version="0.0.0"/>
       <unit id="org.glassfish.hk2.utils" version="0.0.0"/>
-      <unit id="org.glassfish.jersey.bundles.repackaged.jersey-guava" version="0.0.0"/>
-      <unit id="org.glassfish.jersey.containers.jersey-container-servlet" version="0.0.0"/>
-      <unit id="org.glassfish.jersey.containers.jersey-container-servlet-core" version="0.0.0"/>
-      <unit id="org.glassfish.jersey.core.jersey-client" version="0.0.0"/>
-      <unit id="org.glassfish.jersey.core.jersey-common" version="0.0.0"/>
-      <unit id="org.glassfish.jersey.core.jersey-server" version="0.0.0"/>
-      <unit id="org.glassfish.jersey.ext.jersey-entity-filtering" version="0.0.0"/>
-      <unit id="org.glassfish.jersey.media.jersey-media-jaxb" version="0.0.0"/>
-      <unit id="org.glassfish.jersey.media.jersey-media-json-jackson" version="0.0.0"/>
       <unit id="org.objectweb.asm.all.debug" version="0.0.0"/>
       <repository location="http://agentlab.ru/pd/p2/che/"/>
     </location>
@@ -381,7 +363,10 @@
       <unit id="org.eclipse.e4.ui.css.core" version="0.0.0"/>
       <unit id="org.eclipse.e4.ui.workbench.addons.swt" version="0.0.0"/>
       <unit id="org.eclipse.e4.ui.workbench.renderers.swt" version="0.0.0"/>
+      <unit id="org.eclipse.ecf.filetransfer" version="0.0.0"/>
+      <unit id="org.eclipse.ecf.filetransfer.feature.feature.group" version="0.0.0"/>
       <unit id="org.eclipse.ecf.provider.datashare" version="0.0.0"/>
+      <unit id="org.eclipse.ecf.provider.filetransfer" version="0.0.0"/>
       <unit id="org.eclipse.emf.common.ui" version="0.0.0"/>
       <unit id="org.eclipse.emf.edit" version="0.0.0"/>
       <unit id="org.eclipse.emf.edit.ui" version="0.0.0"/>
@@ -469,6 +454,25 @@
       <unit id="org.eclipse.equinox.weaving.aspectj" version="0.0.0"/>
       <unit id="org.eclipse.equinox.weaving.sdk.feature.group" version="0.0.0"/>
       <repository location="http://download.eclipse.org/tools/ajdt/46/dev/update"/>
+    </location>
+    <location includeAllPlatforms="true" includeConfigurePhase="true" includeMode="slicer" includeSource="true" type="InstallableUnit">
+      <unit id="com.fasterxml.jackson.core.jackson-core" version="0.0.0"/>
+      <unit id="com.fasterxml.jackson.core.jackson-databind" version="0.0.0"/>
+      <unit id="com.fasterxml.jackson.jaxrs.jackson-jaxrs-base" version="0.0.0"/>
+      <unit id="com.fasterxml.jackson.jaxrs.jackson-jaxrs-json-provider" version="0.0.0"/>
+      <unit id="com.fasterxml.jackson.module.jackson-module-jaxb-annotations" version="0.0.0"/>
+      <unit id="org.glassfish.jersey.bundles.repackaged.jersey-guava" version="0.0.0"/>
+      <unit id="org.glassfish.jersey.containers.jersey-container-servlet" version="0.0.0"/>
+      <unit id="org.glassfish.jersey.containers.jersey-container-servlet-core" version="0.0.0"/>
+      <unit id="org.glassfish.jersey.core.jersey-client" version="0.0.0"/>
+      <unit id="org.glassfish.jersey.core.jersey-common" version="0.0.0"/>
+      <unit id="org.glassfish.jersey.core.jersey-server" version="0.0.0"/>
+      <unit id="org.glassfish.jersey.ext.jersey-entity-filtering" version="0.0.0"/>
+      <unit id="org.glassfish.jersey.media.jersey-media-jaxb" version="0.0.0"/>
+      <unit id="org.glassfish.jersey.media.jersey-media-json-jackson" version="0.0.0"/>
+      <unit id="org.objenesis" version="0.0.0"/>
+      <unit id="org.tukaani.xz" version="0.0.0"/>
+      <repository location="http://agentlab.ru/pd/p2/eclipseorbit/"/>
     </location>
   </locations>
 </target>
