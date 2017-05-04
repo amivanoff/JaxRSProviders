@@ -377,10 +377,11 @@ public class JerseyServerDistributionProvider extends JaxRSServerDistributionPro
                                     {
                                         methodBuilder = childResourceBuilder.addMethod("PUT"); //$NON-NLS-1$
                                     }
-                                    methodBuilder.consumes(MediaType.APPLICATION_JSON);//APPLICATION_JSON)TEXT_PLAIN_TYPE
+//                                    methodBuilder.consumes(MediaType.APPLICATION_JSON);//APPLICATION_JSON)TEXT_PLAIN_TYPE
                                 }
                                 methodBuilder.produces(MediaType.APPLICATION_JSON)//APPLICATION_JSON)
                                     //.handledBy(implClass, method)
+                                	.consumes(MediaType.APPLICATION_JSON)
                                     .handledBy(registration.getService(), method).handlingMethod(method).extended(
                                         false);
                             }
